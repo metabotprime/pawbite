@@ -1,5 +1,8 @@
+'use client';
+
+import * as React from 'react';
 import Link from 'next/link';
-import type { Metadata } from 'next';
+import { useSearchParams } from 'next/navigation';
 import { Section } from '@/components/layout/section';
 import { Container } from '@/components/layout/container';
 import { Button } from '@/components/ui/button';
@@ -15,31 +18,28 @@ import {
   type QuizQuestionId,
 } from '@/lib/quiz';
 import { products } from '@/data/products';
-import { SITE_URL } from '@/lib/seo';
-
-export const metadata: Metadata = {
-  title: 'Your dog’s plan',
-  description: 'Personalized PawBite recommendation based on your quiz answers.',
-  alternates: { canonical: `${SITE_URL}/quiz/results` },
-  robots: { index: false },
-};
 
 const validKeys: QuizQuestionId[] = ['weight', 'age', 'primary', 'secondary', 'diet'];
 
-export default function QuizResultsPage({
-  searchParams,
-}: {
-  searchParams: Record<string, string | string[] | undefined>;
-}) {
+export default function QuizResultsPage() {
+  const searchParams = useSearchParams();
+  const [discountCode, setDiscountCode] = React.useState('WELCOME-PAWBITE');
+
+  React.useEffect(() => {
+    // Read email from sessionStorage — not from URL to avoid PII leakage
+    const email = sessionStorage.getItem('pawbite_quiz_email') ?? '';
+    if (email) {
+      setDiscountCode(generateDiscountCode(email));
+    }
+  }, []);
+
   const answers: QuizAnswers = {};
   validKeys.forEach((k) => {
-    const v = searchParams[k];
-    if (typeof v === 'string') answers[k] = v;
+    const v = searchParams.get(k);
+    if (v) answers[k] = v;
   });
 
-  const email = typeof searchParams.email === 'string' ? searchParams.email : '';
   const result = recommendFromAnswers(answers);
-  const discountCode = email ? generateDiscountCode(email) : 'WELCOME-PAWBITE';
 
   const recommendedProduct = products.find((p) => p.slug === result.primarySku) ?? products[0];
   const alsoConsider = products.filter(
@@ -89,12 +89,6 @@ export default function QuizResultsPage({
               </Badge>
             )}
           </div>
-
-          {email && (
-            <p className="text-sm text-charcoal/70">
-              We&apos;ve emailed your plan + code to <span className="font-semibold">{email}</span>.
-            </p>
-          )}
         </Container>
       </Section>
 

@@ -34,9 +34,10 @@ export default function QuizPage() {
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
+    // Store email in sessionStorage — keep it out of the URL to avoid PII leakage
+    sessionStorage.setItem('pawbite_quiz_email', email);
     const params = new URLSearchParams();
     Object.entries(answers).forEach(([k, v]) => v && params.set(k, v));
-    params.set('email', email);
     router.push(`/quiz/results?${params.toString()}`);
   }
 
@@ -103,7 +104,11 @@ export default function QuizPage() {
                 first order. No spam. Cancel any time.
               </p>
 
+              <label htmlFor="quiz-email" className="sr-only">
+                Email address
+              </label>
               <input
+                id="quiz-email"
                 type="email"
                 required
                 placeholder="you@email.com"
