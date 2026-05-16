@@ -6,6 +6,7 @@ import { breedPageSlugs } from '@/data/breed-pages';
 import { concernPageSlugs } from '@/data/concern-pages';
 import { ingredientPageSlugs } from '@/data/ingredient-pages';
 import { vsPageSlugs } from '@/data/vs-pages';
+import { vets } from '@/data/vets';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -13,6 +14,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Top-level
     { url: SITE_URL, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${SITE_URL}/quiz`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
+
+    // Brand pages
+    { url: `${SITE_URL}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/vets`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    ...vets.map((v) => ({
+      url: `${SITE_URL}/vets/${v.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.65,
+    })),
+    { url: `${SITE_URL}/science`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/reviews`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${SITE_URL}/perks`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+
+    // Legal
+    { url: `${SITE_URL}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${SITE_URL}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${SITE_URL}/shipping`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${SITE_URL}/returns`, lastModified: now, changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${SITE_URL}/editorial`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
 
     // Commerce
     { url: `${SITE_URL}/products`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },

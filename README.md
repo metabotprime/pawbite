@@ -4,9 +4,9 @@ A new DTC dog supplement brand. Launching with 2 SKUs: a daily probiotic chew an
 
 ## Status
 
-**Phase 5 complete** — Full SEO content layer live: 15 blog posts, 25 breed pages, 10 concern pages, 20 ingredient pages, 4 competitor comparisons, 5 hub pages. All under AI-citation-friendly content template with Article + FAQPage JSON-LD schema. ~93 total routes prerendering.
+**Phases 6 + 7 complete** — Brand pages live (About, Vets advisory + dynamic bios, Science, Reviews, Perks) plus legal pages (Privacy, Terms, Shipping, Returns, Editorial). 100+ total routes prerendering. Legal pages flagged for pre-launch counsel review.
 
-Phase 6 next: Brand pages (About, Vets, Science, Reviews, Perks).
+Phase 8 next: Shopify wiring (cart, checkout, customer portal, subscriptions).
 
 ## Repository layout
 
