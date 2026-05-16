@@ -1,101 +1,52 @@
-import Image from 'next/image';
+import { Container } from '@/components/layout/container';
+import { Section } from '@/components/layout/section';
+import { Button } from '@/components/ui/button';
+import { Mascot } from '@/components/brand/illustrations/characters/mascot';
+import { CalloutPill } from '@/components/brand/illustrations/callout-pill';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm sm:text-left">
-          <li className="mb-2">
-            Get started by editing{' '}
-            <code className="rounded bg-black/[.05] px-1 py-0.5 font-semibold dark:bg-white/[.06]">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Section background="cream" spacing="loose">
+        <Container size="narrow" className="text-center">
+          <CalloutPill variant="caveat" color="warmyellow" rotation={-4} className="mb-6">
+            coming soon —
+          </CalloutPill>
+          <h1 className="fraunces-soft mb-6 text-5xl font-bold leading-tight md:text-7xl">
+            The good stuff your dog needs.
+            <br />
+            <span className="italic text-terracotta">Nothing weird.</span>
+          </h1>
+          <p className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-charcoal">
+            PawBite is a new line of vet-formulated dog supplements. Two products. Both daily. Real
+            ingredients, no fluff. The site is in active development — come back soon, or drop your
+            email and we&apos;ll tell you when we ship.
+          </p>
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Button variant="primary" size="lg">
+              Notify me at launch
+            </Button>
+            <Button variant="outline" size="lg">
+              See the design directions
+            </Button>
+          </div>
+          <div className="mt-16 flex justify-center">
+            <Mascot variant="sitting" size={240} bodyColor="#E8B547" />
+          </div>
+        </Container>
+      </Section>
 
-        <div className="flex flex-col items-center gap-4 sm:flex-row">
-          <a
-            className="flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent bg-foreground px-4 text-sm text-background transition-colors hover:bg-[#383838] sm:h-12 sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="flex h-10 items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm transition-colors hover:border-transparent hover:bg-[#f2f2f2] sm:h-12 sm:min-w-44 sm:px-5 sm:text-base dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <Section background="forest" spacing="default" className="text-center">
+        <Container size="narrow">
+          <p className="mb-2 font-hand text-3xl text-warmyellow">A note from our founder —</p>
+          <p className="mx-auto max-w-xl text-lg leading-relaxed text-cream/90 md:text-xl">
+            I started PawBite because my dog Theo&apos;s gut was a wreck. Most dog supplements are
+            made by people who&apos;ve never owned a sick dog. We&apos;re building the brand we
+            wished existed.
+          </p>
+          <p className="mt-4 font-hand text-2xl text-warmyellow">— Sam Whitlock, founder</p>
+        </Container>
+      </Section>
+    </>
   );
 }
