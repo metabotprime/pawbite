@@ -50,7 +50,9 @@ export function TestimonialsSection() {
           <h2 className="fraunces-soft mb-3 text-balance text-4xl font-bold md:text-5xl">
             Real dogs. Real differences.
           </h2>
-          <p className="text-lg text-charcoal">Pre-launch testimonials from dogs who tested the formulas with us.</p>
+          <p className="text-lg text-charcoal">
+            Pre-launch testimonials from dogs who tested the formulas with us.
+          </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">

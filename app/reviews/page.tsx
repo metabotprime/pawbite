@@ -79,7 +79,8 @@ export default function ReviewsPage() {
               Reviews coming soon.
             </h1>
             <p className="mt-4 text-base text-charcoal/80">
-              We&apos;re pre-launch. Below are testimonials from dogs who tested the formulas with us.
+              We&apos;re pre-launch. Below are testimonials from dogs who tested the formulas with
+              us.
             </p>
             <div className="mt-6 flex justify-center">
               <Squiggle width={140} className="text-terracotta" />
