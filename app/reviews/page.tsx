@@ -11,25 +11,17 @@ import { testimonials } from '@/data/testimonials';
 import { SITE_URL } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Reviews from real dog parents',
+  title: 'Reviews — coming soon',
   description:
-    'Read 10,000+ verified reviews of PawBite Daily Probiotic, Hip + Joint, and the Daily Duo. Real dogs, real results, real names.',
+    'PawBite reviews are coming. We are pre-launch — here are a few testimonials from dogs who tested the formulas with us.',
   alternates: { canonical: `${SITE_URL}/reviews` },
   openGraph: {
-    title: '4.9 out of 5 from 10,000+ dog parents',
+    title: 'Reviews — coming soon',
     description:
-      'Real reviews from real subscribers. PawBite Daily Probiotic, Hip + Joint, and the Daily Duo.',
+      'PawBite is pre-launch. Here are a few testimonials from dogs who tested the formulas with us.',
     type: 'website',
   },
 };
-
-const ratingBreakdown = [
-  { stars: 5, count: 8400 },
-  { stars: 4, count: 1200 },
-  { stars: 3, count: 300 },
-  { stars: 2, count: 80 },
-  { stars: 1, count: 20 },
-];
 
 const filters = [
   { label: 'All reviews', value: 'all', active: true },
@@ -37,8 +29,6 @@ const filters = [
   { label: 'Hip + Joint', value: 'hip-and-joint', active: false },
   { label: 'Daily Duo', value: 'daily-duo', active: false },
 ];
-
-const totalReviews = ratingBreakdown.reduce((sum, r) => sum + r.count, 0);
 
 function BeforeAfterBars({
   metric,
@@ -86,45 +76,14 @@ export default function ReviewsPage() {
           <div className="text-center">
             <p className="mb-2 font-hand text-2xl text-terracotta">— Reviews</p>
             <h1 className="fraunces-soft mb-4 text-balance text-4xl font-bold text-forest md:text-6xl">
-              4.9 out of 5 from 10,000+ dog parents.
+              Reviews coming soon.
             </h1>
-            <div className="mt-6 flex justify-center gap-1">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <Star key={i} size={32} className="text-warmyellow" />
-              ))}
-            </div>
             <p className="mt-4 text-base text-charcoal/80">
-              {totalReviews.toLocaleString()} verified reviews across both products
+              We&apos;re pre-launch. Below are testimonials from dogs who tested the formulas with us.
             </p>
             <div className="mt-6 flex justify-center">
               <Squiggle width={140} className="text-terracotta" />
             </div>
-          </div>
-
-          {/* Rating breakdown */}
-          <div className="mx-auto mt-12 max-w-md rounded-3xl border border-forest/10 bg-offwhite p-6">
-            <ul className="space-y-2">
-              {ratingBreakdown.map((row) => {
-                const pct = (row.count / totalReviews) * 100;
-                return (
-                  <li key={row.stars} className="flex items-center gap-3 text-sm">
-                    <span className="flex w-14 items-center gap-1 font-mono text-charcoal">
-                      {row.stars}
-                      <Star size={12} className="text-warmyellow" />
-                    </span>
-                    <div className="h-2 flex-1 rounded-full bg-forest/10">
-                      <div
-                        className="h-2 rounded-full bg-terracotta"
-                        style={{ width: `${pct}%` }}
-                      />
-                    </div>
-                    <span className="w-16 text-right font-mono text-xs text-charcoal/70">
-                      {row.count.toLocaleString()}
-                    </span>
-                  </li>
-                );
-              })}
-            </ul>
           </div>
         </Container>
       </Section>

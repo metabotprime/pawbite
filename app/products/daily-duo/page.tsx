@@ -6,7 +6,6 @@ import { Canister } from '@/components/brand/canister';
 import { Blob } from '@/components/brand/illustrations/decor/blob';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Star } from '@/components/brand/illustrations/icons/star';
 import { PdpFaq } from '@/components/pdp/pdp-faq';
 import { PdpGuarantee } from '@/components/pdp/pdp-guarantee';
 import { VetQuoteCard } from '@/components/pdp/vet-quote-card';
@@ -85,12 +84,7 @@ export default function DailyDuoPage() {
 
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
-                <div className="flex">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} size={16} className="text-terracotta" />
-                  ))}
-                </div>
-                <span className="text-sm text-charcoal/70">4.9 (10,000+ reviews)</span>
+                <span className="text-sm text-charcoal/70">Vet-formulated • 90-day guarantee</span>
                 <Badge variant="warmyellow">Most popular</Badge>
               </div>
 

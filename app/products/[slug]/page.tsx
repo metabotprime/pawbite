@@ -49,11 +49,6 @@ export default function PdpPage({ params }: { params: { slug: string } }) {
       price: product.subPrice.toString(),
       availability: 'https://schema.org/InStock',
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '10000',
-    },
   };
 
   return (

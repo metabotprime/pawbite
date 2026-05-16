@@ -5,7 +5,6 @@ import { Section } from '@/components/layout/section';
 import { Button } from '@/components/ui/button';
 import { TapeAccent } from '@/components/brand/illustrations/decor/tape-accent';
 import { Squiggle } from '@/components/brand/illustrations/icons/squiggle';
-import { Star } from '@/components/brand/illustrations/icons/star';
 
 export function HeroSection() {
   return (
@@ -54,16 +53,9 @@ export function HeroSection() {
             </p>
             <p className="font-hand text-2xl text-terracotta">— Sam Whitlock, founder</p>
 
-            <div className="flex items-center gap-3 pt-2">
-              <div className="flex">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} size={20} className="text-warmyellow" />
-                ))}
-              </div>
-              <span className="text-sm font-medium text-charcoal">
-                4.9 average from 10,000+ dog parents
-              </span>
-            </div>
+            <p className="pt-2 text-sm font-medium text-charcoal">
+              Vet-formulated. Backed by our 90-day money-back guarantee.
+            </p>
 
             <div className="flex flex-col gap-3 pt-2 sm:flex-row">
               <Button variant="primary" size="lg" asChild>
