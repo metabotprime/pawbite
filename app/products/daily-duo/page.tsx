@@ -10,7 +10,6 @@ import { Star } from '@/components/brand/illustrations/icons/star';
 import { PdpFaq } from '@/components/pdp/pdp-faq';
 import { PdpGuarantee } from '@/components/pdp/pdp-guarantee';
 import { VetQuoteCard } from '@/components/pdp/vet-quote-card';
-import { dailyDuo, dailyProbiotic, hipAndJoint } from '@/data/products';
 import { dailyProbioticDetail, hipAndJointDetail } from '@/data/products-detail';
 import { SITE_URL } from '@/lib/seo';
 
