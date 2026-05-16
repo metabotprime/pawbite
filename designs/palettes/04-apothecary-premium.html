@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PawBite — Considered supplements for your dog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@400;600&family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'p-base': '#F5EFE6',
+            'p-base-2': '#FAF5EC',
+            'p-text': '#15233D',
+            'p-text-deep': '#0E1A2E',
+            'p-cta': '#B5673D',
+            'p-cta-dark': '#965230',
+            'p-acc1': '#C49A4A',
+            'p-acc2': '#A8B59C',
+            'p-body': '#15233D',
+          },
+          fontFamily: {
+            display: ['"Bagel Fat One"', 'serif'],
+            serif: ['Fraunces', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            hand: ['Caveat', 'cursive'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F5EFE6;
+      color: #15233D;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .font-soft {
+      font-family: 'Fraunces', serif;
+      font-variation-settings: 'SOFT' 100, 'opsz' 144, 'wght' 500;
+      letter-spacing: -0.02em;
+    }
+    .font-soft-light {
+      font-family: 'Fraunces', serif;
+      font-variation-settings: 'SOFT' 80, 'opsz' 144, 'wght' 400;
+      letter-spacing: -0.015em;
+    }
+    .polaroid {
+      transform: rotate(-2.2deg);
+      transition: transform 0.4s ease;
+    }
+    .polaroid:hover { transform: rotate(-1deg) scale(1.01); }
+    .canister {
+      transition: transform 0.35s ease;
+    }
+    .canister:hover { transform: translateY(-4px); }
+    .featured-card {
+      transition: transform 0.35s ease;
+    }
+    .featured-card:hover { transform: translateY(-3px); }
+    .nav-link {
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      background-color: #B5673D;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .nav-link:hover { color: #B5673D; }
+    .btn-cta {
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+    .btn-cta:hover { background-color: #965230; }
+    .btn-cta:active { transform: translateY(1px); }
+    .btn-ghost {
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+    .btn-ghost:hover { border-color: #B5673D; color: #B5673D; }
+    .marquee-text {
+      letter-spacing: 0.18em;
+    }
+    .stat-divider {
+      background: linear-gradient(180deg, rgba(21,35,61,0.15), rgba(21,35,61,0));
+    }
+    /* Subtle blob backgrounds for product cards */
+    .blob-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      border-radius: 1.25rem;
+      pointer-events: none;
+    }
+    .canister-body {
+      background: linear-gradient(180deg, #FAF5EC 0%, #F1E9DA 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.7),
+        inset -8px 0 18px rgba(21,35,61,0.06),
+        0 18px 30px -18px rgba(21,35,61,0.22);
+    }
+    .canister-lid {
+      background: linear-gradient(180deg, #15233D 0%, #0E1A2E 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 1px 2px rgba(0,0,0,0.2);
+    }
+    .footer-link {
+      transition: color 0.2s ease;
+    }
+    .footer-link:hover { color: #C49A4A; }
+    .social-icon {
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .social-icon:hover {
+      background-color: #C49A4A;
+      color: #0E1A2E;
+    }
+    .quiet-rule {
+      height: 1px;
+      background: linear-gradient(90deg, rgba(21,35,61,0), rgba(21,35,61,0.18), rgba(21,35,61,0));
+    }
+    /* Refined sage/cream blob */
+    .blob-sage {
+      background: radial-gradient(ellipse at 30% 30%, rgba(168,181,156,0.22) 0%, rgba(168,181,156,0) 60%);
+    }
+    .blob-cream {
+      background: radial-gradient(ellipse at 70% 70%, rgba(196,154,74,0.10) 0%, rgba(196,154,74,0) 55%);
+    }
+    .featured-glow {
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(196,154,74,0.18) 0%, rgba(196,154,74,0) 55%),
+        radial-gradient(ellipse at 50% 100%, rgba(168,181,156,0.18) 0%, rgba(168,181,156,0) 55%);
+    }
+  </style>
+</head>
+<body class="bg-p-base text-p-text">
+
+  <!-- ============================= -->
+  <!-- 1. WELCOME BANNER -->
+  <!-- ============================= -->
+  <div class="bg-p-text text-p-base text-center text-[13px] sm:text-sm tracking-wide py-3 px-4">
+    <span class="opacity-95">Welcome offer: 30% off your first order + free shipping. Code </span>
+    <span class="font-semibold text-p-acc1 ml-1">WELCOME</span>
+  </div>
+
+  <!-- ============================= -->
+  <!-- 2. STICKY NAV -->
+  <!-- ============================= -->
+  <nav class="sticky top-0 z-50 bg-p-base/95 backdrop-blur-md border-b border-p-text/8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+      <!-- Wordmark + mascot -->
+      <a href="#" class="flex items-center gap-2.5 group">
+        <!-- Inline SVG mascot: simple, refined dog silhouette -->
+        <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="19" fill="#15233D"/>
+          <!-- dog head -->
+          <path d="M13 16 L13 23 Q13 27 17 27 L23 27 Q27 27 27 23 L27 16 L24 12 L22 14 L18 14 L16 12 Z" fill="#F5EFE6"/>
+          <!-- ears -->
+          <path d="M13 16 L11 13 L14 14 Z" fill="#C49A4A"/>
+          <path d="M27 16 L29 13 L26 14 Z" fill="#C49A4A"/>
+          <!-- eyes -->
+          <circle cx="17" cy="20" r="1.1" fill="#15233D"/>
+          <circle cx="23" cy="20" r="1.1" fill="#15233D"/>
+          <!-- nose -->
+          <ellipse cx="20" cy="23.4" rx="1.4" ry="1" fill="#15233D"/>
+        </svg>
+        <span class="font-display text-[26px] leading-none text-p-text tracking-tight">PawBite</span>
+      </a>
+
+      <!-- Nav links -->
+      <div class="hidden md:flex items-center gap-9 text-[14px] text-p-text/85 font-medium">
+        <a href="#" class="nav-link">Shop</a>
+        <a href="#" class="nav-link">Quiz</a>
+        <a href="#" class="nav-link">Learn</a>
+        <a href="#" class="nav-link">About</a>
+      </div>
+
+      <!-- CTA -->
+      <a
+        href="#"
+        class="btn-cta inline-flex items-center gap-2 bg-p-cta text-p-base-2 px-5 py-2.5 rounded-full text-[14px] font-medium tracking-wide"
+      >
+        Take the quiz
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ============================= -->
+  <!-- 3. HERO -->
+  <!-- ============================= -->
+  <section class="bg-p-base">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-28">
+      <div class="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <!-- LEFT: Founder polaroid -->
+        <div class="relative flex justify-center lg:justify-start">
+          <!-- Single subtle squiggle in copper -->
+          <svg class="absolute -top-8 -left-6 lg:-left-12 opacity-70" width="110" height="40" viewBox="0 0 110 40" fill="none" aria-hidden="true">
+            <path d="M2 20 Q15 6, 28 20 T54 20 T80 20 T108 20" stroke="#B5673D" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+
+          <div class="polaroid relative bg-p-base-2 p-4 pb-16 rounded-sm shadow-[0_20px_60px_-20px_rgba(21,35,61,0.30)] max-w-md w-full">
+            <div class="overflow-hidden bg-p-text/5">
+              <img
+                src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&q=80"
+                alt="Noah Chang with his dog Theo"
+                class="w-full aspect-[4/5] object-cover"
+                loading="eager"
+              />
+            </div>
+            <p class="absolute bottom-5 left-0 right-0 text-center font-hand text-2xl text-p-text/75">
+              Theo, age 7
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT: copy -->
+        <div class="max-w-xl">
+          <p class="font-hand text-[26px] text-p-cta leading-none mb-5">— A note from the founder</p>
+          <h1 class="font-soft text-[44px] sm:text-[54px] lg:text-[60px] leading-[1.05] text-p-text mb-7">
+            I started PawBite because my dog Theo&rsquo;s gut was a wreck.
+          </h1>
+          <p class="text-[17px] leading-[1.7] text-p-text/80 mb-7">
+            Two SKUs. Both vet-formulated, third-party tested, made in the U.S. No fillers, no buzzwords, no
+            marketing fluff. Just two supplements I trust enough to feed Theo every morning.
+          </p>
+          <p class="font-hand text-[28px] text-p-text/85 mb-9">— Noah Chang, founder</p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 mb-7">
+            <a
+              href="#"
+              class="btn-cta inline-flex items-center gap-2 bg-p-cta text-p-base-2 px-7 py-3.5 rounded-full text-[15px] font-medium tracking-wide"
+            >
+              Shop the Daily Duo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="btn-ghost inline-flex items-center gap-2 border border-p-text/25 text-p-text px-7 py-3.5 rounded-full text-[15px] font-medium tracking-wide"
+            >
+              Take the 60-second quiz
+            </a>
+          </div>
+
+          <!-- Trust line -->
+          <div class="flex items-center gap-3 text-[13px] text-p-text/65">
+            <div class="flex -space-x-1.5">
+              <span class="w-2 h-2 rounded-full bg-p-acc1"></span>
+              <span class="w-2 h-2 rounded-full bg-p-acc2"></span>
+              <span class="w-2 h-2 rounded-full bg-p-cta"></span>
+            </div>
+            <span>4,200+ dogs on the morning routine. 4.9 average across 1,800 reviews.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- 4. 4-STAT BAND (gold accent) -->
+  <!-- ============================= -->
+  <section class="bg-p-acc1">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-12 lg:py-14">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6 text-p-text">
+
+        <div class="text-center lg:text-left relative">
+          <div class="hidden lg:block absolute top-1/2 -translate-y-1/2 right-0 w-px h-14 stat-divider"></div>
+          <p class="font-soft text-[34px] sm:text-[40px] leading-none mb-2">5 BILLION</p>
+          <p class="text-[12px] uppercase tracking-[0.18em] text-p-text/80">CFUs per chew</p>
+        </div>
+
+        <div class="text-center lg:text-left relative">
+          <div class="hidden lg:block absolute top-1/2 -translate-y-1/2 right-0 w-px h-14 stat-divider"></div>
+          <p class="font-soft text-[34px] sm:text-[40px] leading-none mb-2">5 STRAINS</p>
+          <p class="text-[12px] uppercase tracking-[0.18em] text-p-text/80">All third-party tested</p>
+        </div>
+
+        <div class="text-center lg:text-left relative">
+          <div class="hidden lg:block absolute top-1/2 -translate-y-1/2 right-0 w-px h-14 stat-divider"></div>
+          <p class="font-soft text-[34px] sm:text-[40px] leading-none mb-2">90 DAYS</p>
+          <p class="text-[12px] uppercase tracking-[0.18em] text-p-text/80">Money-back guarantee</p>
+        </div>
+
+        <div class="text-center lg:text-left">
+          <p class="font-soft text-[34px] sm:text-[40px] leading-none mb-2">MADE IN USA</p>
+          <p class="text-[12px] uppercase tracking-[0.18em] text-p-text/80">cGMP-certified facility</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- 5. PRODUCT SHOWCASE -->
+  <!-- ============================= -->
+  <section class="bg-p-base py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+      <!-- Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-20">
+        <p class="font-hand text-[24px] text-p-cta mb-3">The whole shelf</p>
+        <h2 class="font-soft text-[38px] sm:text-[46px] lg:text-[52px] leading-[1.1] text-p-text mb-5">
+          What Theo takes daily.
+        </h2>
+        <p class="text-[16px] leading-relaxed text-p-text/70">
+          Two soft chews. One bundle. Vet-formulated, third-party tested,
+          and a 90-day promise if your dog doesn&rsquo;t finish the jar.
+        </p>
+      </div>
+
+      <!-- 3 product cards -->
+      <div class="grid lg:grid-cols-3 gap-7 lg:gap-8">
+
+        <!-- CARD 1: Daily Probiotic (gold band) -->
+        <article class="canister relative bg-p-base-2 rounded-2xl p-8 pt-10 border border-p-text/8 overflow-hidden">
+          <div class="blob-bg blob-sage"></div>
+          <div class="relative">
+            <p class="text-[11px] uppercase tracking-[0.22em] text-p-text/55 mb-6">Daily essentials</p>
+
+            <!-- CSS canister -->
+            <div class="flex justify-center mb-8">
+              <div class="relative w-[160px] h-[230px]">
+                <!-- Lid -->
+                <div class="canister-lid absolute top-0 left-1/2 -translate-x-1/2 w-[150px] h-[18px] rounded-t-lg"></div>
+                <!-- Body -->
+                <div class="canister-body absolute top-[16px] left-1/2 -translate-x-1/2 w-[160px] h-[214px] rounded-lg flex flex-col items-center justify-between py-5">
+                  <p class="font-display text-[20px] text-p-text leading-none">PawBite</p>
+                  <!-- color band -->
+                  <div class="w-full bg-p-acc1 py-3 flex items-center justify-center">
+                    <p class="font-soft text-[14px] text-p-text leading-tight text-center px-2">Daily<br/>Probiotic</p>
+                  </div>
+                  <p class="text-[9px] uppercase tracking-[0.22em] text-p-text/65">30 Soft Chews</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="font-soft text-[26px] text-p-text leading-tight mb-2">Daily Probiotic</h3>
+            <p class="text-[14px] text-p-text/70 leading-relaxed mb-5">
+              5 billion CFUs across 5 strains. For the dog whose stomach has opinions.
+            </p>
+
+            <div class="flex items-baseline gap-2 mb-5">
+              <span class="font-soft text-[26px] text-p-text leading-none">$32</span>
+              <span class="text-[13px] text-p-text/55">/ month, ships free</span>
+            </div>
+
+            <a href="#" class="btn-ghost inline-flex items-center justify-center w-full border border-p-text/25 text-p-text px-5 py-3 rounded-full text-[14px] font-medium tracking-wide">
+              Add to cart
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 3 (FEATURED): Daily Duo (sage band) — MIDDLE -->
+        <article class="featured-card relative bg-p-base-2 rounded-2xl p-8 pt-10 border-2 border-p-cta overflow-hidden lg:scale-[1.03] lg:-mt-3 lg:mb-3">
+          <div class="blob-bg featured-glow"></div>
+          <div class="relative">
+            <!-- Top tags -->
+            <div class="flex items-center justify-between mb-6">
+              <span class="text-[11px] uppercase tracking-[0.22em] text-p-cta font-semibold">Most popular</span>
+              <span class="text-[11px] uppercase tracking-[0.18em] bg-p-cta text-p-base-2 px-3 py-1.5 rounded-full font-medium">Save 32%</span>
+            </div>
+
+            <!-- CSS canister -->
+            <div class="flex justify-center mb-8">
+              <div class="relative w-[170px] h-[240px]">
+                <div class="canister-lid absolute top-0 left-1/2 -translate-x-1/2 w-[160px] h-[18px] rounded-t-lg"></div>
+                <div class="canister-body absolute top-[16px] left-1/2 -translate-x-1/2 w-[170px] h-[224px] rounded-lg flex flex-col items-center justify-between py-5">
+                  <p class="font-display text-[22px] text-p-text leading-none">PawBite</p>
+                  <div class="w-full bg-p-acc2 py-3 flex items-center justify-center">
+                    <p class="font-soft text-[14px] text-p-text leading-tight text-center px-2">Daily<br/>Duo</p>
+                  </div>
+                  <p class="text-[9px] uppercase tracking-[0.22em] text-p-text/65">30 Soft Chews</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="font-soft text-[28px] text-p-text leading-tight mb-2">Daily Duo</h3>
+            <p class="text-[14px] text-p-text/70 leading-relaxed mb-5">
+              Both jars, one subscription. The morning routine 78% of customers stay on.
+            </p>
+
+            <div class="flex items-baseline gap-3 mb-5">
+              <span class="font-soft text-[28px] text-p-text leading-none">$48</span>
+              <span class="text-[14px] text-p-text/45 line-through">$71</span>
+              <span class="text-[13px] text-p-text/55">/ month</span>
+            </div>
+
+            <a href="#" class="btn-cta inline-flex items-center justify-center w-full bg-p-cta text-p-base-2 px-5 py-3.5 rounded-full text-[14px] font-medium tracking-wide gap-2">
+              Start the Duo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/>
+                <polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 2: Hip + Joint (copper band) -->
+        <article class="canister relative bg-p-base-2 rounded-2xl p-8 pt-10 border border-p-text/8 overflow-hidden">
+          <div class="blob-bg blob-cream"></div>
+          <div class="relative">
+            <p class="text-[11px] uppercase tracking-[0.22em] text-p-text/55 mb-6">For senior dogs</p>
+
+            <!-- CSS canister -->
+            <div class="flex justify-center mb-8">
+              <div class="relative w-[160px] h-[230px]">
+                <div class="canister-lid absolute top-0 left-1/2 -translate-x-1/2 w-[150px] h-[18px] rounded-t-lg"></div>
+                <div class="canister-body absolute top-[16px] left-1/2 -translate-x-1/2 w-[160px] h-[214px] rounded-lg flex flex-col items-center justify-between py-5">
+                  <p class="font-display text-[20px] text-p-text leading-none">PawBite</p>
+                  <div class="w-full bg-p-cta py-3 flex items-center justify-center">
+                    <p class="font-soft text-[14px] text-p-base-2 leading-tight text-center px-2">Hip<br/>+ Joint</p>
+                  </div>
+                  <p class="text-[9px] uppercase tracking-[0.22em] text-p-text/65">30 Soft Chews</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="font-soft text-[26px] text-p-text leading-tight mb-2">Hip + Joint</h3>
+            <p class="text-[14px] text-p-text/70 leading-relaxed mb-5">
+              Glucosamine, chondroitin, MSM. For dogs who&rsquo;ve started taking the stairs slowly.
+            </p>
+
+            <div class="flex items-baseline gap-2 mb-5">
+              <span class="font-soft text-[26px] text-p-text leading-none">$39</span>
+              <span class="text-[13px] text-p-text/55">/ month, ships free</span>
+            </div>
+
+            <a href="#" class="btn-ghost inline-flex items-center justify-center w-full border border-p-text/25 text-p-text px-5 py-3 rounded-full text-[14px] font-medium tracking-wide">
+              Add to cart
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Quiet rule -->
+      <div class="quiet-rule mt-20 max-w-md mx-auto"></div>
+
+      <!-- Subtle footnote -->
+      <p class="text-center text-[13px] text-p-text/55 mt-8">
+        Subscribe and save. Skip or cancel any time, no email gymnastics.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================= -->
+  <!-- 6. FOOTER -->
+  <!-- ============================= -->
+  <footer class="bg-p-text-deep text-p-base pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+      <!-- Top: wordmark + tagline -->
+      <div class="grid lg:grid-cols-12 gap-12 mb-16">
+
+        <div class="lg:col-span-4">
+          <div class="flex items-center gap-2.5 mb-4">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="20" cy="20" r="19" fill="#C49A4A"/>
+              <path d="M13 16 L13 23 Q13 27 17 27 L23 27 Q27 27 27 23 L27 16 L24 12 L22 14 L18 14 L16 12 Z" fill="#0E1A2E"/>
+              <path d="M13 16 L11 13 L14 14 Z" fill="#0E1A2E"/>
+              <path d="M27 16 L29 13 L26 14 Z" fill="#0E1A2E"/>
+              <circle cx="17" cy="20" r="1.1" fill="#C49A4A"/>
+              <circle cx="23" cy="20" r="1.1" fill="#C49A4A"/>
+              <ellipse cx="20" cy="23.4" rx="1.4" ry="1" fill="#C49A4A"/>
+            </svg>
+            <span class="font-display text-[30px] leading-none text-p-acc1 tracking-tight">PawBite</span>
+          </div>
+          <p class="font-hand text-[22px] text-p-base/85 mb-5 leading-snug">
+            Made by humans in Hudson Valley, NY
+          </p>
+          <p class="text-[14px] leading-relaxed text-p-base/65 max-w-xs">
+            Two supplements. Two ingredients lists you can actually read. Built for the dog you already love.
+          </p>
+        </div>
+
+        <!-- 4 link columns -->
+        <div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8">
+
+          <div>
+            <h4 class="text-[12px] uppercase tracking-[0.2em] text-p-acc1 mb-5 font-semibold">Shop</h4>
+            <ul class="space-y-3 text-[14px] text-p-base/75">
+              <li><a href="#" class="footer-link">Daily Probiotic</a></li>
+              <li><a href="#" class="footer-link">Hip + Joint</a></li>
+              <li><a href="#" class="footer-link">Daily Duo</a></li>
+              <li><a href="#" class="footer-link">Subscribe &amp; save</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-[12px] uppercase tracking-[0.2em] text-p-acc1 mb-5 font-semibold">Learn</h4>
+            <ul class="space-y-3 text-[14px] text-p-base/75">
+              <li><a href="#" class="footer-link">The quiz</a></li>
+              <li><a href="#" class="footer-link">Ingredients</a></li>
+              <li><a href="#" class="footer-link">Testing &amp; sourcing</a></li>
+              <li><a href="#" class="footer-link">Field notes</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-[12px] uppercase tracking-[0.2em] text-p-acc1 mb-5 font-semibold">Help</h4>
+            <ul class="space-y-3 text-[14px] text-p-base/75">
+              <li><a href="#" class="footer-link">Contact</a></li>
+              <li><a href="#" class="footer-link">Shipping</a></li>
+              <li><a href="#" class="footer-link">Returns</a></li>
+              <li><a href="#" class="footer-link">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-[12px] uppercase tracking-[0.2em] text-p-acc1 mb-5 font-semibold">Company</h4>
+            <ul class="space-y-3 text-[14px] text-p-base/75">
+              <li><a href="#" class="footer-link">About</a></li>
+              <li><a href="#" class="footer-link">Press</a></li>
+              <li><a href="#" class="footer-link">Wholesale</a></li>
+              <li><a href="#" class="footer-link">Careers</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="quiet-rule mb-10 opacity-30"></div>
+
+      <!-- Bottom: social + legal -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+
+        <!-- Social icons -->
+        <div class="flex items-center gap-3">
+          <a href="#" aria-label="Instagram" class="social-icon w-9 h-9 rounded-full bg-p-base/8 text-p-base/75 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="social-icon w-9 h-9 rounded-full bg-p-base/8 text-p-base/75 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V9.01a8.16 8.16 0 0 0 4.77 1.52V7.09a4.85 4.85 0 0 1-1.84-.4z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="social-icon w-9 h-9 rounded-full bg-p-base/8 text-p-base/75 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Email" class="social-icon w-9 h-9 rounded-full bg-p-base/8 text-p-base/75 flex items-center justify-center">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Legal -->
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-[12px] text-p-base/55">
+          <span>&copy; 2026 PawBite Inc.</span>
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Terms</a>
+          <a href="#" class="footer-link">Accessibility</a>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <p class="text-[11px] text-p-base/40 mt-10 max-w-3xl leading-relaxed">
+        These statements have not been evaluated by the FDA. PawBite products are not intended to diagnose, treat,
+        cure, or prevent any disease. Always consult your veterinarian before starting a new supplement.
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>

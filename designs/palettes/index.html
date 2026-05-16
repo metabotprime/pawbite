@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PawBite — 5 Color Palette Options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,400&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind = window.tailwind || {};
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Fraunces', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            hand: ['Caveat', 'cursive'],
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #FAFAFA; color: #1F3A2E; }
+    .serif { font-family: 'Fraunces', serif; }
+    .hand { font-family: 'Caveat', cursive; }
+    .card-hover { transition: transform .2s ease, box-shadow .2s ease; }
+    .card-hover:hover { transform: translateY(-3px); box-shadow: 0 12px 32px -8px rgba(0,0,0,0.15); }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="border-b border-black/10 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+      <div class="serif text-2xl font-bold">
+        PawBite <span class="text-[#C8765B]">/</span> <span class="text-sm font-normal italic opacity-70">color palette options</span>
+      </div>
+      <div class="text-sm opacity-60">5 alternatives + current</div>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section class="max-w-4xl mx-auto px-6 pt-16 pb-12 text-center">
+    <p class="hand italic text-[#C8765B] mb-4 text-2xl">Pick your favorite —</p>
+    <h1 class="serif text-5xl md:text-6xl font-bold leading-tight mb-6">
+      Five palette directions for the PawBite homepage.
+    </h1>
+    <p class="text-lg opacity-80 max-w-2xl mx-auto leading-relaxed">
+      Each one is the same Design 8 hybrid structure with a different color scheme.
+      Open them in new tabs and compare against the current live site at
+      <a href="https://pawbite.vercel.app" target="_blank" class="text-[#C8765B] underline">pawbite.vercel.app</a>.
+    </p>
+  </section>
+
+  <!-- Current site reminder -->
+  <section class="max-w-7xl mx-auto px-6 pb-12">
+    <div class="rounded-2xl border border-black/10 bg-white p-6 md:p-8">
+      <div class="flex items-start justify-between gap-6 flex-wrap">
+        <div>
+          <div class="text-xs uppercase tracking-wider opacity-60 mb-2">Current — live now</div>
+          <h3 class="serif text-2xl font-bold mb-2">Earthy Warm (cream + forest + terracotta + yellow)</h3>
+          <p class="text-sm opacity-80 max-w-xl">What's deployed today. Forest-green primary type, terracotta CTAs, warm cream base, accent yellow + pink + mint. Friendly and grounded.</p>
+        </div>
+        <div class="flex gap-2">
+          <div class="w-10 h-10 rounded-full border border-black/15" style="background:#F5EFE6;" title="cream #F5EFE6"></div>
+          <div class="w-10 h-10 rounded-full border border-black/15" style="background:#1F3A2E;" title="forest #1F3A2E"></div>
+          <div class="w-10 h-10 rounded-full border border-black/15" style="background:#C8765B;" title="terracotta #C8765B"></div>
+          <div class="w-10 h-10 rounded-full border border-black/15" style="background:#E8B547;" title="warmyellow #E8B547"></div>
+          <div class="w-10 h-10 rounded-full border border-black/15" style="background:#F4B8A8;" title="pinky #F4B8A8"></div>
+          <div class="w-10 h-10 rounded-full border border-black/15" style="background:#B8D4C4;" title="mint #B8D4C4"></div>
+        </div>
+      </div>
+      <a href="https://pawbite.vercel.app" target="_blank" class="inline-block mt-4 text-sm font-semibold text-[#C8765B] hover:underline">See live site →</a>
+    </div>
+  </section>
+
+  <!-- 5 palette options grid -->
+  <section class="max-w-7xl mx-auto px-6 pb-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Palette 1: Coastal Calm -->
+      <a href="./01-coastal-calm.html" target="_blank" class="card-hover block rounded-2xl bg-white border border-black/10 overflow-hidden">
+        <!-- preview band -->
+        <div class="h-32 grid grid-cols-5">
+          <div style="background:#F2E8D5;"></div>
+          <div style="background:#2B4A5C;"></div>
+          <div style="background:#DE6B5A;"></div>
+          <div style="background:#A8C5D1;"></div>
+          <div style="background:#FAEEC4;"></div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs uppercase tracking-wider font-bold text-[#DE6B5A]">Option 1</span>
+            <span class="text-xs opacity-50">Beach + slate blue</span>
+          </div>
+          <h3 class="serif text-2xl font-bold mb-2">Coastal Calm</h3>
+          <p class="text-sm opacity-75 leading-relaxed mb-4">
+            Warm sand base, deep slate-blue type, coral CTAs. Trustworthy, premium-natural,
+            evokes calm. A real departure from forest green.
+          </p>
+          <div class="flex gap-2 text-xs flex-wrap">
+            <span class="px-2 py-1 rounded font-mono" style="background:#F2E8D5; color:#2B4A5C;">#F2E8D5</span>
+            <span class="px-2 py-1 rounded font-mono" style="background:#2B4A5C; color:#F2E8D5;">#2B4A5C</span>
+            <span class="px-2 py-1 rounded font-mono" style="background:#DE6B5A; color:#FAEEC4;">#DE6B5A</span>
+          </div>
+          <span class="inline-block mt-4 text-sm font-semibold text-[#DE6B5A]">View full mockup →</span>
+        </div>
+      </a>
+
+      <!-- Palette 2: Olive & Clay -->
+      <a href="./02-olive-clay.html" target="_blank" class="card-hover block rounded-2xl bg-white border border-black/10 overflow-hidden">
+        <div class="h-32 grid grid-cols-5">
+          <div style="background:#F4ECDC;"></div>
+          <div style="background:#3F2A1F;"></div>
+          <div style="background:#C45A2E;"></div>
+          <div style="background:#8A8856;"></div>
+          <div style="background:#D89070;"></div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs uppercase tracking-wider font-bold text-[#C45A2E]">Option 2</span>
+            <span class="text-xs opacity-50">Pure earth tones</span>
+          </div>
+          <h3 class="serif text-2xl font-bold mb-2">Olive & Clay</h3>
+          <p class="text-sm opacity-75 leading-relaxed mb-4">
+            No green at all — earth tones throughout. Warmer than current, fully grounded.
+            Olive accent feels organic without being granola.
+          </p>
+          <div class="flex gap-2 text-xs flex-wrap">
+            <span class="px-2 py-1 rounded font-mono" style="background:#F4ECDC; color:#3F2A1F;">#F4ECDC</span>
+            <span class="px-2 py-1 rounded font-mono" style="background:#3F2A1F; color:#F4ECDC;">#3F2A1F</span>
+            <span class="px-2 py-1 rounded font-mono" style="background:#C45A2E; color:#F4ECDC;">#C45A2E</span>
+          </div>
+          <span class="inline-block mt-4 text-sm font-semibold text-[#C45A2E]">View full mockup →</span>
+        </div>
+      </a>
+
+      <!-- Palette 3: Black + Pop -->
+      <a href="./03-black-pop.html" target="_blank" class="card-hover block rounded-2xl bg-white border border-black/10 overflow-hidden">
+        <div class="h-32 grid grid-cols-5">
+          <div style="background:#F8F5EE;"></div>
+          <div style="background:#0E0E0E;"></div>
+          <div style="background:#FF5546;"></div>
+          <div style="background:#FFD93D;"></div>
+          <div style="background:#4A90E2;"></div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs uppercase tracking-wider font-bold text-[#FF5546]">Option 3</span>
+            <span class="text-xs opacity-50">Bold + scroll-stopping</span>
+          </div>
+          <h3 class="serif text-2xl font-bold mb-2">Black + Pop</h3>
+          <p class="text-sm opacity-75 leading-relaxed mb-4">
+            Modern, Liquid Death-adjacent. Hard black type with punchy coral + sunshine yellow
+            + pop blue. Maximum energy. Not for everyone — that's the point.
+          </p>
+          <div class="flex gap-2 text-xs flex-wrap">
+            <span class="px-2 py-1 rounded font-mono" style="background:#F8F5EE; color:#0E0E0E;">#F8F5EE</span>
+            <span class="px-2 py-1 rounded font-mono" style="background:#0E0E0E; color:#FFD93D;">#0E0E0E</span>
+            <span class="px-2 py-1 rounded font-mono" style="background:#FF5546; color:white;">#FF5546</span>
+          </div>
+          <span class="inline-block mt-4 text-sm font-semibold text-[#FF5546]">View full mockup →</span>
+        </div>
+      </a>
+
+      <!-- Palette 4: Apothecary Premium -->
+      <a href="./04-apothecary-premium.html" target="_blank" class="card-hover block rounded-2xl bg-white border border-black/10 overflow-hidden">
+        <div class="h-32 grid grid-cols-5">
+          <div style="background:#F5EFE6;"></div>
+          <div style="background:#15233D;"></div>
+          <div style="background:#B5673D;"></div>
+          <div style="background:#C49A4A;"></div>
+          <div style="background:#A8B59C;"></div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs uppercase tracking-wider font-bold text-[#B5673D]">Option 4</span>
+            <span class="text-xs opacity-50">Premium + clinical</span>
+          </div>
+          <h3 class="serif text-2xl font-bold mb-2">Apothecary Premium</h3>
+          <p class="text-sm opacity-75 leading-relaxed mb-4">
+            Navy + cream + burnished copper + soft gold + dusty sage. Reads upscale — pulls
+            the brand toward apothecary / premium-clinical territory. Quieter use of color.
+          </p>
+          <div class="flex gap-2 text-xs flex-wrap">
+            <span class="px-2 py-1 rounded font-mono" style="background:#F5EFE6; color:#15233D;">#F5EFE6</span>
+            <span class="px-2 py-1 rounded font-mono" style="background:#15233D; color:#C49A4A;">#15233D</span>
+            <span class="px-2 py-1 rounded font-mono" style="background:#B5673D; color:#F5EFE6;">#B5673D</span>
+          </div>
+          <span class="inline-block mt-4 text-sm font-semibold text-[#B5673D]">View full mockup →</span>
+        </div>
+      </a>
+
+      <!-- Palette 5: Sunset Warm (spans 2 cols on md) -->
+      <a href="./05-sunset-warm.html" target="_blank" class="card-hover block rounded-2xl bg-white border border-black/10 overflow-hidden md:col-span-2">
+        <div class="h-32 grid grid-cols-5">
+          <div style="background:#F7EBD4;"></div>
+          <div style="background:#3A2418;"></div>
+          <div style="background:#C4502E;"></div>
+          <div style="background:#D9A02B;"></div>
+          <div style="background:#E8A98E;"></div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs uppercase tracking-wider font-bold text-[#C4502E]">Option 5</span>
+            <span class="text-xs opacity-50">70s-modern, warm + retro</span>
+          </div>
+          <h3 class="serif text-2xl font-bold mb-2">Sunset Warm</h3>
+          <p class="text-sm opacity-75 leading-relaxed mb-4">
+            Rust + mustard + clay pink + cream. Think Olipop, Magic Spoon, modern brands with
+            retro chops. The warmest of the five — earthy and friendly, with serious type discipline
+            underneath.
+          </p>
+          <div class="flex gap-2 text-xs flex-wrap">
+            <span class="px-2 py-1 rounded font-mono" style="background:#F7EBD4; color:#3A2418;">#F7EBD4</span>
+            <span class="px-2 py-1 rounded font-mono" style="background:#3A2418; color:#D9A02B;">#3A2418</span>
+            <span class="px-2 py-1 rounded font-mono" style="background:#C4502E; color:#F7EBD4;">#C4502E</span>
+            <span class="px-2 py-1 rounded font-mono" style="background:#D9A02B; color:#3A2418;">#D9A02B</span>
+          </div>
+          <span class="inline-block mt-4 text-sm font-semibold text-[#C4502E]">View full mockup →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- How to use -->
+  <section class="bg-[#1F3A2E] text-[#F5EFE6] py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="serif text-3xl font-bold mb-6">How to decide</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-sm leading-relaxed">
+        <div>
+          <div class="serif italic text-[#E8B547] mb-2 text-xl">1.</div>
+          <p>Open all 5 in new tabs. Look at the hero first — that's the page that does 80% of the brand work.</p>
+        </div>
+        <div>
+          <div class="serif italic text-[#E8B547] mb-2 text-xl">2.</div>
+          <p>Compare each against the current site at <a href="https://pawbite.vercel.app" target="_blank" class="underline">pawbite.vercel.app</a>. Which one looks more like a brand you'd buy from?</p>
+        </div>
+        <div>
+          <div class="serif italic text-[#E8B547] mb-2 text-xl">3.</div>
+          <p>Tell Claude the option number. The chosen palette gets applied to the live site (tailwind config + globals.css + a few component tweaks).</p>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-[#F5EFE6]/20 text-sm opacity-70">
+        <strong class="opacity-100">Note:</strong> These are simplified mockups — hero + stat band + product showcase + footer. The real homepage has 13 sections. Once you pick a palette, all 105+ pages on the live site inherit the new colors automatically (they use Tailwind tokens, not hardcoded hex).
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

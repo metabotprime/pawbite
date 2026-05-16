@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PawBite — Daily chews for a happier dog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@400;600;700&family=Fraunces:opsz,wght,SOFT@9..144,400..900,30..100&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'p-base': '#F4ECDC',
+            'p-base-2': '#FAF4E5',
+            'p-text': '#3F2A1F',
+            'p-text-deep': '#2B1F18',
+            'p-cta': '#C45A2E',
+            'p-cta-dark': '#A04A26',
+            'p-acc1': '#8A8856',
+            'p-acc2': '#D89070',
+            'p-body': '#2B1F18',
+          },
+          fontFamily: {
+            display: ['"Bagel Fat One"', 'serif'],
+            serif: ['Fraunces', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            hand: ['Caveat', 'cursive'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F4ECDC;
+      color: #2B1F18;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-fraunces-soft {
+      font-family: 'Fraunces', serif;
+      font-variation-settings: "SOFT" 100, "opsz" 144;
+      letter-spacing: -0.01em;
+    }
+    .polaroid {
+      background: #FAF4E5;
+      padding: 14px 14px 56px 14px;
+      border-radius: 4px;
+      box-shadow: 0 30px 60px -20px rgba(63,42,31,0.35),
+                  0 12px 24px -10px rgba(63,42,31,0.25);
+    }
+    .tape {
+      position: absolute;
+      width: 110px;
+      height: 28px;
+      background: rgba(216,144,112,0.55);
+      border-left: 1px dashed rgba(255,255,255,0.4);
+      border-right: 1px dashed rgba(255,255,255,0.4);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .squiggle {
+      position: absolute;
+      pointer-events: none;
+    }
+    .canister {
+      border-radius: 18px;
+      background: linear-gradient(180deg, #FAF4E5 0%, #F4ECDC 100%);
+      box-shadow:
+        0 30px 50px -20px rgba(63,42,31,0.35),
+        0 12px 24px -10px rgba(63,42,31,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+      border: 1px solid rgba(63,42,31,0.08);
+    }
+    .canister-cap {
+      background: linear-gradient(180deg, #3F2A1F 0%, #2B1F18 100%);
+      border-radius: 14px 14px 6px 6px;
+      box-shadow: inset 0 -3px 6px rgba(0,0,0,0.3),
+                  inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .stat-divider {
+      background: rgba(255,255,255,0.25);
+      width: 1px;
+    }
+    .nav-shadow {
+      box-shadow: 0 2px 0 rgba(63,42,31,0.05);
+    }
+    .btn-cta {
+      background-color: #C45A2E;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 0 #A04A26;
+    }
+    .btn-cta:hover {
+      background-color: #A04A26;
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #A04A26;
+    }
+    .btn-secondary {
+      background-color: transparent;
+      border: 2px solid #3F2A1F;
+      color: #3F2A1F;
+      transition: all 0.2s ease;
+    }
+    .btn-secondary:hover {
+      background-color: #3F2A1F;
+      color: #F4ECDC;
+    }
+    .ring-band-olive { background-color: #8A8856; }
+    .ring-band-cta { background-color: #C45A2E; }
+    .ring-band-clay { background-color: #D89070; }
+    .featured-card {
+      transform: translateY(-12px) scale(1.02);
+    }
+    @media (max-width: 768px) {
+      .featured-card { transform: none; }
+    }
+    .wordmark {
+      font-family: 'Bagel Fat One', serif;
+      letter-spacing: -0.01em;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body class="bg-p-base text-p-body">
+
+  <!-- ============ WELCOME BANNER ============ -->
+  <div class="bg-p-text text-p-base text-center text-sm py-2.5 px-4">
+    <span class="font-medium">
+      Welcome offer: <span class="font-bold">30% off your first order + free shipping.</span>
+      Code <span class="font-mono bg-p-base/10 px-2 py-0.5 rounded">WELCOME</span>
+    </span>
+  </div>
+
+  <!-- ============ STICKY NAV ============ -->
+  <nav class="sticky top-0 z-50 bg-p-base/95 backdrop-blur-sm nav-shadow">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Wordmark + mascot -->
+      <a href="#" class="flex items-center gap-2.5">
+        <!-- Inline mascot SVG -->
+        <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <ellipse cx="20" cy="24" rx="13" ry="11" fill="#3F2A1F"/>
+          <ellipse cx="10" cy="14" rx="5" ry="6.5" fill="#3F2A1F" transform="rotate(-25 10 14)"/>
+          <ellipse cx="30" cy="14" rx="5" ry="6.5" fill="#3F2A1F" transform="rotate(25 30 14)"/>
+          <circle cx="15.5" cy="22" r="1.6" fill="#FAF4E5"/>
+          <circle cx="24.5" cy="22" r="1.6" fill="#FAF4E5"/>
+          <ellipse cx="20" cy="27" rx="2.6" ry="1.8" fill="#C45A2E"/>
+          <path d="M16 30 Q20 33 24 30" stroke="#FAF4E5" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+        </svg>
+        <span class="wordmark text-3xl text-p-text">PawBite</span>
+      </a>
+
+      <!-- Nav links -->
+      <div class="hidden md:flex items-center gap-9 text-p-text font-medium">
+        <a href="#" class="hover:text-p-cta transition">Shop</a>
+        <a href="#" class="hover:text-p-cta transition">Quiz</a>
+        <a href="#" class="hover:text-p-cta transition">Learn</a>
+        <a href="#" class="hover:text-p-cta transition">About</a>
+      </div>
+
+      <!-- CTA -->
+      <a href="#"
+         class="btn-cta text-white px-5 py-2.5 rounded-full font-semibold text-sm flex items-center gap-2">
+        Take the quiz
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M13 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="relative overflow-hidden">
+    <!-- Soft background squiggles -->
+    <svg class="absolute top-10 right-10 opacity-30 hidden md:block" width="120" height="60" viewBox="0 0 120 60" fill="none" aria-hidden="true">
+      <path d="M5 30 Q20 5 35 30 T65 30 T95 30 T115 30" stroke="#8A8856" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+
+      <!-- LEFT: Founder polaroid -->
+      <div class="relative flex justify-center md:justify-start">
+        <!-- Decorative squiggle behind -->
+        <svg class="squiggle -top-6 -left-4 opacity-60" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+          <path d="M10 40 Q25 10 40 40 T70 40" stroke="#D89070" stroke-width="3" stroke-linecap="round" fill="none"/>
+        </svg>
+        <svg class="squiggle -bottom-4 right-2 opacity-70" width="100" height="40" viewBox="0 0 100 40" fill="none" aria-hidden="true">
+          <path d="M5 20 Q25 0 45 20 T85 20" stroke="#8A8856" stroke-width="3" stroke-linecap="round" fill="none"/>
+        </svg>
+        <!-- Stars -->
+        <svg class="squiggle top-10 -right-2 opacity-80" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 2 L18.5 13.5 L30 16 L18.5 18.5 L16 30 L13.5 18.5 L2 16 L13.5 13.5 Z" fill="#C45A2E"/>
+        </svg>
+
+        <div class="polaroid relative" style="transform: rotate(-3deg); max-width: 420px;">
+          <!-- Tape -->
+          <div class="tape" style="top: -14px; left: 50%; transform: translateX(-50%) rotate(-4deg);"></div>
+          <div class="tape" style="bottom: 12px; right: -20px; transform: rotate(35deg); width: 80px;"></div>
+          <img
+            src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&q=80"
+            alt="Noah and his dog Theo"
+            class="w-full h-[420px] object-cover rounded-sm"
+            loading="lazy"
+          />
+          <p class="absolute bottom-4 left-0 right-0 text-center font-hand text-2xl text-p-text">
+            Theo &amp; me, 2023
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT: Copy -->
+      <div class="relative">
+        <p class="font-hand text-2xl text-p-acc1 mb-3">— A note from our founder</p>
+        <h1 class="font-fraunces-soft font-medium text-5xl md:text-6xl lg:text-7xl text-p-text leading-[1.05] mb-7">
+          I started PawBite because my dog Theo&rsquo;s gut was a wreck.
+        </h1>
+
+        <div class="space-y-4 text-lg text-p-body/85 leading-relaxed mb-6 max-w-xl">
+          <p>
+            For two years Theo had bad days more often than good ones. Bloating after meals, the occasional accident on the rug, ear infections that kept circling back. Our vet shrugged. The internet sold me twelve different things.
+          </p>
+          <p>
+            Nothing was made for the dog in front of me. So I worked with a veterinary nutritionist to build the chews I wished I&rsquo;d had on day one. Five clinical probiotic strains, the right CFU count, ingredients you can actually pronounce.
+          </p>
+          <p>
+            Three months in, Theo was a different dog. PawBite exists so you don&rsquo;t have to spend two years guessing.
+          </p>
+        </div>
+
+        <p class="font-hand text-2xl text-p-text mb-8">— Noah Chang, founder</p>
+
+        <!-- Trust line -->
+        <div class="flex items-center gap-2 mb-7 text-sm text-p-text/75">
+          <div class="flex -space-x-1.5">
+            <span class="w-6 h-6 rounded-full bg-p-acc1 border-2 border-p-base"></span>
+            <span class="w-6 h-6 rounded-full bg-p-acc2 border-2 border-p-base"></span>
+            <span class="w-6 h-6 rounded-full bg-p-cta border-2 border-p-base"></span>
+            <span class="w-6 h-6 rounded-full bg-p-text border-2 border-p-base"></span>
+          </div>
+          <span class="font-medium">12,000+ dogs on a daily PawBite routine</span>
+          <span class="text-p-acc1">·</span>
+          <span class="flex items-center gap-0.5 text-p-cta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </span>
+          <span class="font-semibold text-p-text">4.8</span>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-wrap gap-3">
+          <a href="#" class="btn-cta text-white px-7 py-3.5 rounded-full font-semibold inline-flex items-center gap-2">
+            Shop the chews
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#" class="btn-secondary px-7 py-3.5 rounded-full font-semibold inline-flex items-center gap-2">
+            Take the 60-sec quiz
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4-STAT BAND ============ -->
+  <section class="bg-p-cta text-p-base-2">
+    <div class="max-w-7xl mx-auto px-6 py-12 md:py-14">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 md:gap-x-0 relative">
+        <!-- Stat 1 -->
+        <div class="text-center px-4 md:px-6">
+          <p class="font-fraunces-soft font-medium text-4xl md:text-5xl mb-2">5 BILLION</p>
+          <p class="text-sm md:text-base font-medium uppercase tracking-wider opacity-90">CFUs per chew</p>
+        </div>
+        <!-- divider -->
+        <div class="hidden md:block stat-divider absolute left-1/4 top-2 bottom-2"></div>
+
+        <!-- Stat 2 -->
+        <div class="text-center px-4 md:px-6">
+          <p class="font-fraunces-soft font-medium text-4xl md:text-5xl mb-2">5 STRAINS</p>
+          <p class="text-sm md:text-base font-medium uppercase tracking-wider opacity-90">all third-party tested</p>
+        </div>
+        <div class="hidden md:block stat-divider absolute left-2/4 top-2 bottom-2"></div>
+
+        <!-- Stat 3 -->
+        <div class="text-center px-4 md:px-6">
+          <p class="font-fraunces-soft font-medium text-4xl md:text-5xl mb-2">90 DAYS</p>
+          <p class="text-sm md:text-base font-medium uppercase tracking-wider opacity-90">money-back guarantee</p>
+        </div>
+        <div class="hidden md:block stat-divider absolute left-3/4 top-2 bottom-2"></div>
+
+        <!-- Stat 4 -->
+        <div class="text-center px-4 md:px-6">
+          <p class="font-fraunces-soft font-medium text-4xl md:text-5xl mb-2">MADE IN USA</p>
+          <p class="text-sm md:text-base font-medium uppercase tracking-wider opacity-90">cGMP-certified</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT SHOWCASE ============ -->
+  <section class="py-20 md:py-28 bg-p-base">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <p class="font-hand text-2xl text-p-acc1 mb-3">— The lineup</p>
+        <h2 class="font-fraunces-soft font-medium text-5xl md:text-6xl text-p-text leading-tight mb-5">
+          What Theo takes daily.
+        </h2>
+        <p class="text-lg text-p-body/75 leading-relaxed">
+          Two chews, one easy bundle. Pick the one that fits your dog or grab the duo and save.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-7 md:gap-6">
+
+        <!-- ===== CARD 1: Daily Probiotic ===== -->
+        <div class="bg-p-base-2 rounded-3xl p-7 flex flex-col" style="box-shadow: 0 20px 40px -20px rgba(63,42,31,0.2);">
+          <!-- Canister -->
+          <div class="bg-p-base rounded-2xl p-8 mb-6 flex items-center justify-center" style="min-height: 280px;">
+            <div class="canister w-40 h-56 relative flex flex-col items-center justify-center">
+              <div class="canister-cap absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-5"></div>
+              <!-- Wordmark -->
+              <div class="text-center mt-2">
+                <p class="wordmark text-xl text-p-text leading-none">PawBite</p>
+              </div>
+              <!-- Color band -->
+              <div class="ring-band-olive w-full py-3 my-3 text-center">
+                <p class="font-fraunces-soft text-white font-semibold text-base leading-tight px-2">Daily<br/>Probiotic</p>
+              </div>
+              <!-- Bottom label -->
+              <p class="text-[9px] font-bold tracking-widest text-p-text/70 uppercase">30 Soft Chews</p>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="flex-grow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="chip bg-p-acc1/15 text-p-acc1">
+                <span class="w-1.5 h-1.5 rounded-full bg-p-acc1"></span>
+                Gut health
+              </span>
+              <span class="text-sm font-semibold text-p-text">$34</span>
+            </div>
+            <h3 class="font-fraunces-soft font-medium text-2xl text-p-text mb-2">Daily Probiotic</h3>
+            <p class="text-sm text-p-body/75 leading-relaxed mb-5">
+              Five clinical strains and a prebiotic boost. For the dog with a sensitive stomach, on-and-off appetite, or recovering from antibiotics.
+            </p>
+            <ul class="text-sm text-p-body/80 space-y-1.5 mb-6">
+              <li class="flex gap-2"><span class="text-p-acc1">✓</span> Bacon-flavor soft chew</li>
+              <li class="flex gap-2"><span class="text-p-acc1">✓</span> 5B CFUs per chew</li>
+              <li class="flex gap-2"><span class="text-p-acc1">✓</span> No corn, wheat, soy</li>
+            </ul>
+          </div>
+          <a href="#" class="text-center bg-p-text text-p-base py-3 rounded-full font-semibold text-sm hover:bg-p-text-deep transition">
+            Add to cart — $34
+          </a>
+        </div>
+
+        <!-- ===== CARD 2 (FEATURED): Daily Duo ===== -->
+        <div class="bg-p-base-2 rounded-3xl p-7 flex flex-col featured-card relative" style="box-shadow: 0 30px 60px -20px rgba(63,42,31,0.35); border: 2px solid #D89070;">
+          <!-- Most popular ribbon -->
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-p-acc2 text-p-text px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+            Most popular · Save 32%
+          </div>
+
+          <!-- Canister duo -->
+          <div class="bg-p-base rounded-2xl p-8 mb-6 flex items-center justify-center gap-2" style="min-height: 280px;">
+            <div class="canister w-28 h-48 relative flex flex-col items-center justify-center" style="transform: rotate(-4deg);">
+              <div class="canister-cap absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-4"></div>
+              <p class="wordmark text-sm text-p-text leading-none mt-2">PawBite</p>
+              <div class="ring-band-olive w-full py-2 my-2 text-center">
+                <p class="font-fraunces-soft text-white font-semibold text-[11px] leading-tight px-1">Probiotic</p>
+              </div>
+              <p class="text-[7px] font-bold tracking-widest text-p-text/70 uppercase">30 Chews</p>
+            </div>
+            <div class="canister w-28 h-48 relative flex flex-col items-center justify-center" style="transform: rotate(4deg);">
+              <div class="canister-cap absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-4"></div>
+              <p class="wordmark text-sm text-p-text leading-none mt-2">PawBite</p>
+              <div class="ring-band-cta w-full py-2 my-2 text-center">
+                <p class="font-fraunces-soft text-white font-semibold text-[11px] leading-tight px-1">Hip + Joint</p>
+              </div>
+              <p class="text-[7px] font-bold tracking-widest text-p-text/70 uppercase">30 Chews</p>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="flex-grow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="chip bg-p-acc2/20 text-p-text">
+                <span class="w-1.5 h-1.5 rounded-full bg-p-acc2"></span>
+                Best value
+              </span>
+              <div class="text-right">
+                <span class="text-sm text-p-text/50 line-through mr-1">$68</span>
+                <span class="text-sm font-semibold text-p-cta">$46</span>
+              </div>
+            </div>
+            <h3 class="font-fraunces-soft font-medium text-2xl text-p-text mb-2">Daily Duo</h3>
+            <p class="text-sm text-p-body/75 leading-relaxed mb-5">
+              Both chews on a routine. Cover gut and joints in one go &mdash; what Theo takes every morning with breakfast.
+            </p>
+            <ul class="text-sm text-p-body/80 space-y-1.5 mb-6">
+              <li class="flex gap-2"><span class="text-p-acc2">✓</span> Both formulas, 30 chews each</li>
+              <li class="flex gap-2"><span class="text-p-acc2">✓</span> Save $22 vs. buying separately</li>
+              <li class="flex gap-2"><span class="text-p-acc2">✓</span> Free shipping, free swap anytime</li>
+            </ul>
+          </div>
+          <a href="#" class="text-center btn-cta text-white py-3 rounded-full font-semibold text-sm">
+            Add the duo — $46
+          </a>
+        </div>
+
+        <!-- ===== CARD 3: Hip + Joint ===== -->
+        <div class="bg-p-base-2 rounded-3xl p-7 flex flex-col" style="box-shadow: 0 20px 40px -20px rgba(63,42,31,0.2);">
+          <div class="bg-p-base rounded-2xl p-8 mb-6 flex items-center justify-center" style="min-height: 280px;">
+            <div class="canister w-40 h-56 relative flex flex-col items-center justify-center">
+              <div class="canister-cap absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-5"></div>
+              <div class="text-center mt-2">
+                <p class="wordmark text-xl text-p-text leading-none">PawBite</p>
+              </div>
+              <div class="ring-band-cta w-full py-3 my-3 text-center">
+                <p class="font-fraunces-soft text-white font-semibold text-base leading-tight px-2">Hip + Joint</p>
+              </div>
+              <p class="text-[9px] font-bold tracking-widest text-p-text/70 uppercase">30 Soft Chews</p>
+            </div>
+          </div>
+
+          <div class="flex-grow">
+            <div class="flex items-center justify-between mb-3">
+              <span class="chip bg-p-cta/15 text-p-cta">
+                <span class="w-1.5 h-1.5 rounded-full bg-p-cta"></span>
+                Mobility
+              </span>
+              <span class="text-sm font-semibold text-p-text">$34</span>
+            </div>
+            <h3 class="font-fraunces-soft font-medium text-2xl text-p-text mb-2">Hip + Joint</h3>
+            <p class="text-sm text-p-body/75 leading-relaxed mb-5">
+              Glucosamine, chondroitin, MSM and green-lipped mussel. For senior dogs, big breeds, or any pace that&rsquo;s slowing down.
+            </p>
+            <ul class="text-sm text-p-body/80 space-y-1.5 mb-6">
+              <li class="flex gap-2"><span class="text-p-cta">✓</span> Chicken-flavor soft chew</li>
+              <li class="flex gap-2"><span class="text-p-cta">✓</span> 4 active ingredients</li>
+              <li class="flex gap-2"><span class="text-p-cta">✓</span> Vet-formulated</li>
+            </ul>
+          </div>
+          <a href="#" class="text-center bg-p-text text-p-base py-3 rounded-full font-semibold text-sm hover:bg-p-text-deep transition">
+            Add to cart — $34
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Sub-CTA -->
+      <p class="text-center mt-12 text-p-body/70">
+        Not sure which one?
+        <a href="#" class="text-p-cta font-semibold underline decoration-p-acc2 decoration-2 underline-offset-4 hover:decoration-p-cta">Take the 60-second quiz</a>
+        and we&rsquo;ll match you.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-p-text-deep text-p-base">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
+        <!-- Brand block -->
+        <div class="col-span-2">
+          <div class="flex items-center gap-2.5 mb-4">
+            <svg width="36" height="36" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <ellipse cx="20" cy="24" rx="13" ry="11" fill="#F4ECDC"/>
+              <ellipse cx="10" cy="14" rx="5" ry="6.5" fill="#F4ECDC" transform="rotate(-25 10 14)"/>
+              <ellipse cx="30" cy="14" rx="5" ry="6.5" fill="#F4ECDC" transform="rotate(25 30 14)"/>
+              <circle cx="15.5" cy="22" r="1.6" fill="#2B1F18"/>
+              <circle cx="24.5" cy="22" r="1.6" fill="#2B1F18"/>
+              <ellipse cx="20" cy="27" rx="2.6" ry="1.8" fill="#C45A2E"/>
+            </svg>
+            <span class="wordmark text-3xl text-p-base">PawBite</span>
+          </div>
+          <p class="font-hand text-2xl text-p-acc2 mb-5">Made by humans in Hudson Valley, NY</p>
+          <p class="text-p-base/70 text-sm leading-relaxed max-w-sm mb-6">
+            Daily chews for happier dogs &mdash; built with a veterinary nutritionist, third-party tested, money-back guaranteed.
+          </p>
+
+          <!-- Socials -->
+          <div class="flex gap-3">
+            <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full border border-p-base/25 flex items-center justify-center hover:bg-p-cta hover:border-p-cta transition">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="TikTok" class="w-10 h-10 rounded-full border border-p-base/25 flex items-center justify-center hover:bg-p-cta hover:border-p-cta transition">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V9.91a8.16 8.16 0 0 0 4.77 1.52V8a4.85 4.85 0 0 1-1.84-1.31z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube" class="w-10 h-10 rounded-full border border-p-base/25 flex items-center justify-center hover:bg-p-cta hover:border-p-cta transition">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Email" class="w-10 h-10 rounded-full border border-p-base/25 flex items-center justify-center hover:bg-p-cta hover:border-p-cta transition">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Link col 1 -->
+        <div>
+          <p class="font-fraunces-soft font-semibold text-base mb-4 text-p-acc2">Shop</p>
+          <ul class="space-y-2.5 text-sm text-p-base/80">
+            <li><a href="#" class="hover:text-p-acc2 transition">Daily Probiotic</a></li>
+            <li><a href="#" class="hover:text-p-acc2 transition">Hip + Joint</a></li>
+            <li><a href="#" class="hover:text-p-acc2 transition">Daily Duo</a></li>
+            <li><a href="#" class="hover:text-p-acc2 transition">Subscribe &amp; save</a></li>
+          </ul>
+        </div>
+
+        <!-- Link col 2 -->
+        <div>
+          <p class="font-fraunces-soft font-semibold text-base mb-4 text-p-acc2">Learn</p>
+          <ul class="space-y-2.5 text-sm text-p-base/80">
+            <li><a href="#" class="hover:text-p-acc2 transition">The quiz</a></li>
+            <li><a href="#" class="hover:text-p-acc2 transition">Ingredients</a></li>
+            <li><a href="#" class="hover:text-p-acc2 transition">Vet network</a></li>
+            <li><a href="#" class="hover:text-p-acc2 transition">Reviews</a></li>
+          </ul>
+        </div>
+
+        <!-- Link col 3 -->
+        <div>
+          <p class="font-fraunces-soft font-semibold text-base mb-4 text-p-acc2">Help</p>
+          <ul class="space-y-2.5 text-sm text-p-base/80">
+            <li><a href="#" class="hover:text-p-acc2 transition">Shipping</a></li>
+            <li><a href="#" class="hover:text-p-acc2 transition">Returns</a></li>
+            <li><a href="#" class="hover:text-p-acc2 transition">Manage subscription</a></li>
+            <li><a href="#" class="hover:text-p-acc2 transition">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-p-base/15 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-p-base/55">
+        <p>&copy; 2026 PawBite Co. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a href="#" class="hover:text-p-base transition">Privacy</a>
+          <a href="#" class="hover:text-p-base transition">Terms</a>
+          <a href="#" class="hover:text-p-base transition">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
