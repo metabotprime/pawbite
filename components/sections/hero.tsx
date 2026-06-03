@@ -59,7 +59,7 @@ export function HeroSection() {
 
             <div className="flex flex-col gap-3 pt-2 sm:flex-row">
               <Button variant="primary" size="lg" asChild>
-                <Link href="/products">Shop our two essentials →</Link>
+                <Link href="/products">Shop the line →</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href="/quiz">Take the quiz</Link>

@@ -27,6 +27,7 @@ const filters = [
   { label: 'All reviews', value: 'all', active: true },
   { label: 'Daily Probiotic', value: 'daily-probiotic', active: false },
   { label: 'Hip + Joint', value: 'hip-and-joint', active: false },
+  { label: 'Calming Chew', value: 'calm', active: false },
   { label: 'Daily Duo', value: 'daily-duo', active: false },
 ];
 

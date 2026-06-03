@@ -35,6 +35,16 @@ export const testimonials: Testimonial[] = [
     beforeAfter: { metric: 'Mobility', before: 4, after: 8, days: 21 },
   },
   {
+    dogName: 'Juniper',
+    dogBreed: 'Border Collie, 3 yo',
+    ownerName: 'Dana K.',
+    ownerLocation: 'Portland, OR',
+    avatarVariant: 3,
+    quote:
+      "Juniper used to shake through every thunderstorm and turn into a different dog at the vet. We give her a Calm chew about half an hour ahead and she's still herself — just not vibrating out of her skin. It doesn't knock her out, which is exactly what I wanted.",
+    beforeAfter: { metric: 'Storm-night stress', before: 3, after: 8, days: 14 },
+  },
+  {
     dogName: 'Pickle',
     dogBreed: 'French Bulldog, 4 yo',
     ownerName: 'Priya S.',

@@ -2,6 +2,7 @@
 
 **Date:** 2026-05-06
 **Status:** Locked. Pending writing-plans → implementation.
+**⚠️ 2026-06-03 update:** Launch line expanded from 2 SKUs to **3** — a **Calming Chew** was added as SKU #3 after demand validation (see `2026-06-03-launch-product-validation.md`). Wherever this spec says "two products," the live site now ships three: Daily Probiotic, Hip + Joint, and Calm.
 **Reference design (homepage, locked):** `/Users/christosi/Desktop/pawbite claude/designs/08-hybrid-favorite.html`
 **Reference design (other candidates, for context):** `designs/01-modern-storefront.html` through `designs/07-playful-illustration.html`, indexed in `designs/index.html`
 

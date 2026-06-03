@@ -35,6 +35,10 @@ const sections: ContentSection[] = [
     body: 'Hip + Joint pulls together five actives with the strongest canine data for mobility, cartilage support, and inflammation modulation.\n\n**Glucosamine HCl (500mg).** McNamara 2017 reviewed the evidence for glucosamine in canine osteoarthritis and found consistent improvement in mobility scores at therapeutic doses. HCl form, not sulfate — better bioavailability per milligram.\n\n**Chondroitin sulfate (400mg).** Comblain 2017 demonstrated reduced cartilage breakdown markers and improved gait analysis scores when combined with glucosamine. The two work together; we ship them together.\n\n**MSM (300mg).** McCarthy 2007 reported improved owner-assessed pain scores in dogs with mild-to-moderate osteoarthritis at 50-100mg/kg. Useful adjunct, not a standalone fix.\n\n**Green-lipped mussel (150mg).** Bui and Bierer 2003 published the foundational canine work showing reduced joint pain and improved range of motion at 450mg/day in arthritic dogs. We use freeze-dried whole-organism, which preserves the omega-3 profile that does the work.\n\n**Turmeric extract (50mg, standardized to 95% curcuminoids).** Hielm-Björkman 2009 documented improvement in chronic osteoarthritis pain scores at meaningful curcuminoid doses. Bioavailability is the limit; we pair it with black pepper extract to lift absorption.\n\nDoses are per chew. Two chews per day for a 50-pound dog. Adjust by weight per the label.',
   },
   {
+    heading: 'Our calming actives.',
+    body: "Calm is the newest formula and the one where we hold the line hardest on claims. Anxiety research in dogs is younger than the gut and joint literature, so we lead with the ingredients that actually have canine data and we tell you plainly which ones don't yet.\n\n**L-theanine / Suntheanine (100mg).** This is the anchor, and the reason Calm exists. Araujo 2010 ran a controlled trial of L-theanine in dogs and found reduced fear and anxiety-related behavior — without sedation. L-theanine promotes the alpha-wave activity associated with calm focus rather than drowsiness. It has the most direct canine evidence of any calming ingredient, which is why it's the largest dose in the chew.\n\n**Bacillus coagulans GBI-30, 6086 (1 billion CFU).** The gut-brain piece. McGowan 2018 reported that a probiotic strain measurably reduced anxious behaviors in dogs over a six-week trial. The gut-brain axis is real, and anxious dogs are disproportionately gut-unsettled dogs — so we put a probiotic strain in Calm for the same reason we built the company around the gut.\n\n**Ashwagandha root (50mg).** An adaptogen with strong human stress-response data and a long traditional-use record; direct canine trial data is still emerging. We dose it conservatively and we'll say it straight: this one rides on mechanistic and cross-species evidence, not a canine RCT. The L-theanine is doing the heavy lifting regardless.\n\n**Organic chamomile (100mg).** A traditional calming herb — gentle, with a long safety record. A supporting actor, not the lead.\n\nWhat's deliberately not in Calm: no melatonin, no sedatives, no CBD. We wanted calm without sedation — a dog that's still themselves, just less wound up.",
+  },
+  {
     heading: 'How our content is reviewed.',
     body: "Every article on PawBite is read line-by-line by Dr. M. Hayes, DVM before it publishes. We don't use 'medically reviewed' as a label — we use it as a process.\n\n**The draft.** An editorial writer drafts the piece using only peer-reviewed sources, vet guidelines (AAHA, WSAVA), and primary research. Every numeric claim has a citation.\n\n**The review.** Dr. Hayes reads the full draft. Anything that's oversimplified, unsupported, or out of step with current standard of care gets flagged. Comments are inline. If a claim can't be defended, it gets cut. If a claim is borderline, we add the caveat.\n\n**The republish.** When new research lands or guidelines shift, we update the page, re-review, and re-stamp. The publish date and last-review date are both on every article.\n\nThis is slow, expensive, and produces fewer articles than it would otherwise. We think it's the only honest way to do health content.",
   },
@@ -114,6 +118,20 @@ const sources: ContentSource[] = [
       'An un-commissioned randomized, placebo-controlled double-blind study to test the effect of deep sea fish oil as a pain reliever for dogs suffering from canine OA.',
     journal: 'BMC Veterinary Research',
   },
+  {
+    author: 'Araujo et al.',
+    year: 2010,
+    title:
+      'Anxitane (L-theanine) tablets reduce fear of human beings in a laboratory model of anxiety-related behavior.',
+    journal: 'Journal of Veterinary Behavior',
+  },
+  {
+    author: 'McGowan et al.',
+    year: 2018,
+    title:
+      'Tapping into those gut feelings: impact of a probiotic (Bifidobacterium longum BL999) on anxiety-related behavior in dogs.',
+    journal: 'American College of Veterinary Behaviorists Proceedings',
+  },
 ];
 
 const faqs: ContentFAQ[] = [
@@ -186,7 +204,7 @@ export default function SciencePage() {
         sources={sources}
         faqs={faqs}
         recommendsProduct="daily-duo"
-        recommendsContext="The Daily Duo bundles both formulas — every strain and active discussed above, dosed daily."
+        recommendsContext="The Daily Duo bundles our two daily essentials — the probiotic and joint formulas above — at 32% off. Calm is sold separately, for the dogs who need it."
       />
     </>
   );

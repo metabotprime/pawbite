@@ -56,7 +56,7 @@ export function TestimonialsSection() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {testimonials.map((t) => (
+          {testimonials.slice(0, 3).map((t) => (
             <article
               key={t.dogName}
               className="flex flex-col rounded-3xl border border-forest/10 bg-cream p-6"
