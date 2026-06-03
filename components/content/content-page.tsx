@@ -70,7 +70,7 @@ export function ContentPage({
           {hubLink ? (
             <Link
               href={hubLink.href}
-              className="font-mono uppercase tracking-wider text-terracotta hover:underline"
+              className="font-mono uppercase tracking-wider text-terracotta-dark hover:underline"
             >
               ← {hubLink.label}
             </Link>

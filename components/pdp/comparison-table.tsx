@@ -19,11 +19,11 @@ export function ComparisonTable({ comparison }: { comparison: CompetitorCompare 
               <th className="px-4 py-4 font-mono text-xs uppercase tracking-wider text-forest/70">
                 Feature
               </th>
-              <th className="px-4 py-4 font-mono text-xs uppercase tracking-wider text-terracotta">
+              <th className="px-4 py-4 font-mono text-xs uppercase tracking-wider text-terracotta-dark">
                 <Check size={14} className="mr-1 inline" />
                 PawBite
               </th>
-              <th className="px-4 py-4 font-mono text-xs uppercase tracking-wider text-forest/50">
+              <th className="px-4 py-4 font-mono text-xs uppercase tracking-wider text-forest/60">
                 {comparison.competitor}
               </th>
             </tr>
@@ -32,7 +32,9 @@ export function ComparisonTable({ comparison }: { comparison: CompetitorCompare 
             {comparison.rows.map((row, idx) => (
               <tr key={row.feature} className={idx % 2 ? 'bg-cream/30' : ''}>
                 <td className="px-4 py-3 text-sm font-medium text-forest">{row.feature}</td>
-                <td className="px-4 py-3 text-sm font-semibold text-terracotta">{row.pawbite}</td>
+                <td className="px-4 py-3 text-sm font-semibold text-terracotta-dark">
+                  {row.pawbite}
+                </td>
                 <td className="px-4 py-3 text-sm text-charcoal/70">{row.competitor}</td>
               </tr>
             ))}

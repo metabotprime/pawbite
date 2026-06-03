@@ -39,7 +39,7 @@ export function IngredientsTable({
             {ingredients.map((i, idx) => (
               <tr key={i.name} className={idx % 2 ? 'bg-cream/30' : ''}>
                 <td className="px-4 py-3 font-mono text-sm text-forest">{i.name}</td>
-                <td className="px-4 py-3 font-mono text-sm font-bold text-terracotta">
+                <td className="px-4 py-3 font-mono text-sm font-bold text-terracotta-dark">
                   {i.amount}
                 </td>
                 <td className="px-4 py-3 text-sm text-charcoal">{i.role}</td>

@@ -51,7 +51,7 @@ export default function GlobalError({ error, reset }: ErrorProps) {
         </div>
 
         {error.digest && (
-          <p className="mt-12 font-mono text-xs text-charcoal/50">
+          <p className="mt-12 font-mono text-xs text-charcoal/60">
             Error reference: {error.digest}
           </p>
         )}

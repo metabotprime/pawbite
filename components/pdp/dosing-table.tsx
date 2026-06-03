@@ -15,7 +15,7 @@ export function DosingTable({ dosing, note }: { dosing: DosingRow[]; note: strin
             key={row.weightRange}
             className="rounded-2xl border border-forest/15 bg-offwhite p-4 text-center"
           >
-            <div className="mb-2 font-mono text-xs uppercase tracking-wider text-terracotta">
+            <div className="mb-2 font-mono text-xs uppercase tracking-wider text-terracotta-dark">
               {row.weightRange}
             </div>
             <div className="fraunces-soft text-2xl font-bold text-forest">{row.amount}</div>

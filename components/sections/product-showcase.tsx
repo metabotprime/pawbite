@@ -113,7 +113,7 @@ export function ProductShowcase() {
                 <span className="text-3xl font-bold text-warmyellow">
                   ${dailyDuo.subPrice.toFixed(2)}
                 </span>
-                <span className="text-sm text-cream/50 line-through">${dailyDuo.retailPrice}</span>
+                <span className="text-sm text-cream/70 line-through">${dailyDuo.retailPrice}</span>
                 <span className="text-xs text-cream/70">/ mo</span>
               </div>
               <Button variant="light" size="md">

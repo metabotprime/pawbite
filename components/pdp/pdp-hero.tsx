@@ -49,7 +49,7 @@ export function PdpHero({ product }: { product: ProductDetail }) {
               type="button"
               onClick={() => setSubscribe(true)}
               className={cn(
-                'flex-1 rounded-full border-2 px-4 py-2 text-sm font-semibold transition-all',
+                'flex-1 rounded-full border-2 px-4 py-2 text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2',
                 subscribe
                   ? 'border-terracotta bg-terracotta text-cream'
                   : 'border-forest/20 bg-transparent text-forest hover:border-forest',
@@ -61,7 +61,7 @@ export function PdpHero({ product }: { product: ProductDetail }) {
               type="button"
               onClick={() => setSubscribe(false)}
               className={cn(
-                'flex-1 rounded-full border-2 px-4 py-2 text-sm font-semibold transition-all',
+                'flex-1 rounded-full border-2 px-4 py-2 text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2',
                 !subscribe
                   ? 'border-forest bg-forest text-cream'
                   : 'border-forest/20 bg-transparent text-forest hover:border-forest',

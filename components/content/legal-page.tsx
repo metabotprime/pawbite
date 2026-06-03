@@ -25,7 +25,7 @@ export function LegalPage({ title, lastUpdated, intro, sections, contactNote }: 
       <Container size="narrow">
         <Link
           href="/"
-          className="mb-6 inline-block font-mono text-xs uppercase tracking-wider text-terracotta hover:underline"
+          className="mb-6 inline-block font-mono text-xs uppercase tracking-wider text-terracotta-dark hover:underline"
         >
           ← Home
         </Link>

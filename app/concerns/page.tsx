@@ -41,7 +41,7 @@ export default function ConcernsHub() {
                   {c.concernName}
                 </h2>
                 <p className="mb-4 line-clamp-3 text-sm text-charcoal">{c.tldr}</p>
-                <span className="text-xs font-semibold text-terracotta">Read the guide →</span>
+                <span className="text-xs font-semibold text-terracotta-dark">Read the guide →</span>
               </Link>
             ))}
           </div>

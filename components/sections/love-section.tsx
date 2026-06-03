@@ -2,7 +2,21 @@ import { Container } from '@/components/layout/container';
 import { Section } from '@/components/layout/section';
 import { DogChewScene } from '@/components/brand/illustrations/scenes/dog-chew-scene';
 import { CalloutPill } from '@/components/brand/illustrations/callout-pill';
-import { DashedArrow } from '@/components/brand/illustrations/icons/dashed-arrow';
+import { Sparkle } from '@/components/brand/illustrations/icons/sparkle';
+
+const goesIn = [
+  'Named, clinically-studied ingredients',
+  'Doses that match the research',
+  'Third-party tested, every single batch',
+  'Made in a cGMP-certified facility in the USA',
+];
+
+const staysOut = [
+  'No fillers or maltodextrin',
+  'No artificial colors or flavors',
+  "No mystery 'flavoring agents'",
+  'No corn, soy, or wheat',
+];
 
 export function LoveSection() {
   return (
@@ -18,53 +32,87 @@ export function LoveSection() {
           </p>
         </div>
 
-        <div className="relative mx-auto max-w-3xl rounded-3xl border-2 border-forest/15 bg-offwhite p-8 md:p-12">
-          <div className="flex justify-center">
-            <DogChewScene />
-          </div>
+        <div className="mx-auto max-w-5xl rounded-3xl border-2 border-forest/15 bg-offwhite p-8 md:p-10">
+          <div className="grid gap-10 md:grid-cols-2 md:items-center">
+            {/* Left: illustrated scene with callouts */}
+            <div className="relative">
+              <div className="flex justify-center">
+                <DogChewScene size={360} />
+              </div>
 
-          {/* Desktop callouts */}
-          <div className="pointer-events-none absolute left-2 top-12 hidden md:block">
-            <CalloutPill variant="caveat" color="warmyellow" rotation={-8}>
-              5 strains!
-            </CalloutPill>
-            <div className="ml-4 mt-1">
-              <DashedArrow className="text-terracotta" width={60} height={30} />
+              <div className="pointer-events-none absolute -left-2 top-2 hidden md:block">
+                <CalloutPill variant="caveat" color="warmyellow" rotation={-8}>
+                  5 strains!
+                </CalloutPill>
+              </div>
+              <div className="pointer-events-none absolute -right-2 top-6 hidden md:block">
+                <CalloutPill variant="caveat" color="pinky" rotation={6}>
+                  Vet-approved
+                </CalloutPill>
+              </div>
+              <div className="pointer-events-none absolute bottom-2 left-6 hidden md:block">
+                <CalloutPill variant="caveat" color="mint" rotation={-4}>
+                  Tail-wag tested
+                </CalloutPill>
+              </div>
+
+              {/* Mobile callouts */}
+              <div className="mt-6 flex flex-wrap justify-center gap-3 md:hidden">
+                <CalloutPill variant="caveat" color="warmyellow">
+                  5 strains!
+                </CalloutPill>
+                <CalloutPill variant="caveat" color="pinky" rotation={4}>
+                  Vet-approved
+                </CalloutPill>
+                <CalloutPill variant="caveat" color="mint" rotation={-3}>
+                  Tail-wag tested
+                </CalloutPill>
+              </div>
             </div>
-          </div>
 
-          <div className="pointer-events-none absolute right-2 top-10 hidden md:block">
-            <CalloutPill variant="caveat" color="pinky" rotation={6}>
-              Vet-approved
-            </CalloutPill>
-          </div>
+            {/* Right: what goes in / what stays out */}
+            <div className="space-y-6">
+              <div>
+                <div className="mb-3 flex items-center gap-2">
+                  <Sparkle size={20} className="text-warmyellow" />
+                  <h3 className="fraunces-soft text-xl font-bold text-forest">What goes in</h3>
+                </div>
+                <ul className="space-y-2.5">
+                  {goesIn.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span
+                        aria-hidden
+                        className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-mint text-xs font-bold text-forest"
+                      >
+                        ✓
+                      </span>
+                      <span className="text-sm leading-relaxed text-charcoal">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-          <div className="pointer-events-none absolute bottom-20 left-4 hidden md:block">
-            <CalloutPill variant="caveat" color="mint" rotation={-4}>
-              No fillers
-            </CalloutPill>
-          </div>
+              <div className="h-px w-full bg-forest/10" />
 
-          <div className="pointer-events-none absolute bottom-16 right-4 hidden md:block">
-            <CalloutPill variant="caveat" color="terracotta" rotation={5}>
-              Tail-wag tested
-            </CalloutPill>
-          </div>
-
-          {/* Mobile callouts */}
-          <div className="mt-8 flex flex-wrap justify-center gap-3 md:hidden">
-            <CalloutPill variant="caveat" color="warmyellow">
-              5 strains!
-            </CalloutPill>
-            <CalloutPill variant="caveat" color="pinky" rotation={4}>
-              Vet-approved
-            </CalloutPill>
-            <CalloutPill variant="caveat" color="mint" rotation={-3}>
-              No fillers
-            </CalloutPill>
-            <CalloutPill variant="caveat" color="terracotta" rotation={2}>
-              Tail-wag tested
-            </CalloutPill>
+              <div>
+                <div className="mb-3 flex items-center gap-2">
+                  <h3 className="fraunces-soft text-xl font-bold text-forest">What stays out</h3>
+                </div>
+                <ul className="space-y-2.5">
+                  {staysOut.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span
+                        aria-hidden
+                        className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-terracotta/15 text-xs font-bold text-terracotta-dark"
+                      >
+                        ✕
+                      </span>
+                      <span className="text-sm leading-relaxed text-charcoal">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

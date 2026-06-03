@@ -47,7 +47,7 @@ export function NewsletterSection() {
                   id="newsletter-email"
                   type="email"
                   placeholder="you@email.com"
-                  className="flex-1 rounded-full border-2 border-forest/15 bg-cream px-5 py-3 text-sm text-forest placeholder:text-forest/40 focus:border-terracotta focus:outline-none"
+                  className="flex-1 rounded-full border-2 border-forest/15 bg-cream px-5 py-3 text-sm text-forest placeholder:text-forest/60 focus:border-terracotta focus:outline-none"
                 />
                 <Button type="submit" variant="primary" size="md">
                   Subscribe

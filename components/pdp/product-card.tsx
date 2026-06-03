@@ -51,7 +51,7 @@ export function ProductCard({
       </div>
       <div className="text-center">
         <h3 className="fraunces-soft mb-2 text-2xl font-bold text-forest">{product.name}</h3>
-        <p className="mb-4 min-h-[3rem] text-sm leading-relaxed text-charcoal">
+        <p className="mb-4 min-h-[4rem] text-sm leading-relaxed text-charcoal">
           {product.oneLineDescription}
         </p>
         <div className="mb-4 flex items-baseline justify-center gap-2">

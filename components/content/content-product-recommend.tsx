@@ -27,7 +27,7 @@ export function ContentProductRecommend({
         </div>
         <div>
           <div className="mb-2 flex items-center gap-2">
-            <span className="font-mono text-xs uppercase tracking-wider text-terracotta">
+            <span className="font-mono text-xs uppercase tracking-wider text-terracotta-dark">
               Our recommendation
             </span>
             {product.badge && <Badge variant="warmyellow">{product.badge}</Badge>}

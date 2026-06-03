@@ -81,12 +81,15 @@ export default function QuizPage() {
                 <button
                   onClick={back}
                   disabled={step === 0}
-                  className="text-sm text-forest/60 hover:text-terracotta disabled:opacity-30"
+                  className="text-sm text-forest/60 hover:text-terracotta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 disabled:opacity-30"
                 >
                   ← Back
                 </button>
                 {currentQuestion.optional && (
-                  <button onClick={next} className="text-sm font-semibold text-terracotta">
+                  <button
+                    onClick={next}
+                    className="text-sm font-semibold text-terracotta-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2"
+                  >
                     Skip →
                   </button>
                 )}
@@ -114,7 +117,7 @@ export default function QuizPage() {
                 placeholder="you@email.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mb-4 w-full rounded-full border-2 border-forest/20 bg-offwhite px-5 py-3 text-base text-forest placeholder:text-forest/40 focus:border-terracotta focus:outline-none"
+                className="mb-4 w-full rounded-full border-2 border-forest/20 bg-offwhite px-5 py-3 text-base text-forest placeholder:text-forest/60 focus:border-terracotta focus:outline-none"
               />
 
               <Button type="submit" variant="primary" size="lg" className="w-full">
@@ -125,7 +128,7 @@ export default function QuizPage() {
                 <button
                   type="button"
                   onClick={back}
-                  className="text-sm text-forest/60 hover:text-terracotta"
+                  className="text-sm text-forest/60 hover:text-terracotta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2"
                 >
                   ← Back
                 </button>

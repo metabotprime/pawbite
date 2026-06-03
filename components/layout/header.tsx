@@ -18,6 +18,20 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   // Cart icon hidden until Phase 8 (Shopify wiring) ships functional cart
 
+  // Mobile menu keyboard + scroll management: Esc closes, body scroll locks while open.
+  React.useEffect(() => {
+    if (!mobileOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMobileOpen(false);
+    };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
   return (
     <header className="sticky top-0 z-40 border-b border-forest/10 bg-cream/95 backdrop-blur-sm">
       <Container>
@@ -49,10 +63,11 @@ export function Header() {
               <Link href="/quiz">Take the quiz</Link>
             </Button>
             <button
-              className="p-2 text-forest md:hidden"
+              className="rounded-md p-2 text-forest focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2 md:hidden"
               onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle menu"
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
+              aria-controls="mobile-nav"
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -60,7 +75,10 @@ export function Header() {
         </div>
 
         {mobileOpen && (
-          <nav className="flex flex-col gap-2 border-t border-forest/10 pb-4 pt-3 md:hidden">
+          <nav
+            id="mobile-nav"
+            className="flex flex-col gap-2 border-t border-forest/10 pb-4 pt-3 md:hidden"
+          >
             {navLinks.map((link) => (
               <Link
                 key={link.href}

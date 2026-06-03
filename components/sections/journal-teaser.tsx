@@ -24,7 +24,7 @@ export function JournalTeaser() {
           </h2>
           <Link
             href="/learn"
-            className="text-sm font-semibold text-terracotta underline-offset-4 hover:underline"
+            className="text-sm font-semibold text-terracotta-dark underline-offset-4 hover:underline"
           >
             All articles →
           </Link>
@@ -45,7 +45,7 @@ export function JournalTeaser() {
                   <Illo size={140} />
                 </div>
                 <div className="p-6">
-                  <div className="mb-2 text-xs uppercase tracking-wider text-terracotta">
+                  <div className="mb-2 text-xs uppercase tracking-wider text-terracotta-dark">
                     {entry.category} · {entry.readMin} min read
                   </div>
                   <h3 className="fraunces-soft mb-3 text-xl font-bold leading-tight text-forest group-hover:text-terracotta">

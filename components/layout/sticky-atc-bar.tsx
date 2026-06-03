@@ -40,7 +40,7 @@ export function StickyATCBar({ show = true }: StickyATCBarProps) {
               <div className="truncate text-xs font-semibold text-forest">The Daily Duo</div>
               <div className="text-xs text-forest/70">
                 <span className="font-bold text-terracotta">$47.60</span>
-                <span className="ml-1 text-forest/40 line-through">$70</span>
+                <span className="ml-1 text-forest/60 line-through">$70</span>
                 <span className="ml-1 hidden sm:inline">/ month</span>
               </div>
             </div>

@@ -242,7 +242,7 @@ export default function VetBioPage({ params }: { params: { slug: string } }) {
                     </div>
                     <span
                       aria-hidden
-                      className="hidden flex-shrink-0 font-mono text-sm text-terracotta md:block"
+                      className="hidden flex-shrink-0 font-mono text-sm text-terracotta-dark md:block"
                     >
                       →
                     </span>

@@ -37,7 +37,7 @@ export default function VsHub() {
                 href={`/vs/${v.slug}`}
                 className="group block rounded-2xl border border-forest/15 bg-offwhite p-6 transition-transform hover:-translate-y-1"
               >
-                <p className="mb-1 font-mono text-xs uppercase tracking-wider text-terracotta">
+                <p className="mb-1 font-mono text-xs uppercase tracking-wider text-terracotta-dark">
                   PawBite vs.
                 </p>
                 <h2 className="fraunces-soft mb-2 text-2xl font-bold text-forest group-hover:text-terracotta">
