@@ -120,7 +120,17 @@ export function recommendFromAnswers(answers: QuizAnswers): QuizResult {
     };
   }
 
-  // Gut / skin / anxiety / wellness → Daily Probiotic (the gut-first thesis)
+  // Primary anxiety → Calm
+  if (primary === 'anxiety') {
+    return {
+      primarySku: 'calm',
+      reasoning:
+        'Calm pairs L-theanine, ashwagandha, and chamomile for relaxed focus without sedation — plus a gut-brain probiotic, since anxious dogs are very often gut-unsettled dogs. Give a chew 30 minutes before a known stressor, or one daily for everyday nerves.',
+      bundleRecommended: false,
+    };
+  }
+
+  // Gut / skin / wellness → Daily Probiotic (the gut-first thesis)
   return {
     primarySku: 'daily-probiotic',
     reasoning:
@@ -128,9 +138,7 @@ export function recommendFromAnswers(answers: QuizAnswers): QuizResult {
         ? 'Daily Probiotic is 5 strains, 5 billion CFUs — including the strains most-studied for firming stool, reducing gas, and supporting digestion. Most dogs see improvement within 7–14 days.'
         : primary === 'skin'
           ? 'Skin and coat issues often trace back to the gut — it’s called the gut-skin axis, and it’s real. Most owners see coat improvements once digestion stabilizes. Daily Probiotic is our recommendation while we develop a skin-specific chew.'
-          : primary === 'anxiety'
-            ? 'Anxious dogs often have unsettled guts (the gut-brain axis works both ways). Daily Probiotic helps stabilize the foundation while we develop a calming chew. For acute calming, talk to your vet about short-term options.'
-            : 'Daily Probiotic is our most-recommended daily essential. Five strains, five billion CFUs, third-party tested. The simplest way to support overall wellness from the gut up.',
+          : 'Daily Probiotic is our most-recommended daily essential. Five strains, five billion CFUs, third-party tested. The simplest way to support overall wellness from the gut up.',
     bundleRecommended: false,
   };
 }

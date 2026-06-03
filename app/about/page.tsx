@@ -19,12 +19,12 @@ import { SITE_URL } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'About PawBite',
   description:
-    'PawBite is a small dog supplement brand from the Hudson Valley. Two products, vet-formulated, made by humans who actually own dogs. Read the founder story.',
+    'PawBite is a small dog supplement brand from the Hudson Valley. Three focused chews, vet-formulated, made by humans who actually own dogs. Read the founder story.',
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
     title: 'About PawBite',
     description:
-      'Two products. Vet-formulated. Made by humans who actually own dogs. The story behind PawBite, written by founder Noah Chang.',
+      'Three focused chews. Vet-formulated. Made by humans who actually own dogs. The story behind PawBite, written by founder Noah Chang.',
     type: 'website',
   },
 };
@@ -125,15 +125,16 @@ export default function AboutPage() {
                   actual dog. Neither felt right.
                 </p>
                 <p>
-                  So I started PawBite. Two products — a daily probiotic and a hip + joint chew.
-                  Each one cites the studies it&apos;s built on. Each one is reviewed by Dr. M.
-                  Hayes, our veterinary nutritionist. Each one is the version I wish I could have
-                  handed past-me at 2am on a Tuesday, standing in the kitchen, Googling whether the
-                  new chew Theo had thrown up was something to call the vet about.
+                  So I started PawBite. Three focused chews — a daily probiotic, a hip + joint chew,
+                  and a calming chew. Each one cites the studies it&apos;s built on. Each one is
+                  reviewed by Dr. M. Hayes, our veterinary nutritionist. Each one is the version I
+                  wish I could have handed past-me at 2am on a Tuesday, standing in the kitchen,
+                  Googling whether the new chew Theo had thrown up was something to call the vet
+                  about.
                 </p>
                 <p>
-                  That&apos;s the whole brand. Two products, made carefully, sold honestly, by
-                  people who feed them to their own dogs every morning.
+                  That&apos;s the whole brand. Three focused chews, made carefully, sold honestly,
+                  by people who feed them to their own dogs every morning.
                 </p>
               </div>
               <p className="font-hand text-2xl text-terracotta">— Noah Chang, founder</p>
@@ -185,7 +186,7 @@ export default function AboutPage() {
         </Container>
       </Section>
 
-      {/* Why we make only two products */}
+      {/* Why we keep the line short */}
       <Section background="cream" spacing="default">
         <Container size="narrow">
           <div className="relative">
@@ -198,25 +199,29 @@ export default function AboutPage() {
             <div className="relative">
               <p className="mb-2 font-hand text-2xl text-terracotta">— The focused line</p>
               <h2 className="fraunces-soft mb-6 text-balance text-4xl font-bold text-forest md:text-5xl">
-                Why we only make two products.
+                Why we keep the line short.
               </h2>
               <div className="space-y-4 text-lg leading-relaxed text-charcoal">
                 <p>
-                  Most dog supplement brands sell twenty or thirty SKUs. Skin chew, calming chew,
-                  allergy chew, anxiety chew, multivitamin chew, dental chew, eye chew. Half of them
-                  are the same base recipe with a different sticker.
+                  Most dog supplement brands sell twenty or thirty SKUs. Skin chew, allergy chew,
+                  multivitamin chew, dental chew, eye chew, a different anxiety chew for every week
+                  of the month. Half of them are the same base recipe with a different sticker.
                 </p>
                 <p>
-                  We make two: a daily probiotic and a hip + joint chew. That&apos;s what most dogs
-                  actually need, and it&apos;s what we can stand behind without bending the
-                  evidence. Every dollar we don&apos;t spend launching a fourteenth flavor of
-                  calming chew goes into better strains, higher doses, and slower, more careful
-                  formulation. Two products means we know every ingredient, every supplier, and
-                  every batch. It also means if your dog only needs one, we&apos;ll tell you.
+                  We make three: a daily probiotic, a hip + joint chew, and a calming chew.
+                  That&apos;s what most dogs actually need, and it&apos;s what we can stand behind
+                  without bending the evidence. Every dollar we don&apos;t spend launching a
+                  fourteenth flavor of multivitamin goes into better strains, higher doses, and
+                  slower, more careful formulation. A short line means we know every ingredient,
+                  every supplier, and every batch. It also means if your dog only needs one,
+                  we&apos;ll tell you.
                 </p>
                 <p>
-                  We&apos;ll add a third SKU when there&apos;s a category we can do meaningfully
-                  better than what&apos;s already on the shelf — not before.
+                  Calm is the most recent addition — and proof of the rule, not an exception to it.
+                  We only added it because we found a version we could do meaningfully better than
+                  the shelf: L-theanine and ashwagandha for calm without sedation, plus a gut-brain
+                  probiotic, because anxious dogs are so often gut-unsettled dogs. When we find the
+                  next one worth doing, we&apos;ll add it. Not before.
                 </p>
               </div>
             </div>
@@ -279,8 +284,8 @@ export default function AboutPage() {
             </CalloutPill>
             <p className="max-w-xl text-base leading-relaxed text-forest">
               PawBite is independently owned, US-formulated, and packaged in upstate New York. No
-              private equity, no celebrity stakeholders, no investor slide deck. Just two products
-              and a small team.
+              private equity, no celebrity stakeholders, no investor slide deck. Just three focused
+              chews and a small team.
             </p>
             <div className="flex flex-col gap-3 pt-2 sm:flex-row">
               <Button variant="primary" size="md" asChild>

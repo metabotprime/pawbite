@@ -224,7 +224,7 @@ export default function PerksPage() {
         <Container size="narrow">
           <div className="text-center">
             <h2 className="fraunces-soft mb-4 text-balance text-3xl font-bold text-forest md:text-4xl">
-              Two products. Both daily. All perks included.
+              Three focused chews. All perks included.
             </h2>
             <p className="mx-auto mb-6 max-w-xl text-base text-forest/80">
               Every PawBite subscription comes with all the perks above by default. Nothing to opt

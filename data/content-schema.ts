@@ -35,4 +35,4 @@ export type ContentByline = {
   updatedDate: string; // ISO date
 };
 
-export type ProductRecommendation = 'daily-probiotic' | 'hip-and-joint' | 'daily-duo';
+export type ProductRecommendation = 'daily-probiotic' | 'hip-and-joint' | 'calm' | 'daily-duo';

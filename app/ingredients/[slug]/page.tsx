@@ -23,10 +23,13 @@ export default function IngredientPage({ params }: { params: { slug: string } })
   if (!ing) notFound();
 
   const title = `${ing.ingredientName} for dogs.`;
+  const productLabels: Record<'daily-probiotic' | 'hip-and-joint' | 'calm', string> = {
+    'daily-probiotic': 'Daily Probiotic',
+    'hip-and-joint': 'Hip + Joint',
+    calm: 'Calming Chew',
+  };
   const inProductsLine = ing.inProducts.length
-    ? `Found in PawBite products: ${ing.inProducts
-        .map((p) => (p === 'daily-probiotic' ? 'Daily Probiotic' : 'Hip + Joint'))
-        .join(', ')}.`
+    ? `Found in PawBite products: ${ing.inProducts.map((p) => productLabels[p]).join(', ')}.`
     : 'Not currently in any PawBite product — but we get a lot of questions about it.';
 
   // Prepend overview + dosing sections

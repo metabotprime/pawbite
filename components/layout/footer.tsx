@@ -10,6 +10,7 @@ const linkColumns = [
     links: [
       { href: '/products/daily-probiotic', label: 'Daily Probiotic' },
       { href: '/products/hip-and-joint', label: 'Hip + Joint' },
+      { href: '/products/calm', label: 'Calming Chew' },
       { href: '/products/daily-duo', label: 'The Daily Duo' },
       { href: '/quiz', label: 'Take the quiz' },
     ],

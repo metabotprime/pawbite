@@ -48,8 +48,8 @@ export function HeroSection() {
               cast of vet visits. Most dog supplements I tried were either junk-food chews with
               ingredient lists I couldn&apos;t pronounce, or sterile-looking clinical brands made by
               people who&apos;d clearly never owned a sick dog. So I started PawBite to be the brand
-              I wished existed when Theo needed it. Two products. Vet-formulated. Made by humans who
-              actually own dogs.
+              I wished existed when Theo needed it. Three focused chews. Vet-formulated. Made by
+              humans who actually own dogs.
             </p>
             <p className="font-hand text-2xl text-terracotta">— Noah Chang, founder</p>
 

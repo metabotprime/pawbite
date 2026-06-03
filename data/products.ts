@@ -39,10 +39,23 @@ export const products: Product[] = [
     subPrice: 30,
   },
   {
+    slug: 'calm',
+    name: 'Calming Chew',
+    shortName: 'Calm',
+    bandColor: 'mint',
+    blobColor: 'mint',
+    countLabel: '30 SOFT CHEWS',
+    tagline: 'L-theanine + chamomile',
+    oneLineDescription:
+      'L-theanine, chamomile, ashwagandha, and a gut-brain probiotic. For fireworks, vet visits, and everyday nerves.',
+    retailPrice: 34,
+    subPrice: 27,
+  },
+  {
     slug: 'daily-duo',
     name: 'The Daily Duo',
     shortName: 'Duo',
-    bandColor: 'mint',
+    bandColor: 'forest',
     blobColor: 'mint',
     countLabel: '2 PRODUCTS',
     tagline: 'both, every day',
@@ -55,4 +68,5 @@ export const products: Product[] = [
 
 export const dailyProbiotic = products[0];
 export const hipAndJoint = products[1];
-export const dailyDuo = products[2];
+export const calm = products[2];
+export const dailyDuo = products[3];

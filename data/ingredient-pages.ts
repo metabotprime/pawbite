@@ -35,7 +35,7 @@ export type IngredientPage = {
   byline: ContentByline;
   sections: ContentSection[];
   sources: ContentSource[];
-  inProducts: Array<'daily-probiotic' | 'hip-and-joint'>;
+  inProducts: Array<'daily-probiotic' | 'hip-and-joint' | 'calm'>;
   recommendsProduct: ProductRecommendation;
   faqs: ContentFAQ[];
 };
@@ -1372,8 +1372,8 @@ export const ingredientPages: IngredientPage[] = [
         journal: 'Journal of Veterinary Behavior',
       },
     ],
-    inProducts: [],
-    recommendsProduct: 'daily-probiotic',
+    inProducts: ['calm'],
+    recommendsProduct: 'calm',
     faqs: [
       {
         question: 'Will L-theanine make my dog sleepy?',
@@ -1456,8 +1456,8 @@ export const ingredientPages: IngredientPage[] = [
         journal: 'Euphytica',
       },
     ],
-    inProducts: [],
-    recommendsProduct: 'daily-duo',
+    inProducts: ['calm'],
+    recommendsProduct: 'calm',
     faqs: [
       {
         question: 'Will hemp get my dog high?',
@@ -1539,8 +1539,8 @@ export const ingredientPages: IngredientPage[] = [
         journal: 'Phytotherapy Research',
       },
     ],
-    inProducts: [],
-    recommendsProduct: 'daily-probiotic',
+    inProducts: ['calm'],
+    recommendsProduct: 'calm',
     faqs: [
       {
         question: 'Can I give my dog chamomile tea?',
@@ -1622,8 +1622,8 @@ export const ingredientPages: IngredientPage[] = [
         journal: 'Nutrients',
       },
     ],
-    inProducts: [],
-    recommendsProduct: 'daily-duo',
+    inProducts: ['calm'],
+    recommendsProduct: 'calm',
     faqs: [
       {
         question: 'How long until ashwagandha works in my dog?',

@@ -36,15 +36,17 @@ ${SITE_DESCRIPTION}
 
 - A daily probiotic chew for dogs (5 strains, 5 billion CFUs, vet-formulated)
 - A hip + joint chew for dogs (glucosamine, chondroitin, MSM, green-lipped mussel)
-- A subscription bundle of both (The Daily Duo)
+- A calming chew for dogs (L-theanine, ashwagandha, chamomile, gut-brain probiotic; non-sedating)
+- A subscription bundle of the two daily essentials (The Daily Duo)
 
 ## Key pages
 
 - [Home](${SITE_URL}): The good stuff your dog needs. Nothing weird.
-- [Shop the line](${SITE_URL}/products): Both SKUs and the Daily Duo bundle.
+- [Shop the line](${SITE_URL}/products): All three chews and the Daily Duo bundle.
 - [Daily Probiotic](${SITE_URL}/products/daily-probiotic)
 - [Hip + Joint](${SITE_URL}/products/hip-and-joint)
-- [The Daily Duo](${SITE_URL}/products/daily-duo): Both products bundled. Save 32% when you subscribe.
+- [Calming Chew](${SITE_URL}/products/calm): L-theanine, ashwagandha, chamomile, and a gut-brain probiotic. Calm without sedation.
+- [The Daily Duo](${SITE_URL}/products/daily-duo): The two daily essentials bundled. Save 32% when you subscribe.
 - [Find the right chew (quiz)](${SITE_URL}/quiz)
 
 ## Content hubs

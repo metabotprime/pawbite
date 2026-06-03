@@ -1,5 +1,5 @@
 import type { Product } from './products';
-import { dailyProbiotic, hipAndJoint } from './products';
+import { dailyProbiotic, hipAndJoint, calm } from './products';
 
 export type Ingredient = {
   name: string;
@@ -311,9 +311,132 @@ export const hipAndJointDetail: ProductDetail = {
   ],
 };
 
+export const calmDetail: ProductDetail = {
+  ...calm,
+  flavor: 'Peanut butter',
+  longDescription:
+    'A daily soft chew built for the nervous, the storm-shy, and the vet-visit-dreading. L-theanine, ashwagandha, and chamomile take the edge off without sedation, and a gut-brain probiotic strain works the other end of the anxiety loop. No melatonin, no sedatives — calm, not knocked out. Vet-formulated. Third-party tested. Made in a cGMP-certified facility in the USA.',
+  ingredients: [
+    {
+      name: 'L-theanine (Suntheanine)',
+      amount: '100 mg',
+      role: 'Calm focus without sedation',
+      reference: 'Pike et al., 2015',
+    },
+    { name: 'Ashwagandha root extract', amount: '50 mg', role: 'Adaptogen for stress response' },
+    { name: 'Organic chamomile', amount: '100 mg', role: 'Soothes restlessness' },
+    { name: 'Hemp seed powder', amount: '75 mg', role: 'Calming support (no CBD, no THC)' },
+    {
+      name: 'Bacillus coagulans GBI-30, 6086',
+      scientificName: 'Bacillus coagulans',
+      amount: '1 billion CFU',
+      role: 'Gut-brain axis support',
+      reference: 'Kalman et al., 2009',
+    },
+  ],
+  prebioticsAndExtras:
+    'Includes a gut-brain probiotic strain — because anxious dogs are very often gut-unsettled dogs. No melatonin and no sedatives, so your dog stays themselves, just less wound up.',
+  benefits: [
+    {
+      icon: 'sparkle',
+      title: 'Calm, not sedated',
+      body: 'L-theanine promotes relaxed focus without the groggy hangover of sedatives.',
+    },
+    {
+      icon: 'heart',
+      title: 'For the big moments',
+      body: 'Fireworks, thunderstorms, vet visits, car rides, separation. Give 30 minutes ahead.',
+    },
+    {
+      icon: 'stethoscope',
+      title: 'Gut-brain axis',
+      body: 'Includes a probiotic strain, because calm starts in the gut as much as the head.',
+    },
+    {
+      icon: 'shield',
+      title: 'Non-habit-forming',
+      body: 'No melatonin dependency, no sedatives. Safe to give every day.',
+    },
+  ],
+  dosing: [
+    { weightRange: 'Under 25 lbs', amount: '1 chew' },
+    { weightRange: '25–50 lbs', amount: '1–2 chews' },
+    { weightRange: '50–75 lbs', amount: '2 chews' },
+    { weightRange: '75+ lbs', amount: '2–3 chews' },
+  ],
+  dosingNote:
+    'For a known stressor (fireworks, the vet, a road trip), give 30 minutes ahead. For everyday nerves, one chew daily — the calming effect builds over 2–4 weeks of consistent use.',
+  vetQuote: {
+    name: 'Dr. M. Hayes, DVM',
+    credentials: 'Board-certified veterinary nutritionist',
+    quote:
+      'L-theanine is the calming ingredient with the most behavioral evidence in dogs, and it works without sedation. Pairing it with a probiotic is smart — the gut-brain axis is real, and anxious dogs are very often gut-unsettled dogs.',
+  },
+  comparison: {
+    competitor: 'Zesty Paws Calming Bites',
+    rows: [
+      { feature: 'L-theanine (Suntheanine)', pawbite: 'Yes (100mg)', competitor: 'Yes' },
+      { feature: 'Ashwagandha', pawbite: 'Yes (50mg)', competitor: 'No' },
+      { feature: 'Chamomile', pawbite: 'Yes (100mg)', competitor: 'Yes' },
+      { feature: 'Gut-brain probiotic', pawbite: 'Yes (1B CFU)', competitor: 'No' },
+      { feature: 'Melatonin / sedatives', pawbite: 'None (non-sedating)', competitor: 'Sometimes' },
+      { feature: 'Flavor', pawbite: 'Peanut butter', competitor: 'Various' },
+      {
+        feature: 'Subscribe & Save',
+        pawbite: '20% off + free shipping',
+        competitor: 'Varies by retailer',
+      },
+      { feature: 'Money-back guarantee', pawbite: '90 days', competitor: 'Retailer-dependent' },
+    ],
+  },
+  faqs: [
+    {
+      question: 'How long until it works?',
+      answer:
+        'For an acute stressor, give a chew about 30 minutes ahead — L-theanine acts fast. For baseline, everyday anxiety, the effect builds over 2–4 weeks of daily use as the adaptogens and the gut-brain strain do their slower work.',
+    },
+    {
+      question: 'Will it make my dog drowsy?',
+      answer:
+        'No. L-theanine creates calm focus, not sedation. We deliberately left out melatonin and sedatives, so your dog stays themselves — just less wound up. If you want a sleep aid for a long flight, that’s a different (and vet-guided) conversation.',
+    },
+    {
+      question: 'Does this have CBD?',
+      answer:
+        'No. We use hemp seed powder, which contains no CBD and no THC. It’s legal in all 50 states and won’t show up on any test. Calm is CBD-free by design — we’d rather lead with the ingredients that have the clearest behavioral evidence in dogs.',
+    },
+    {
+      question: 'Can I use it daily and for events?',
+      answer:
+        'Yes. Many dogs take one chew daily for baseline calm, then a second chew 30 minutes before a known stressor. Stay within the daily max for your dog’s weight band.',
+    },
+    {
+      question: 'Is it safe with trazodone, gabapentin, or other prescribed meds?',
+      answer:
+        'Calm is a nutritional supplement and generally complements behavioral medications, but anything that acts on the nervous system should be cleared with your vet first. Never replace a prescribed medication with a supplement without talking to your vet.',
+    },
+    {
+      question: 'Is it safe for puppies?',
+      answer:
+        'Yes for puppies 12 weeks and older. Anxiety shows up early — crate training, new homes, first storms — and these ingredients are gentle. Start at the low end of the weight range.',
+    },
+    {
+      question: 'Can my dog take this with Daily Probiotic and Hip + Joint?',
+      answer:
+        'Yes. The three work on entirely different systems and pair cleanly — plenty of dogs are on all three. A full-routine bundle is coming soon.',
+    },
+    {
+      question: 'What’s the 90-day guarantee?',
+      answer:
+        'If your dog doesn’t take to it, or you don’t see a calmer dog within 90 days, email help@pawbite.com and we’ll refund your first order in full. Keep the chews.',
+    },
+  ],
+};
+
 export const productsDetail = {
   'daily-probiotic': dailyProbioticDetail,
   'hip-and-joint': hipAndJointDetail,
+  calm: calmDetail,
 };
 
 export type ProductSlug = keyof typeof productsDetail;
