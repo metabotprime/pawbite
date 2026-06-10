@@ -4,6 +4,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { dailyDuo } from '@/data/products';
 import { cn } from '@/lib/utils';
 
 interface StickyATCBarProps {
@@ -39,8 +40,8 @@ export function StickyATCBar({ show = true }: StickyATCBarProps) {
             <div className="min-w-0">
               <div className="truncate text-xs font-semibold text-forest">The Daily Duo</div>
               <div className="text-xs text-forest/70">
-                <span className="font-bold text-terracotta">$47.60</span>
-                <span className="ml-1 text-forest/60 line-through">$70</span>
+                <span className="font-bold text-terracotta">${dailyDuo.subPrice.toFixed(2)}</span>
+                <span className="ml-1 text-forest/60 line-through">${dailyDuo.retailPrice}</span>
                 <span className="ml-1 hidden sm:inline">/ month</span>
               </div>
             </div>

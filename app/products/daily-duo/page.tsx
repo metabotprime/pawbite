@@ -10,6 +10,7 @@ import { PdpFaq } from '@/components/pdp/pdp-faq';
 import { PdpGuarantee } from '@/components/pdp/pdp-guarantee';
 import { VetQuoteCard } from '@/components/pdp/vet-quote-card';
 import { dailyProbioticDetail, hipAndJointDetail } from '@/data/products-detail';
+import { dailyProbiotic, hipAndJoint, dailyDuo, dailyDuoMath } from '@/data/products';
 import { SITE_URL } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -101,29 +102,33 @@ export default function DailyDuoPage() {
                 <div className="mb-4 space-y-1 text-sm">
                   <div className="flex justify-between">
                     <span className="text-charcoal/70">Daily Probiotic</span>
-                    <span className="font-mono text-charcoal">$32</span>
+                    <span className="font-mono text-charcoal">${dailyProbiotic.retailPrice}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-charcoal/70">Hip + Joint</span>
-                    <span className="font-mono text-charcoal">$38</span>
+                    <span className="font-mono text-charcoal">${hipAndJoint.retailPrice}</span>
                   </div>
                   <div className="flex justify-between border-t border-forest/15 pt-1 text-charcoal/70">
                     <span>Retail total</span>
-                    <span className="font-mono">$70.00</span>
+                    <span className="font-mono">${dailyDuoMath.retailTotal.toFixed(2)}</span>
                   </div>
-                  <div className="text-mint-foreground flex justify-between">
+                  <div className="flex justify-between text-forest/70">
                     <span>Bundle discount (15%)</span>
-                    <span className="font-mono">−$10.50</span>
+                    <span className="font-mono">−${dailyDuoMath.bundleDiscount.toFixed(2)}</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between text-forest/70">
                     <span>Subscribe & save (20%)</span>
-                    <span className="font-mono">−$11.90</span>
+                    <span className="font-mono">−${dailyDuoMath.subSavings.toFixed(2)}</span>
                   </div>
                 </div>
 
                 <div className="mb-3 flex items-baseline gap-3 border-t border-forest/15 pt-3">
-                  <span className="fraunces-soft text-4xl font-bold text-terracotta">$47.60</span>
-                  <span className="text-base text-charcoal/60 line-through">$70</span>
+                  <span className="fraunces-soft text-4xl font-bold text-terracotta">
+                    ${dailyDuo.subPrice.toFixed(2)}
+                  </span>
+                  <span className="text-base text-charcoal/60 line-through">
+                    ${dailyDuo.retailPrice}
+                  </span>
                   <Badge variant="warmyellow">Save 32% / mo</Badge>
                 </div>
 
@@ -137,8 +142,8 @@ export default function DailyDuoPage() {
               </div>
 
               <p className="text-sm text-charcoal/70">
-                Bundle pricing only available with subscription. One-time order: $59.50 (15% bundle
-                discount only).
+                Bundle pricing only available with subscription. One-time order: $
+                {dailyDuoMath.bundleOneTime.toFixed(2)} (15% bundle discount only).
               </p>
             </div>
           </div>

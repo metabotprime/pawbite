@@ -1,3 +1,15 @@
+/**
+ * Backend identifiers — empty until the Stripe/Shopify wiring (see docs/INTEGRATION.md).
+ * `slug` is the stable join key the frontend already uses; these fields are where the
+ * backend product/variant IDs get pasted in so add-to-cart and checkout can resolve them.
+ */
+export type ProductCommerce = {
+  shopifyVariantId?: string; // Storefront API variant (one-time purchase)
+  shopifySellingPlanId?: string; // subscription selling plan (Recharge / Skio)
+  stripePriceId?: string; // Stripe one-time price
+  stripeSubPriceId?: string; // Stripe recurring (subscription) price
+};
+
 export type Product = {
   slug: string;
   name: string;
@@ -10,6 +22,7 @@ export type Product = {
   retailPrice: number;
   subPrice: number;
   badge?: string;
+  commerce?: ProductCommerce;
 };
 
 export const products: Product[] = [
@@ -70,3 +83,21 @@ export const dailyProbiotic = products[0];
 export const hipAndJoint = products[1];
 export const calm = products[2];
 export const dailyDuo = products[3];
+
+/** Discount rates used to derive the Daily Duo bundle math. Single source of truth. */
+export const BUNDLE_DISCOUNT = 0.15;
+export const SUBSCRIBE_DISCOUNT = 0.2;
+
+/**
+ * Daily Duo pricing, derived from the two single SKUs so the bundle breakdown never
+ * drifts from product prices. When the backend becomes the source of truth, update the
+ * single-product prices (or fetch them) and every Duo number recomputes from here.
+ */
+export const dailyDuoMath = (() => {
+  const retailTotal = dailyProbiotic.retailPrice + hipAndJoint.retailPrice;
+  const bundleDiscount = retailTotal * BUNDLE_DISCOUNT;
+  const bundleOneTime = retailTotal - bundleDiscount;
+  const subSavings = bundleOneTime * SUBSCRIBE_DISCOUNT;
+  const subTotal = bundleOneTime - subSavings;
+  return { retailTotal, bundleDiscount, bundleOneTime, subSavings, subTotal };
+})();

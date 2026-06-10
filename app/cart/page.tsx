@@ -45,14 +45,15 @@ export default function CartPage() {
         <Container>
           <h2 className="fraunces-soft mb-8 text-center text-3xl font-bold">Most-loved picks.</h2>
           <div className="grid items-end gap-8 md:grid-cols-3">
-            {products.map((p, i) => (
-              <ProductCard
-                key={p.slug}
-                product={p}
-                blobVariant={(i + 1) as 1 | 2 | 3 | 4 | 5 | 6}
-                featured={p.slug === 'daily-duo'}
-              />
-            ))}
+            {products
+              .filter((p) => p.slug !== 'daily-duo')
+              .map((p, i) => (
+                <ProductCard
+                  key={p.slug}
+                  product={p}
+                  blobVariant={(i + 1) as 1 | 2 | 3 | 4 | 5 | 6}
+                />
+              ))}
           </div>
         </Container>
       </Section>
