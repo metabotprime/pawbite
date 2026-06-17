@@ -1,8 +1,8 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Section } from '@/components/layout/section';
 import { Container } from '@/components/layout/container';
-import { Canister } from '@/components/brand/canister';
 import { Blob } from '@/components/brand/illustrations/decor/blob';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -60,27 +60,15 @@ export default function DailyDuoPage() {
         <Container>
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div className="relative flex h-96 items-center justify-center rounded-3xl bg-cream-2 lg:h-[520px]">
-              <Blob variant={2} color="mint" className="absolute inset-12 h-auto" />
-              <div className="relative z-10 flex items-center gap-3">
-                <div style={{ transform: 'rotate(-8deg)' }}>
-                  <Canister
-                    name="Daily"
-                    bandColor="warmyellow"
-                    countLabel="30 SOFT CHEWS"
-                    tagline="probiotic"
-                    size="md"
-                  />
-                </div>
-                <div style={{ transform: 'rotate(8deg)' }}>
-                  <Canister
-                    name="Hip+Joint"
-                    bandColor="terracotta"
-                    countLabel="60 SOFT CHEWS"
-                    tagline="glucosamine"
-                    size="md"
-                  />
-                </div>
-              </div>
+              <Blob variant={2} color="mint" className="absolute inset-8 h-auto" />
+              <Image
+                src={dailyDuo.imageSrc!}
+                alt="PawBite Daily Duo — Daily Probiotic and Hip + Joint canisters together"
+                width={dailyDuo.imageWidth!}
+                height={dailyDuo.imageHeight!}
+                priority
+                className="relative z-10 max-h-72 w-auto max-w-full drop-shadow-2xl lg:max-h-[440px]"
+              />
             </div>
 
             <div className="flex flex-col gap-4">

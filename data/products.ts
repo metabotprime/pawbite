@@ -23,6 +23,11 @@ export type Product = {
   subPrice: number;
   badge?: string;
   commerce?: ProductCommerce;
+  /** Transparent-bg product render in /public. Falls back to the CSS <Canister> when absent. */
+  imageSrc?: string;
+  /** Intrinsic dimensions of imageSrc. Defaults to the portrait single-canister render (896×1216). */
+  imageWidth?: number;
+  imageHeight?: number;
 };
 
 export const products: Product[] = [
@@ -37,6 +42,7 @@ export const products: Product[] = [
     oneLineDescription: '5 strains. 5 billion CFUs. The one your dog eats every day.',
     retailPrice: 32,
     subPrice: 26,
+    imageSrc: '/products/daily-probiotic.png',
   },
   {
     slug: 'hip-and-joint',
@@ -50,6 +56,7 @@ export const products: Product[] = [
       'Glucosamine, chondroitin, MSM, green-lipped mussel, turmeric. Built to keep moving.',
     retailPrice: 38,
     subPrice: 30,
+    imageSrc: '/products/hip-and-joint.png',
   },
   {
     slug: 'calm',
@@ -63,6 +70,7 @@ export const products: Product[] = [
       'L-theanine, chamomile, ashwagandha, and a gut-brain probiotic. For fireworks, vet visits, and everyday nerves.',
     retailPrice: 34,
     subPrice: 27,
+    imageSrc: '/products/calm.png',
   },
   {
     slug: 'daily-duo',
@@ -76,6 +84,9 @@ export const products: Product[] = [
     retailPrice: 70,
     subPrice: 47.6,
     badge: 'Save 32%',
+    imageSrc: '/products/daily-duo.png',
+    imageWidth: 1216,
+    imageHeight: 896,
   },
 ];
 

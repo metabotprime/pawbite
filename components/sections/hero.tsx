@@ -24,8 +24,8 @@ export function HeroSection() {
                 <Squiggle width={80} className="text-terracotta" />
               </div>
               <Image
-                src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&q=80"
-                alt="Noah and Theo"
+                src="/founder-theo.jpg"
+                alt="Noah Chang, PawBite founder, with his rescue dog Theo"
                 width={400}
                 height={500}
                 className="h-auto w-full"

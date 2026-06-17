@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { Canister } from '@/components/brand/canister';
-import { Blob } from '@/components/brand/illustrations/decor/blob';
+import { ProductVisual } from '@/components/brand/product-visual';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import type { Product } from '@/data/products';
@@ -34,21 +33,7 @@ export function ProductCard({
           {product.badge}
         </Badge>
       )}
-      <div className="relative mb-6 flex h-56 items-center justify-center">
-        <Blob
-          variant={blobVariant}
-          color={product.blobColor}
-          className="absolute inset-0 h-full w-full"
-        />
-        <Canister
-          name={product.shortName}
-          bandColor={product.bandColor}
-          countLabel={product.countLabel}
-          tagline={product.tagline}
-          size="md"
-          className="relative z-10"
-        />
-      </div>
+      <ProductVisual product={product} blobVariant={blobVariant} className="mb-6" />
       <div className="text-center">
         <h3 className="fraunces-soft mb-2 text-2xl font-bold text-forest">{product.name}</h3>
         <p className="mb-4 min-h-[4rem] text-sm leading-relaxed text-charcoal">

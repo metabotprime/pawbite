@@ -1,8 +1,9 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Container } from '@/components/layout/container';
 import { Section } from '@/components/layout/section';
-import { Canister } from '@/components/brand/canister';
 import { Blob } from '@/components/brand/illustrations/decor/blob';
+import { ProductVisual } from '@/components/brand/product-visual';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { products, dailyDuo } from '@/data/products';
@@ -37,21 +38,11 @@ export function ProductShowcase() {
                 rotations[i % rotations.length],
               )}
             >
-              <div className="relative mb-6 flex h-56 items-center justify-center">
-                <Blob
-                  variant={((i % 6) + 1) as 1 | 2 | 3 | 4 | 5 | 6}
-                  color={p.blobColor}
-                  className="absolute inset-0 h-full w-full"
-                />
-                <Canister
-                  name={p.shortName}
-                  bandColor={p.bandColor}
-                  countLabel={p.countLabel}
-                  tagline={p.tagline}
-                  size="md"
-                  className="relative z-10"
-                />
-              </div>
+              <ProductVisual
+                product={p}
+                blobVariant={((i % 6) + 1) as 1 | 2 | 3 | 4 | 5 | 6}
+                className="mb-6"
+              />
 
               <div className="text-center">
                 <h3 className="fraunces-soft mb-2 text-2xl font-bold text-forest">{p.name}</h3>
@@ -81,19 +72,18 @@ export function ProductShowcase() {
           className="group mt-8 block rounded-3xl border-2 border-terracotta bg-forest p-6 text-cream transition-transform duration-200 hover:-translate-y-1 md:p-8"
         >
           <div className="grid items-center gap-6 md:grid-cols-[auto_1fr_auto]">
-            <div className="relative flex h-40 w-40 items-center justify-center">
+            <div className="relative flex h-36 w-56 items-center justify-center">
               <Blob
                 variant={2}
                 color="mint"
                 className="absolute inset-0 h-full w-full opacity-30"
               />
-              <Canister
-                name="Duo"
-                bandColor="forest"
-                countLabel="2 PRODUCTS"
-                tagline="both, every day"
-                size="md"
-                className="relative z-10"
+              <Image
+                src={dailyDuo.imageSrc!}
+                alt="PawBite Daily Duo — Daily Probiotic and Hip + Joint canisters"
+                width={dailyDuo.imageWidth!}
+                height={dailyDuo.imageHeight!}
+                className="relative z-10 max-h-32 w-auto max-w-full drop-shadow-xl"
               />
             </div>
 

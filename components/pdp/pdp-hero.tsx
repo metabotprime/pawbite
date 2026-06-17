@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import Image from 'next/image';
 import { Canister } from '@/components/brand/canister';
 import { Blob } from '@/components/brand/illustrations/decor/blob';
 import { Button } from '@/components/ui/button';
@@ -19,14 +20,25 @@ export function PdpHero({ product }: { product: ProductDetail }) {
       {/* Image / canister */}
       <div className="relative flex h-96 items-center justify-center rounded-3xl bg-cream-2 lg:h-[520px]">
         <Blob variant={2} color={product.blobColor} className="absolute inset-12 h-auto" />
-        <Canister
-          name={product.shortName}
-          bandColor={product.bandColor}
-          countLabel={product.countLabel}
-          tagline={product.tagline}
-          size="lg"
-          className="relative z-10"
-        />
+        {product.imageSrc ? (
+          <Image
+            src={product.imageSrc}
+            alt={`PawBite ${product.name} canister`}
+            width={896}
+            height={1216}
+            priority
+            className="relative z-10 h-72 w-auto drop-shadow-2xl lg:h-[420px]"
+          />
+        ) : (
+          <Canister
+            name={product.shortName}
+            bandColor={product.bandColor}
+            countLabel={product.countLabel}
+            tagline={product.tagline}
+            size="lg"
+            className="relative z-10"
+          />
+        )}
       </div>
 
       {/* Info */}

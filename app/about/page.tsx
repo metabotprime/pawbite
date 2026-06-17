@@ -89,7 +89,7 @@ export default function AboutPage() {
                   <Squiggle width={80} className="text-terracotta" />
                 </div>
                 <Image
-                  src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1600&q=80"
+                  src="/founder-theo.jpg"
                   alt="Noah Chang with his rescue dog Theo"
                   width={600}
                   height={750}
