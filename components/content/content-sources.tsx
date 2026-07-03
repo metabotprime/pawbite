@@ -10,7 +10,18 @@ export function ContentSources({ sources }: { sources: ContentSource[] }) {
           <li key={i} className="font-mono">
             <span className="text-forest/60">[{i + 1}]</span>{' '}
             <span className="text-forest">{s.author}</span>, {s.year}.{' '}
-            <em className="italic">{s.title}</em>
+            {s.url ? (
+              <a
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="italic underline decoration-forest/30 underline-offset-2 hover:decoration-forest"
+              >
+                {s.title}
+              </a>
+            ) : (
+              <em className="italic">{s.title}</em>
+            )}
             {s.journal && (
               <>
                 . <span className="text-forest/70">{s.journal}</span>

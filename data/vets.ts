@@ -6,6 +6,15 @@ export type Vet = {
   specialty: string;
 };
 
+/**
+ * Single switch for every veterinary-review claim on the site.
+ * While false (pre-launch, no signed DVM): bylines render "Veterinary review pending",
+ * reviewedBy is omitted from Article schema, and no Person schema is emitted for advisors.
+ * Flip to true ONLY when a real, named veterinarian has signed off — then repopulate
+ * `vets` below with their real name, credentials, and bio.
+ */
+export const VET_REVIEW_LIVE = false;
+
 export const vets: Vet[] = [
   {
     slug: 'm-hayes',

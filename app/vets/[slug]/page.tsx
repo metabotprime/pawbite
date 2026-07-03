@@ -12,7 +12,7 @@ import { Heart } from '@/components/brand/illustrations/icons/heart';
 import { Shield } from '@/components/brand/illustrations/icons/shield';
 import { Blob } from '@/components/brand/illustrations/decor/blob';
 import { CalloutPill } from '@/components/brand/illustrations/callout-pill';
-import { vets } from '@/data/vets';
+import { vets, VET_REVIEW_LIVE } from '@/data/vets';
 import { blogPosts } from '@/data/blog-posts';
 import { SITE_URL } from '@/lib/seo';
 
@@ -25,30 +25,15 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!vet) return {};
   return {
     title: `${vet.name} — Veterinary advisor at PawBite`,
-    description: `${vet.name} is a ${vet.credentials.toLowerCase()} and editorial reviewer for PawBite. ${vet.bio}`,
+    description: vet.bio,
     alternates: { canonical: `${SITE_URL}/vets/${vet.slug}` },
+    // Keep placeholder advisor profiles out of the index until a real DVM signs.
+    ...(!VET_REVIEW_LIVE && { robots: { index: false, follow: true } }),
     openGraph: {
       title: vet.name,
-      description: vet.credentials,
+      description: 'PawBite veterinary advisory profile.',
       type: 'profile',
     },
-  };
-}
-
-function personSchema(vet: { slug: string; name: string; credentials: string; bio: string }) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: vet.name,
-    jobTitle: 'Veterinary advisor',
-    description: vet.bio,
-    honorificSuffix: 'DVM',
-    affiliation: {
-      '@type': 'Organization',
-      name: 'PawBite',
-      url: SITE_URL,
-    },
-    url: `${SITE_URL}/vets/${vet.slug}`,
   };
 }
 
@@ -59,11 +44,11 @@ const focusAreas = [
   },
   {
     title: 'Gut microbiome and probiotics.',
-    body: 'Strain selection, dosing, and which clinical findings actually translate from human research into the dog gut. Especially interested in post-antibiotic and post-stress GI recovery.',
+    body: 'Strain selection, dosing, and which clinical findings actually translate from human research into the dog gut — especially post-antibiotic and post-stress GI recovery.',
   },
   {
     title: 'Geriatric care.',
-    body: 'Joint health, weight management, and cognitive support in dogs over seven. The bias of the field is to treat senior dogs as fragile — Dr. Hayes works to push past that.',
+    body: 'Joint health, weight management, and cognitive support in dogs over seven — the fastest-growing part of the editorial library.',
   },
   {
     title: 'Editorial review.',
@@ -89,13 +74,6 @@ export default function VetBioPage({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(personSchema(vet)),
-        }}
-      />
-
       {/* Hero */}
       <Section background="cream" spacing="loose">
         <Container>
@@ -117,7 +95,7 @@ export default function VetBioPage({ params }: { params: { slug: string } }) {
                 </div>
                 <div className="absolute -bottom-2 -right-2">
                   <CalloutPill variant="caveat" color="warmyellow" rotation={6}>
-                    DVM
+                    Advisor
                   </CalloutPill>
                 </div>
               </div>
@@ -135,8 +113,8 @@ export default function VetBioPage({ params }: { params: { slug: string } }) {
                   {vet.specialty}
                 </Badge>
                 <Badge variant="mint" className="normal-case">
-                  Reviewed {reviewedArticles.length} article
-                  {reviewedArticles.length === 1 ? '' : 's'}
+                  {reviewedArticles.length} article{reviewedArticles.length === 1 ? '' : 's'} in
+                  review queue
                 </Badge>
               </div>
               <div className="flex flex-col gap-3 pt-2 sm:flex-row">
@@ -164,9 +142,7 @@ export default function VetBioPage({ params }: { params: { slug: string } }) {
           <div className="space-y-4 text-lg leading-relaxed text-charcoal">
             <p>{vet.bio}</p>
             <p>
-              Dr. Hayes has spent 20 years in small-animal practice, with the last decade focused on
-              the intersection of nutrition, microbiome, and chronic-care management. The role at
-              PawBite is editorial — reading every article and formulation, flagging anything that
+              The role is editorial — reading every article and formulation, flagging anything that
               doesn&apos;t hold up, and signing the page when it does.
             </p>
             <p>
@@ -183,7 +159,7 @@ export default function VetBioPage({ params }: { params: { slug: string } }) {
           <div className="mb-10">
             <p className="mb-2 font-hand text-2xl text-terracotta">— Areas of focus</p>
             <h2 className="fraunces-soft text-balance text-3xl font-bold text-forest md:text-4xl">
-              What Dr. Hayes works on.
+              What this advisory role covers.
             </h2>
           </div>
 
@@ -211,11 +187,11 @@ export default function VetBioPage({ params }: { params: { slug: string } }) {
           <div className="mb-10">
             <p className="mb-2 font-hand text-2xl text-terracotta">— On the record</p>
             <h2 className="fraunces-soft text-balance text-3xl font-bold text-forest md:text-4xl">
-              Articles reviewed by {vet.name.split(',')[0]}.
+              Articles in the review queue.
             </h2>
             <p className="mt-3 text-base text-charcoal">
-              Every article here was read, edited, and approved by {vet.name.split(',')[0]} before
-              publishing.
+              Every article here already cites its studies by author and year, and is slated for
+              line-by-line veterinary review as the advisory board is finalized.
             </p>
           </div>
 

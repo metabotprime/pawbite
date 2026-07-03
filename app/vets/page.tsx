@@ -17,12 +17,12 @@ import { SITE_URL } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Our veterinary advisory board',
   description:
-    'Every PawBite article and product is reviewed by a licensed veterinarian before it ships. Meet the vets behind PawBite and read how our editorial review process works.',
+    "How PawBite's editorial review works: every claim cites a peer-reviewed study, and our veterinary advisory board — real names, not logos — is being finalized before launch.",
   alternates: { canonical: `${SITE_URL}/vets` },
   openGraph: {
     title: 'The vets behind PawBite',
     description:
-      'Editorial review by a board-certified veterinary nutritionist. Every article. Every product. Every claim.',
+      'Source-cited editorial review today. Named veterinary advisors signing every page as the board is finalized.',
     type: 'website',
   },
 };
@@ -34,7 +34,7 @@ const reviewSteps = [
     icon: Sparkle,
   },
   {
-    title: 'Dr. Hayes reviews the draft.',
+    title: 'A reviewing vet reads the draft.',
     body: 'The reviewing vet reads the full draft and flags anything that is unsupported, oversimplified, or out of step with current standards of care. Comments are line by line.',
     icon: Stethoscope,
   },
@@ -76,13 +76,15 @@ export default function VetsPage() {
             </h1>
             <div className="mx-auto flex max-w-2xl flex-col gap-4 text-lg leading-relaxed text-charcoal">
               <p>
-                Every product we sell and every article we publish is reviewed by a licensed
-                veterinarian before it goes live. Not as a logo on the footer — as a person who
-                reads the draft, flags the weak parts, and signs the page.
+                Every product we sell and every article we publish is built to be reviewed by a
+                licensed veterinarian — not as a logo on the footer, but as a person who reads the
+                draft, flags the weak parts, and signs the page. We&apos;re pre-launch: contracts
+                with our advisory vets are being finalized, and until a real name signs, our pages
+                say &ldquo;veterinary review pending&rdquo; instead of pretending otherwise.
               </p>
               <p>
-                Our advisory board is small on purpose. We&apos;d rather have one vet who reads
-                every article carefully than a wall of 12 names who skim.
+                The board will be small on purpose. We&apos;d rather have one vet who reads every
+                article carefully than a wall of 12 names who skim.
               </p>
             </div>
             <div className="mt-6 flex justify-center">
@@ -131,7 +133,7 @@ export default function VetsPage() {
 
                   <div className="mb-6 rounded-2xl bg-offwhite p-4 text-sm">
                     <div className="font-mono text-xs uppercase tracking-wider text-charcoal/60">
-                      Reviewed
+                      In review queue
                     </div>
                     <div className="fraunces-soft text-2xl font-bold text-forest">
                       {reviewedArticleCount} article{reviewedArticleCount === 1 ? '' : 's'}

@@ -13,9 +13,15 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const vs = vsPageBySlug(params.slug);
   if (!vs) return {};
   return {
-    title: `PawBite vs ${vs.competitorName} — head-to-head comparison`,
-    description: vs.tldr,
+    // Competitor-first: people search "[Competitor] alternative/vs", not the pre-launch brand.
+    title: { absolute: `${vs.competitorName} vs PawBite: Honest Comparison & Alternative` },
+    description: vs.tldr.length > 155 ? `${vs.tldr.slice(0, 152).trimEnd()}…` : vs.tldr,
     alternates: { canonical: `${SITE_URL}/vs/${vs.slug}` },
+    openGraph: {
+      title: `${vs.competitorName} vs PawBite — honest comparison`,
+      description: 'A fair, side-by-side look at the formulas, strains, doses, and price.',
+      type: 'article',
+    },
   };
 }
 
@@ -23,7 +29,7 @@ export default function VsPage({ params }: { params: { slug: string } }) {
   const vs = vsPageBySlug(params.slug);
   if (!vs) notFound();
 
-  const title = `PawBite vs ${vs.competitorName}.`;
+  const title = `${vs.competitorName} vs PawBite.`;
 
   const whenSection = [
     { heading: `When ${vs.competitorName} makes sense.`, body: vs.whenCompetitorMakesSense },

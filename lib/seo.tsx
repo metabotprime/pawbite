@@ -1,7 +1,10 @@
 export const SITE_NAME = 'PawBite';
 export const SITE_DESCRIPTION =
-  'The good stuff your dog needs. Nothing weird. Vet-formulated daily chews built for the essentials — gut and joints, done right.';
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://pawbite.vercel.app';
+  'Vet-formulated dog supplements: a daily probiotic chew, a hip & joint chew, and a calming chew. Real named strains, clinical doses, and every claim cited to a study.';
+// Fallback is the real production domain (not the *.vercel.app alias) so canonicals,
+// sitemap, OG, and schema URLs never bake the preview host. Still set
+// NEXT_PUBLIC_SITE_URL in each environment (see .env.example) — this is just the safety net.
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://pawbite.com';
 export const ORG_LEGAL_NAME = 'PawBite Inc.';
 export const ORG_LOCATION = 'Hudson Valley, NY';
 

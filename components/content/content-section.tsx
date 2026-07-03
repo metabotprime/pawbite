@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import type { ContentSection as SectionType } from '@/data/content-schema';
 
 /**
@@ -5,10 +6,14 @@ import type { ContentSection as SectionType } from '@/data/content-schema';
  * - Paragraphs split by double newlines
  * - **bold** → <strong>
  * - *italic* → <em>
+ * - [text](/path) → internal <Link> (root-relative hrefs only; external URLs stay plain text)
+ *
+ * NOTE: link syntax is for ContentSection.body ONLY. Do not use it in FAQ answers —
+ * those are serialized verbatim into FAQPage JSON-LD.
  */
 function renderInline(text: string): React.ReactNode[] {
   const parts: React.ReactNode[] = [];
-  const pattern = /(\*\*[^*]+\*\*|\*[^*]+\*)/g;
+  const pattern = /(\*\*[^*]+\*\*|\*[^*]+\*|\[[^\]]+\]\(\/[^)\s]*\))/g;
   let lastIndex = 0;
   let match: RegExpExecArray | null;
   let i = 0;
@@ -17,6 +22,21 @@ function renderInline(text: string): React.ReactNode[] {
     const m = match[0];
     if (m.startsWith('**')) {
       parts.push(<strong key={`b-${i++}`}>{m.slice(2, -2)}</strong>);
+    } else if (m.startsWith('[')) {
+      const linkMatch = /^\[([^\]]+)\]\((\/[^)\s]*)\)$/.exec(m);
+      if (linkMatch) {
+        parts.push(
+          <Link
+            key={`l-${i++}`}
+            href={linkMatch[2]}
+            className="font-medium text-terracotta-dark underline decoration-terracotta/40 underline-offset-2 hover:decoration-terracotta"
+          >
+            {linkMatch[1]}
+          </Link>,
+        );
+      } else {
+        parts.push(m);
+      }
     } else {
       parts.push(<em key={`i-${i++}`}>{m.slice(1, -1)}</em>);
     }

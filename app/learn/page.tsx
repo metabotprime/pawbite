@@ -7,9 +7,9 @@ import { blogPosts } from '@/data/blog-posts';
 import { SITE_URL } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Learn — articles, guides, and how-to',
+  title: 'Dog Health Articles — Gut, Joint & Calming Supplement Guides',
   description:
-    "Plain-English articles on dog gut health, joint care, and supplements. Reviewed by a licensed veterinarian. We don't pad word counts — we write what's useful.",
+    "Plain-English guides on dog probiotics, joint supplements, and calming chews — every claim cites a peer-reviewed study. We don't pad word counts.",
   alternates: { canonical: `${SITE_URL}/learn` },
 };
 
@@ -23,8 +23,8 @@ export default function LearnHub() {
             What we&apos;ve learned about dog nutrition.
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-charcoal">
-            Real answers to the questions dog parents actually search for. Every article is reviewed
-            by Dr. M. Hayes, DVM and updated when the science updates.
+            Real answers to the questions dog parents actually search for. Every claim cites a
+            peer-reviewed study, and every article is updated when the science updates.
           </p>
         </div>
 
@@ -47,7 +47,11 @@ export default function LearnHub() {
                 </h2>
                 <p className="line-clamp-3 text-sm text-charcoal">{post.tldr}</p>
                 <p className="mt-4 text-xs text-charcoal/60">
-                  Reviewed by {post.byline.reviewedBy}
+                  Updated{' '}
+                  {new Date(post.byline.updatedDate).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                  })}
                 </p>
               </Link>
             ))}

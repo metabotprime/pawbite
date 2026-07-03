@@ -22,6 +22,7 @@ const linkColumns = [
       { href: '/concerns', label: 'Concerns' },
       { href: '/breeds', label: 'By breed' },
       { href: '/ingredients', label: 'Ingredients' },
+      { href: '/vs', label: 'Compare brands' },
       { href: '/science', label: 'The science' },
     ],
   },

@@ -6,9 +6,9 @@ import { vsPages } from '@/data/vs-pages';
 import { SITE_URL } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'PawBite vs other dog supplement brands',
+  title: 'Dog Supplement Comparisons — PetLab, Zesty Paws, Cosequin & Native Pet',
   description:
-    'Honest side-by-side comparisons with PetLab Co., Native Pet, Zesty Paws, and Cosequin. When each makes sense, when PawBite does, and a real feature-by-feature table.',
+    'Honest side-by-side comparisons of PetLab Co., Native Pet, Zesty Paws, and Cosequin vs PawBite — strains, doses, price, and when each one is the right call.',
   alternates: { canonical: `${SITE_URL}/vs` },
 };
 

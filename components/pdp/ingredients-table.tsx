@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Container } from '@/components/layout/container';
 import type { Ingredient } from '@/data/products-detail';
 
@@ -38,7 +39,18 @@ export function IngredientsTable({
           <tbody>
             {ingredients.map((i, idx) => (
               <tr key={i.name} className={idx % 2 ? 'bg-cream/30' : ''}>
-                <td className="px-4 py-3 font-mono text-sm text-forest">{i.name}</td>
+                <td className="px-4 py-3 font-mono text-sm text-forest">
+                  {i.ingredientSlug ? (
+                    <Link
+                      href={`/ingredients/${i.ingredientSlug}`}
+                      className="underline decoration-forest/30 underline-offset-2 hover:text-terracotta-dark hover:decoration-terracotta"
+                    >
+                      {i.name}
+                    </Link>
+                  ) : (
+                    i.name
+                  )}
+                </td>
                 <td className="px-4 py-3 font-mono text-sm font-bold text-terracotta-dark">
                   {i.amount}
                 </td>

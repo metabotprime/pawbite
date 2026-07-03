@@ -7,6 +7,8 @@ export type Ingredient = {
   amount: string;
   role: string;
   reference?: string;
+  /** Slug of the matching /ingredients page, when one exists (names don't always string-match). */
+  ingredientSlug?: string;
 };
 
 export type DosingRow = {
@@ -25,6 +27,10 @@ export type CompetitorCompare = {
 };
 
 export type ProductDetail = Product & {
+  /** SEO title (dog-naming, front-loaded keyword). Layout template appends "· PawBite". */
+  seoTitle: string;
+  /** SEO meta description, ≤155 chars, benefit-led. */
+  seoDescription: string;
   longDescription: string;
   flavor: string;
   ingredients: Ingredient[];
@@ -43,12 +49,16 @@ export type ProductDetail = Product & {
 
 export const dailyProbioticDetail: ProductDetail = {
   ...dailyProbiotic,
+  seoTitle: 'Daily Probiotic for Dogs — 5 Strains, 5 Billion CFU',
+  seoDescription:
+    '5 named probiotic strains plus a prebiotic in one daily soft chew for dogs. Firmer stool in ~14 days. Vet-formulated, third-party tested, USA-made.',
   flavor: 'Chicken',
   longDescription:
     'A daily soft chew built on five clinically referenced probiotic strains, plus chicory inulin and pumpkin powder to feed the strains once they get there. Vet-formulated. Third-party tested. Made in a cGMP-certified facility in the USA.',
   ingredients: [
     {
       name: 'Bacillus coagulans GBI-30, 6086',
+      ingredientSlug: 'bacillus-coagulans',
       scientificName: 'Bacillus coagulans',
       amount: '1 billion CFU',
       role: 'Gut barrier integrity',
@@ -56,6 +66,7 @@ export const dailyProbioticDetail: ProductDetail = {
     },
     {
       name: 'Bifidobacterium animalis subsp. lactis BB-12',
+      ingredientSlug: 'bifidobacterium-animalis',
       scientificName: 'Bifidobacterium animalis',
       amount: '1 billion CFU',
       role: 'Stool consistency',
@@ -63,6 +74,7 @@ export const dailyProbioticDetail: ProductDetail = {
     },
     {
       name: 'Lactobacillus acidophilus LA-5',
+      ingredientSlug: 'lactobacillus-acidophilus',
       scientificName: 'Lactobacillus acidophilus',
       amount: '1 billion CFU',
       role: 'Pathogen exclusion',
@@ -70,6 +82,7 @@ export const dailyProbioticDetail: ProductDetail = {
     },
     {
       name: 'Lactobacillus plantarum 299v',
+      ingredientSlug: 'lactobacillus-plantarum',
       scientificName: 'Lactobacillus plantarum',
       amount: '1 billion CFU',
       role: 'Short-chain fatty acid production',
@@ -77,6 +90,7 @@ export const dailyProbioticDetail: ProductDetail = {
     },
     {
       name: 'Lactobacillus rhamnosus GG',
+      ingredientSlug: 'lactobacillus-rhamnosus',
       scientificName: 'Lactobacillus rhamnosus',
       amount: '1 billion CFU',
       role: 'Immune modulation',
@@ -192,25 +206,55 @@ export const dailyProbioticDetail: ProductDetail = {
 
 export const hipAndJointDetail: ProductDetail = {
   ...hipAndJoint,
+  seoTitle: 'Hip + Joint Chews for Dogs — 500mg Glucosamine',
+  seoDescription:
+    'Glucosamine, chondroitin, MSM, green-lipped mussel and turmeric in one daily chew. Clinical-strength joint support for dogs. Vet-formulated, USA-made.',
   flavor: 'Duck',
   longDescription:
     'A daily soft chew built on clinically-dosed joint support actives — glucosamine, chondroitin, MSM — plus green-lipped mussel and turmeric for a broader inflammation profile. Vet-formulated. Third-party tested. Made in a cGMP-certified facility in the USA.',
   ingredients: [
-    { name: 'Glucosamine HCl', amount: '500 mg', role: 'Cartilage building block' },
-    { name: 'Chondroitin sulfate', amount: '400 mg', role: 'Joint cushion + lubrication' },
+    {
+      name: 'Glucosamine HCl',
+      ingredientSlug: 'glucosamine-hcl',
+      amount: '500 mg',
+      role: 'Cartilage building block',
+    },
+    {
+      name: 'Chondroitin sulfate',
+      ingredientSlug: 'chondroitin-sulfate',
+      amount: '400 mg',
+      role: 'Joint cushion + lubrication',
+    },
     {
       name: 'MSM (methylsulfonylmethane)',
+      ingredientSlug: 'msm',
       amount: '250 mg',
       role: 'Anti-inflammatory sulfur source',
     },
-    { name: 'Green-lipped mussel', amount: '150 mg', role: 'Omega-3 + glycosaminoglycans' },
+    {
+      name: 'Green-lipped mussel',
+      ingredientSlug: 'green-lipped-mussel',
+      amount: '150 mg',
+      role: 'Omega-3 + glycosaminoglycans',
+    },
     {
       name: 'Turmeric (curcumin standardized)',
+      ingredientSlug: 'turmeric-curcumin',
       amount: '100 mg',
       role: 'Anti-inflammatory antioxidant',
     },
-    { name: 'Hyaluronic acid', amount: '10 mg', role: 'Joint fluid viscosity' },
-    { name: 'Salmon oil (EPA + DHA)', amount: '50 mg', role: 'Omega-3 anti-inflammatory' },
+    {
+      name: 'Hyaluronic acid',
+      ingredientSlug: 'hyaluronic-acid',
+      amount: '10 mg',
+      role: 'Joint fluid viscosity',
+    },
+    {
+      name: 'Salmon oil (EPA + DHA)',
+      ingredientSlug: 'salmon-oil-omega-3',
+      amount: '50 mg',
+      role: 'Omega-3 anti-inflammatory',
+    },
   ],
   prebioticsAndExtras: 'No prebiotics in this one — clinically-dosed joint actives only.',
   benefits: [
@@ -313,21 +357,41 @@ export const hipAndJointDetail: ProductDetail = {
 
 export const calmDetail: ProductDetail = {
   ...calm,
+  seoTitle: 'Calming Chews for Dogs — L-Theanine, No Sedatives',
+  seoDescription:
+    'L-theanine, ashwagandha, chamomile and a gut-brain probiotic for anxious dogs. Calm without sedation — no melatonin, no CBD. Vet-formulated.',
   flavor: 'Peanut butter',
   longDescription:
     'A daily soft chew built for the nervous, the storm-shy, and the vet-visit-dreading. L-theanine, ashwagandha, and chamomile take the edge off without sedation, and a gut-brain probiotic strain works the other end of the anxiety loop. No melatonin, no sedatives — calm, not knocked out. Vet-formulated. Third-party tested. Made in a cGMP-certified facility in the USA.',
   ingredients: [
     {
       name: 'L-theanine (Suntheanine)',
+      ingredientSlug: 'l-theanine',
       amount: '100 mg',
       role: 'Calm focus without sedation',
       reference: 'Pike et al., 2015',
     },
-    { name: 'Ashwagandha root extract', amount: '50 mg', role: 'Adaptogen for stress response' },
-    { name: 'Organic chamomile', amount: '100 mg', role: 'Soothes restlessness' },
-    { name: 'Hemp seed powder', amount: '75 mg', role: 'Calming support (no CBD, no THC)' },
+    {
+      name: 'Ashwagandha root extract',
+      ingredientSlug: 'ashwagandha',
+      amount: '50 mg',
+      role: 'Adaptogen for stress response',
+    },
+    {
+      name: 'Organic chamomile',
+      ingredientSlug: 'chamomile',
+      amount: '100 mg',
+      role: 'Soothes restlessness',
+    },
+    {
+      name: 'Hemp seed powder',
+      ingredientSlug: 'hemp',
+      amount: '75 mg',
+      role: 'Calming support (no CBD, no THC)',
+    },
     {
       name: 'Bacillus coagulans GBI-30, 6086',
+      ingredientSlug: 'bacillus-coagulans',
       scientificName: 'Bacillus coagulans',
       amount: '1 billion CFU',
       role: 'Gut-brain axis support',

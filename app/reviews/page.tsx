@@ -5,7 +5,6 @@ import { Container } from '@/components/layout/container';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { DogAvatar } from '@/components/brand/illustrations/characters/dog-avatar';
-import { Star } from '@/components/brand/illustrations/icons/star';
 import { Squiggle } from '@/components/brand/illustrations/icons/squiggle';
 import { testimonials } from '@/data/testimonials';
 import { SITE_URL } from '@/lib/seo';
@@ -115,9 +114,8 @@ export default function ReviewsPage() {
 
           {/* Placeholder note */}
           <div className="mx-auto mb-10 max-w-2xl rounded-2xl border border-warmyellow/40 bg-warmyellow/20 p-4 text-center text-sm text-forest">
-            These are placeholder reviews until our first 50 verified buyers ship. Aggregate numbers
-            above are projected based on pre-launch waitlist signal — they&apos;ll be replaced with
-            verified counts as orders ship.
+            These are pre-launch test-panel testimonials, not verified purchase reviews. Verified
+            reviews will appear here once our first orders ship.
           </div>
 
           {/* Reviews grid */}
@@ -139,11 +137,8 @@ export default function ReviewsPage() {
                 </div>
 
                 <div className="mb-3 flex items-center gap-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} size={14} className="text-terracotta" />
-                  ))}
-                  <Badge variant="soft" className="ml-2 normal-case">
-                    Verified buyer
+                  <Badge variant="soft" className="normal-case">
+                    Pre-launch test panel
                   </Badge>
                 </div>
 
@@ -170,7 +165,7 @@ export default function ReviewsPage() {
         <Container size="narrow">
           <div className="text-center">
             <h2 className="fraunces-soft mb-4 text-balance text-3xl font-bold text-forest md:text-4xl">
-              Already subscribed? Tell us how it&apos;s going.
+              Tested the formulas with us? Tell us how it went.
             </h2>
             <p className="mx-auto mb-6 max-w-xl text-base text-charcoal">
               We read every review — the good, the bad, and the wildly specific. They shape

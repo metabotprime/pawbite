@@ -15,6 +15,8 @@ export type ContentSource = {
   year: number;
   title: string;
   journal?: string;
+  /** Link to the actual study — PubMed or DOI. Only real, verified URLs. */
+  url?: string;
 };
 
 export type ContentFAQ = {
@@ -30,7 +32,12 @@ export type DataTable = {
 
 export type ContentByline = {
   author: string;
-  reviewedBy: string;
+  /**
+   * Named reviewer. Rendered (and emitted in Article schema) ONLY while
+   * VET_REVIEW_LIVE in data/vets.ts is true — until then bylines show
+   * "Veterinary review pending" regardless of this value.
+   */
+  reviewedBy?: string;
   publishedDate: string; // ISO date
   updatedDate: string; // ISO date
 };

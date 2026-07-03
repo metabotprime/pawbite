@@ -1,4 +1,5 @@
 import type { ContentByline as Byline } from '@/data/content-schema';
+import { VET_REVIEW_LIVE } from '@/data/vets';
 
 function formatDate(iso: string): string {
   try {
@@ -17,7 +18,13 @@ export function ContentByline({ byline }: { byline: Byline }) {
       </span>
       <span aria-hidden="true">·</span>
       <span>
-        Reviewed by <span className="font-semibold text-forest">{byline.reviewedBy}</span>
+        {VET_REVIEW_LIVE && byline.reviewedBy ? (
+          <>
+            Reviewed by <span className="font-semibold text-forest">{byline.reviewedBy}</span>
+          </>
+        ) : (
+          <>Veterinary review pending — every claim cites its study below</>
+        )}
       </span>
       <span aria-hidden="true">·</span>
       <span>Published {formatDate(byline.publishedDate)}</span>

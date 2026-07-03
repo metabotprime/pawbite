@@ -10,14 +10,51 @@ import { PdpFaq } from '@/components/pdp/pdp-faq';
 import { PdpGuarantee } from '@/components/pdp/pdp-guarantee';
 import { VetQuoteCard } from '@/components/pdp/vet-quote-card';
 import { dailyProbioticDetail, hipAndJointDetail } from '@/data/products-detail';
-import { dailyProbiotic, hipAndJoint, dailyDuo, dailyDuoMath } from '@/data/products';
+import {
+  dailyProbiotic,
+  hipAndJoint,
+  dailyDuo,
+  dailyDuoMath,
+  CHECKOUT_LIVE,
+} from '@/data/products';
+import { VET_REVIEW_LIVE } from '@/data/vets';
 import { SITE_URL } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'The Daily Duo · Save 32%',
+  title: 'Daily Duo for Dogs — Probiotic + Hip & Joint Bundle (Save 32%)',
   description:
-    'Daily Probiotic + Hip + Joint, together. The bundle that covers gut and joints — the two systems most dogs need supported daily. Save 32% with subscribe and save.',
+    'Daily Probiotic + Hip + Joint in one dog supplement bundle — gut and joints, the two systems most dogs need supported daily. Save 32% on subscribe and save.',
   alternates: { canonical: `${SITE_URL}/products/daily-duo` },
+  openGraph: {
+    title: 'The Daily Duo for Dogs — Save 32%',
+    description: 'Daily Probiotic + Hip + Joint, bundled. Gut and joints, covered daily.',
+    images: [{ url: '/products/daily-duo.png' }],
+  },
+};
+
+const duoProductSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'The Daily Duo for Dogs',
+  description:
+    'A subscription bundle of PawBite Daily Probiotic and Hip + Joint — the two daily-essential dog chews, together at a discount.',
+  brand: { '@type': 'Brand', name: 'PawBite' },
+  sku: 'daily-duo',
+  url: `${SITE_URL}/products/daily-duo`,
+  image: `${SITE_URL}/products/daily-duo.png`,
+  isRelatedTo: [
+    { '@type': 'Product', name: 'Daily Probiotic', url: `${SITE_URL}/products/daily-probiotic` },
+    { '@type': 'Product', name: 'Hip + Joint', url: `${SITE_URL}/products/hip-and-joint` },
+  ],
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'USD',
+    lowPrice: dailyDuo.subPrice.toFixed(2),
+    highPrice: dailyDuo.retailPrice.toFixed(2),
+    offerCount: 2,
+    availability: CHECKOUT_LIVE ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
+    url: `${SITE_URL}/products/daily-duo`,
+  },
 };
 
 const bundleFaqs = [
@@ -44,7 +81,7 @@ const bundleFaqs = [
   {
     question: 'Can I swap one of the Duo products for a different SKU later?',
     answer:
-      'Yes. When you have more SKUs to choose from (we’re adding a Calming chew in a few months), you’ll be able to swap any chew in your subscription. One-click swap from the account portal.',
+      'Yes. We also make a Calming chew (L-theanine, ashwagandha, chamomile, and a gut-brain probiotic) — so once you have a subscription, you can swap any chew in it with a single click from the account portal.',
   },
   {
     question: 'How do skipping and cancelling work?',
@@ -53,9 +90,27 @@ const bundleFaqs = [
   },
 ];
 
+const duoFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: bundleFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.question,
+    acceptedAnswer: { '@type': 'Answer', text: f.answer },
+  })),
+};
+
 export default function DailyDuoPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(duoProductSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(duoFaqSchema) }}
+      />
       <Section background="cream" spacing="default">
         <Container>
           <div className="grid items-start gap-12 lg:grid-cols-2">
@@ -166,13 +221,15 @@ export default function DailyDuoPage() {
         </Container>
       </Section>
 
-      <Section background="cream" spacing="default">
-        <VetQuoteCard
-          name="Dr. M. Hayes, DVM"
-          credentials="Board-certified veterinary nutritionist"
-          quote="If a dog is over five years old and active, gut and joint support are the two highest-leverage daily essentials. The Daily Duo is genuinely what most of my older patients should be on — though I admit it’s nice to finally have a brand to point them to instead of a vague Amazon search."
-        />
-      </Section>
+      {VET_REVIEW_LIVE && (
+        <Section background="cream" spacing="default">
+          <VetQuoteCard
+            name="Dr. M. Hayes, DVM"
+            credentials="Board-certified veterinary nutritionist"
+            quote="If a dog is over five years old and active, gut and joint support are the two highest-leverage daily essentials. The Daily Duo is genuinely what most of my older patients should be on — though I admit it’s nice to finally have a brand to point them to instead of a vague Amazon search."
+          />
+        </Section>
+      )}
 
       <Section background="mint" spacing="default">
         <PdpFaq faqs={bundleFaqs} />

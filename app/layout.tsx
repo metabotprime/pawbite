@@ -17,7 +17,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — The good stuff your dog needs. Nothing weird.`,
+    default: `${SITE_NAME} — Vet-Formulated Dog Supplement Chews`,
     template: `%s · ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: SITE_NAME,
+    title: `${SITE_NAME} — Vet-Formulated Dog Supplements`,
     description: SITE_DESCRIPTION,
     images: [{ url: '/og-default.png', width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: SITE_NAME,
+    title: `${SITE_NAME} — Vet-Formulated Dog Supplements`,
     description: SITE_DESCRIPTION,
     images: ['/og-default.png'],
   },

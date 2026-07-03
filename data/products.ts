@@ -95,6 +95,13 @@ export const hipAndJoint = products[1];
 export const calm = products[2];
 export const dailyDuo = products[3];
 
+/**
+ * Whether checkout is live. While false (pre-launch), CTAs read "Pre-order — coming soon"
+ * and Product JSON-LD advertises schema.org/PreOrder instead of InStock. Flip to true the
+ * day real checkout goes live so the buy buttons and structured data switch together.
+ */
+export const CHECKOUT_LIVE = false;
+
 /** Discount rates used to derive the Daily Duo bundle math. Single source of truth. */
 export const BUNDLE_DISCOUNT = 0.15;
 export const SUBSCRIBE_DISCOUNT = 0.2;

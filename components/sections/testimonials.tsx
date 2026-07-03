@@ -1,7 +1,6 @@
 import { Container } from '@/components/layout/container';
 import { Section } from '@/components/layout/section';
 import { DogAvatar } from '@/components/brand/illustrations/characters/dog-avatar';
-import { Star } from '@/components/brand/illustrations/icons/star';
 import { Badge } from '@/components/ui/badge';
 import { testimonials } from '@/data/testimonials';
 
@@ -73,11 +72,8 @@ export function TestimonialsSection() {
               </div>
 
               <div className="mb-3 flex items-center gap-1">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <Star key={i} size={14} className="text-terracotta" />
-                ))}
-                <Badge variant="soft" className="ml-2 normal-case">
-                  Verified buyer
+                <Badge variant="soft" className="normal-case">
+                  Pre-launch test panel
                 </Badge>
               </div>
 
