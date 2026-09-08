@@ -85,7 +85,7 @@ export function Footer() {
           <div>
             <Wordmark className="mb-4 w-36 text-cream" />
             <p className="font-hand text-lg leading-tight text-warmyellow">
-              Made by humans in Hudson Valley, NY.
+              Formulated in the U.S.A
             </p>
           </div>
           <div className="flex flex-col gap-2 text-xs text-cream/60 md:items-end">
