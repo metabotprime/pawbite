@@ -9,7 +9,10 @@ import { GET } from '@/app/llms.txt/route';
 describe('comparison consolidation', () => {
   it('permanently redirects retired articles to published comparisons and removes discovery duplicates', async () => {
     if (!config.redirects) throw new Error('Comparison redirects are missing');
-    const redirects = await config.redirects();
+    const redirects = (await config.redirects()).filter((redirect) =>
+      redirect.source.startsWith('/learn/'),
+    );
+    expect(redirects).toHaveLength(2);
     const llms = await (await GET()).text();
     const urls = sitemap().map((entry) => entry.url);
     for (const redirect of redirects) {

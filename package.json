@@ -15,7 +15,9 @@
     "format:check": "prettier --check .",
     "test": "vitest",
     "test:run": "vitest run",
-    "test:watch": "vitest --watch"
+    "test:watch": "vitest --watch",
+    "seo": "node scripts/seo-toolkit.mjs",
+    "seo:audit": "python3 scripts/seo-audit.py"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",

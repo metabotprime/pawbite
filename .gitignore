@@ -39,6 +39,7 @@ next-env.d.ts
 # misc
 *.local
 .cache
+__pycache__/
 
 # Local preview server config (machine-specific absolute paths)
 .claude/launch.json

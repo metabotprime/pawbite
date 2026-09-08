@@ -7,3 +7,6 @@ public/
 .env*
 designs/
 docs/
+# Reviewed upstream skills are retained verbatim for provenance.
+.agents/skills/
+.claude/skills/

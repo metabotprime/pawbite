@@ -1,11 +1,9 @@
 export const SITE_NAME = 'PawBite';
 export const SITE_DESCRIPTION =
-  'Vet-formulated dog supplements: a daily probiotic chew, a hip & joint chew, and a calming chew. Real named strains, clinical doses, and every claim cited to a study.';
-// The repo homepage is the verified public deployment. pawbite.com currently redirects
-// to a domain-sale listing. Override only after the intended custom domain is connected.
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://pawbite-zeta.vercel.app';
-export const ORG_LEGAL_NAME = 'PawBite Inc.';
-export const ORG_LOCATION = 'Hudson Valley, NY';
+  'Explore PawBite dog supplement chews for gut health, hip and joint support, and everyday calm. Compare ingredients, serving guidance, and pre-launch product details.';
+// Vercel redirects pawbite.com to www.pawbite.com. Keep discovery signals on
+// that verified primary origin, including builds served from deployment aliases.
+export const SITE_URL = 'https://www.pawbite.com';
 
 /** JSON-LD: Organization */
 export function organizationSchema() {
@@ -13,16 +11,9 @@ export function organizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: SITE_NAME,
-    legalName: ORG_LEGAL_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/og-default.png`,
     description: SITE_DESCRIPTION,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Hudson Valley',
-      addressRegion: 'NY',
-      addressCountry: 'US',
-    },
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
@@ -35,21 +26,13 @@ export function organizationSchema() {
   };
 }
 
-/** JSON-LD: WebSite (enables Sitelinks search box) */
+/** JSON-LD: WebSite. There is no site search, so do not advertise SearchAction. */
 export function websiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: SITE_NAME,
     url: SITE_URL,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/learn?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
   };
 }
 
