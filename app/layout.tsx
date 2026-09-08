@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import { fontDisplay, fontSerif, fontSans, fontHand, fontMono } from '@/lib/fonts';
 import {
   JsonLd,
@@ -83,6 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <StickyATCBar />
+        <Analytics />
       </body>
     </html>
   );
