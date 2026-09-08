@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const blobVariants: Array<1 | 2 | 3 | 4 | 5 | 6> = [1, 3, 5];
-const rotations = [-2, 0, 2];
+const rotations = [0, 0, 0];
 
 export default function ProductsCollectionPage() {
   const singles = products.filter((p) => p.slug !== 'daily-duo');
@@ -22,12 +22,14 @@ export default function ProductsCollectionPage() {
     <Section background="cream" spacing="default">
       <Container>
         <div className="mb-12 text-center">
-          <p className="mb-2 font-hand text-2xl text-terracotta">Shop the line —</p>
-          <h1 className="fraunces-soft mb-4 text-balance text-4xl font-bold md:text-5xl">
-            Three daily essentials.
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em]">Meet the line</p>
+          <h1 className="editorial-heading mb-5 text-balance text-5xl leading-none md:text-7xl">
+            Three chews.
+            <br />
+            <span className="font-serif italic">One very good dog.</span>
           </h1>
           <p className="mx-auto max-w-xl text-lg text-charcoal">
-            Gut, joints, and calm — a focused chew for each. The Duo bundles the two most dogs start
+            Gut, joints, and calm. a focused chew for each. The Duo bundles the two most dogs start
             with and saves 32%.
           </p>
         </div>

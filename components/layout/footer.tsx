@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { Container } from '@/components/layout/container';
-import { Mascot } from '@/components/brand/illustrations/characters/mascot';
+import { Wordmark } from '@/components/brand/wordmark';
 import { Button } from '@/components/ui/button';
 
 const linkColumns = [
@@ -48,16 +48,12 @@ const linkColumns = [
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-forest pb-10 pt-32 text-cream">
-      <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
-        <Mascot variant="peeking" size={120} bodyColor="#E8B547" />
-      </div>
-
+    <footer className="relative overflow-hidden bg-forest pb-28 pt-14 text-cream">
       <Container>
         <div className="mb-16 text-center">
           <p className="mb-2 font-hand text-3xl text-warmyellow">Subscribe & save 20%.</p>
           <p className="mx-auto max-w-md text-sm text-cream/80">
-            Plus free shipping on every order. Skip, swap, or cancel in one click — no calls, no
+            Plus free shipping on every order. Skip, swap, or cancel in one click. No calls, no
             fees.
           </p>
           <Button variant="light" size="md" className="mt-6" asChild>
@@ -87,7 +83,7 @@ export function Footer() {
 
         <div className="flex flex-col items-start justify-between gap-4 border-t border-cream/15 pt-8 md:flex-row md:items-center">
           <div>
-            <div className="mb-1 font-display text-2xl text-cream">PawBite</div>
+            <Wordmark className="mb-4 w-36 text-cream" />
             <p className="font-hand text-lg leading-tight text-warmyellow">
               Made by humans in Hudson Valley, NY.
             </p>
@@ -104,7 +100,7 @@ export function Footer() {
                 Editorial policy
               </Link>
             </div>
-            <p>© {new Date().getFullYear()} PawBite. Vet-formulated. Dog-approved.</p>
+            <p>© {new Date().getFullYear()} PawBite. Good stuff. Nothing weird.</p>
           </div>
         </div>
       </Container>

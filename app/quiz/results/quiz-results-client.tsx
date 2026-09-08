@@ -1,6 +1,5 @@
 'use client';
 
-import * as React from 'react';
 import Link from 'next/link';
 import { Section } from '@/components/layout/section';
 import { Container } from '@/components/layout/container';
@@ -8,22 +7,11 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ProductCard } from '@/components/pdp/product-card';
 import { Mascot } from '@/components/brand/illustrations/characters/mascot';
-import { Sparkle } from '@/components/brand/illustrations/icons/sparkle';
 import { CalloutPill } from '@/components/brand/illustrations/callout-pill';
-import { recommendFromAnswers, generateDiscountCode, type QuizAnswers } from '@/lib/quiz';
+import { recommendFromAnswers, type QuizAnswers } from '@/lib/quiz';
 import { products } from '@/data/products';
 
 export function QuizResultsClient({ answers }: { answers: QuizAnswers }) {
-  const [discountCode, setDiscountCode] = React.useState('WELCOME-PAWBITE');
-
-  React.useEffect(() => {
-    // Read email from sessionStorage — not from URL to avoid PII leakage
-    const email = sessionStorage.getItem('pawbite_quiz_email') ?? '';
-    if (email) {
-      setDiscountCode(generateDiscountCode(email));
-    }
-  }, []);
-
   const result = recommendFromAnswers(answers);
 
   const recommendedProduct = products.find((p) => p.slug === result.primarySku) ?? products[0];
@@ -52,20 +40,15 @@ export function QuizResultsClient({ answers }: { answers: QuizAnswers }) {
             {result.reasoning}
           </p>
 
-          <div className="mx-auto mb-10 inline-flex items-center gap-3 rounded-full border-2 border-terracotta bg-terracotta/5 px-6 py-3">
-            <Sparkle size={20} className="text-terracotta" />
-            <div className="text-left">
-              <div className="text-xs uppercase tracking-wider text-forest/70">
-                Your $5-off code
-              </div>
-              <div className="font-mono text-lg font-bold text-terracotta">{discountCode}</div>
-            </div>
-          </div>
+          <p className="mx-auto mb-8 max-w-xl text-sm text-charcoal/70">
+            This is a product guide, not a diagnosis. Discuss health concerns, medications, and
+            prescription diets with your veterinarian before changing your dog’s routine.
+          </p>
 
           <div className="mb-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button variant="primary" size="lg" asChild>
               <Link href={`/products/${recommendedProduct.slug}`}>
-                Shop {recommendedProduct.shortName} →
+                Explore {recommendedProduct.shortName} →
               </Link>
             </Button>
             {result.bundleRecommended && (

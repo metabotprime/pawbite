@@ -41,7 +41,7 @@ export const vsPages: VsPage[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-02-14',
-      updatedDate: '2026-05-10',
+      updatedDate: '2026-09-08',
     },
     comparisonRows: [
       { feature: 'CFU per chew', pawbite: '5 billion', competitor: '5 billion (claimed)' },
@@ -140,6 +140,31 @@ export const vsPages: VsPage[] = [
         question: "What's the PawBite money-back guarantee?",
         answer:
           "90 days from your first order. If your dog doesn't take to the chews or you don't see results within 90 days, email help@pawbite.com and we refund the first order in full. Keep the chews — donate them or pass them to a friend. PetLab's guarantee is 30 days, which is short for a probiotic since coat and immune effects often take 4–8 weeks to show up.",
+      },
+      {
+        question: 'Is more strains better?',
+        answer:
+          'Strain count alone does not establish effectiveness. Look for the exact strain, the amount, and research relevant to the intended use. A larger blend is not automatically a better choice.',
+      },
+      {
+        question: 'Why does it matter when CFU is measured?',
+        answer:
+          'CFU counts describe viable microorganisms. A count guaranteed through expiration is different from a count measured only at manufacture. Check the label for the guarantee and storage instructions.',
+      },
+      {
+        question: 'Can I switch from PetLab to PawBite without a gap?',
+        answer:
+          'There is no universal transition schedule for all probiotic products or dogs. Follow the product instructions and ask your veterinarian before changing a supplement used as part of treatment.',
+      },
+      {
+        question: 'My dog hates chews. What now?',
+        answer:
+          'A chew is useful only if your dog eats it. Ask your veterinarian about a suitable alternative format, especially if your dog follows a prescription or elimination diet.',
+      },
+      {
+        question: 'How long until I see results from either?',
+        answer:
+          'Response depends on the formulation, the reason for use, and your dog. A fixed timeline cannot be promised for either product. Discuss persistent or worsening symptoms with your veterinarian rather than waiting for a supplement to work.',
       },
     ],
   },
@@ -427,7 +452,7 @@ export const vsPages: VsPage[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-03-07',
-      updatedDate: '2026-05-10',
+      updatedDate: '2026-09-08',
     },
     comparisonRows: [
       {
@@ -548,12 +573,37 @@ export const vsPages: VsPage[] = [
       {
         question: 'Is PawBite Hip + Joint safe to give with a vet-prescribed NSAID like Carprofen?',
         answer:
-          'Yes. PawBite Hip + Joint is a nutritional supplement, not an NSAID — there is no drug-drug interaction with Carprofen, Galliprim, Meloxicam, or other prescription anti-inflammatories. Many owners use a joint supplement to reduce the NSAID dose their vet might otherwise prescribe over time. Always loop in your vet for chronic conditions.',
+          'Ask your prescribing veterinarian before combining Hip + Joint with an NSAID or any other medicine. A supplement can still have adverse effects or interactions. Do not reduce or stop prescribed pain medication because you have added a supplement.',
       },
       {
         question: 'What flavor is PawBite Hip + Joint? Cosequin comes in chicken.',
         answer:
           'PawBite Hip + Joint is duck-flavored. A lot of senior dogs (the primary use case for joint supplements) develop chicken sensitivities over time, so we made Hip + Joint duck-based to avoid that. Cosequin offers chicken, tuna, and unflavored capsule SKUs depending on which product line you pick.',
+      },
+      {
+        question: 'Can I switch from Cosequin to PawBite without a gap?',
+        answer:
+          'Ask your veterinarian to compare the formulas and plan the change, especially if Cosequin is part of an arthritis care plan. Do not change prescribed pain treatment when switching supplements.',
+      },
+      {
+        question: 'Is one safer than the other?',
+        answer:
+          'Safety depends on the full formula, dose, health conditions, and other medicines your dog takes. Ingredient overlap does not establish equal safety. Ask your veterinarian to review the labels.',
+      },
+      {
+        question: 'Does Cosequin work better because it costs more?',
+        answer:
+          'Price alone does not establish effectiveness. Compare the exact formulation, serving instructions, and evidence for the finished product, with advice from your veterinarian.',
+      },
+      {
+        question: 'How long until either works?',
+        answer:
+          'There is no guaranteed response time. Agree on a monitoring and review plan with your veterinarian. Pain or worsening mobility needs assessment, not a longer supplement trial.',
+      },
+      {
+        question: 'Can I give both?',
+        answer:
+          'Combining products may duplicate ingredients and increase the total dose. Have your veterinarian review both labels before using them together.',
       },
     ],
   },

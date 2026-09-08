@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Canister } from '@/components/brand/canister';
-import { Blob } from '@/components/brand/illustrations/decor/blob';
 import type { Product } from '@/data/products';
 import { cn } from '@/lib/utils';
 
@@ -10,7 +9,6 @@ import { cn } from '@/lib/utils';
  */
 export function ProductVisual({
   product,
-  blobVariant = 1,
   className,
 }: {
   product: Product;
@@ -19,11 +17,6 @@ export function ProductVisual({
 }) {
   return (
     <div className={cn('relative flex h-56 items-center justify-center', className)}>
-      <Blob
-        variant={blobVariant}
-        color={product.blobColor}
-        className="absolute inset-0 h-full w-full"
-      />
       {product.imageSrc ? (
         <Image
           src={product.imageSrc}

@@ -4,6 +4,7 @@ import { Section } from '@/components/layout/section';
 import { Container } from '@/components/layout/container';
 import { Badge } from '@/components/ui/badge';
 import { ingredientPages } from '@/data/ingredient-pages';
+import { products } from '@/data/products';
 import { SITE_URL } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -85,8 +86,11 @@ export default function IngredientsHub() {
                           <p className="text-xs text-charcoal/60">
                             In{' '}
                             {ing.inProducts
-                              .map((p) => (p === 'daily-probiotic' ? 'Daily' : 'Hip + Joint'))
-                              .join(' + ')}
+                              .map(
+                                (slug) =>
+                                  products.find((product) => product.slug === slug)?.name ?? slug,
+                              )
+                              .join(', ')}
                           </p>
                         )}
                       </Link>

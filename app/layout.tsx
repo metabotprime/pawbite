@@ -72,7 +72,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="flex min-h-screen flex-col bg-cream text-forest">
         <WelcomeBanner />
         <Header />
-        <main className="flex-1">{children}</main>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-cream focus:px-5 focus:py-3"
+        >
+          Skip to content
+        </a>
+        <main id="main-content" className="flex-1">
+          {children}
+        </main>
         <Footer />
         <StickyATCBar />
       </body>

@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    --color-cream: 245 239 230;
-    --color-forest: 31 58 46;
-    --color-terracotta: 200 118 91;
+    --color-cream: 248 240 227;
+    --color-forest: 41 61 166;
+    --color-terracotta: 204 121 89;
   }
 
   html {
@@ -16,8 +16,8 @@
   }
 
   body {
-    background-color: #f5efe6;
-    color: #1f3a2e;
+    background-color: #f8f0e3;
+    color: #293da6;
     font-family: var(--font-sans), system-ui, sans-serif;
   }
 
@@ -34,19 +34,19 @@
   h4 {
     font-family: var(--font-serif);
     font-variation-settings: 'SOFT' 100;
-    color: #1f3a2e;
+    color: inherit;
   }
 
   ::selection {
-    background-color: #c8765b;
-    color: #f5efe6;
+    background-color: #cc7959;
+    color: #f8f0e3;
   }
 }
 
 @layer components {
   /* Hand-drawn underline utility — for emotional/personal accents */
   .underline-hand {
-    background-image: linear-gradient(transparent 65%, #c8765b 65%, #c8765b 80%, transparent 80%);
+    background-image: linear-gradient(transparent 65%, #cc7959 65%, #cc7959 80%, transparent 80%);
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
@@ -55,5 +55,34 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  .editorial-heading {
+    font-family: var(--font-sans), sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.065em;
+  }
+}
+@layer base {
+  :focus-visible {
+    outline: 2px solid #293da6;
+    outline-offset: 4px;
+  }
+  main {
+    min-width: 0;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

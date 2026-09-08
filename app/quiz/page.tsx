@@ -14,9 +14,8 @@ export default function QuizPage() {
   const router = useRouter();
   const [step, setStep] = React.useState(0);
   const [answers, setAnswers] = React.useState<QuizAnswers>({});
-  const [email, setEmail] = React.useState('');
 
-  const isEmailStep = step === quizQuestions.length;
+  const isResultsStep = step === quizQuestions.length;
   const totalSteps = quizQuestions.length + 1;
   const currentQuestion = quizQuestions[step];
 
@@ -34,8 +33,6 @@ export default function QuizPage() {
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
-    // Store email in sessionStorage — keep it out of the URL to avoid PII leakage
-    sessionStorage.setItem('pawbite_quiz_email', email);
     const params = new URLSearchParams();
     Object.entries(answers).forEach(([k, v]) => v && params.set(k, v));
     router.push(`/quiz/results?${params.toString()}`);
@@ -46,14 +43,14 @@ export default function QuizPage() {
       <Container size="narrow">
         <div className="mb-6 text-center">
           <CalloutPill variant="caveat" color="warmyellow" rotation={-3}>
-            $5 off when you finish —
+            A starting point for your dog.
           </CalloutPill>
         </div>
 
         <QuizProgress current={step + 1} total={totalSteps} />
 
         <div className="rounded-3xl border border-forest/15 bg-cream p-6 md:p-10">
-          {!isEmailStep && currentQuestion && (
+          {!isResultsStep && currentQuestion && (
             <>
               <h1 className="fraunces-soft mb-2 text-balance text-2xl font-bold md:text-3xl">
                 {currentQuestion.question}
@@ -97,31 +94,18 @@ export default function QuizPage() {
             </>
           )}
 
-          {isEmailStep && (
+          {isResultsStep && (
             <form onSubmit={submit}>
               <h1 className="fraunces-soft mb-2 text-balance text-2xl font-bold md:text-3xl">
-                One last thing — where should we send your $5 off?
+                Your starting point is ready.
               </h1>
               <p className="mb-6 text-sm text-charcoal/70">
-                We&apos;ll email your personalized recommendation and a $5-off code valid on your
-                first order. No spam. Cancel any time.
+                See the recommendation based on your answers. No email needed. This quiz is a guide
+                to our products, not a veterinary diagnosis.
               </p>
 
-              <label htmlFor="quiz-email" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="quiz-email"
-                type="email"
-                required
-                placeholder="you@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="mb-4 w-full rounded-full border-2 border-forest/20 bg-offwhite px-5 py-3 text-base text-forest placeholder:text-forest/60 focus:border-terracotta focus:outline-none"
-              />
-
               <Button type="submit" variant="primary" size="lg" className="w-full">
-                Get my dog&apos;s plan →
+                See my dog&apos;s results →
               </Button>
 
               <div className="mt-4 flex items-center justify-start">
@@ -133,14 +117,6 @@ export default function QuizPage() {
                   ← Back
                 </button>
               </div>
-
-              <p className="mt-6 text-center text-xs text-charcoal/60">
-                We don&apos;t share, sell, or rent your email. Read our{' '}
-                <a href="/privacy" className="underline">
-                  privacy promise
-                </a>
-                .
-              </p>
             </form>
           )}
         </div>

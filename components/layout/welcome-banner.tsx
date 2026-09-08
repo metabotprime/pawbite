@@ -4,6 +4,7 @@ import * as React from 'react';
 import { X } from 'lucide-react';
 import { Bone } from '@/components/brand/illustrations/icons/bone';
 import { cn } from '@/lib/utils';
+import { CHECKOUT_LIVE } from '@/data/products';
 
 const DISMISS_KEY = 'pawbite_welcome_dismissed';
 
@@ -36,15 +37,21 @@ export function WelcomeBanner({ show = true, className, ...props }: WelcomeBanne
   return (
     <div
       className={cn(
-        'relative w-full bg-terracotta px-10 py-2 text-center text-xs font-medium text-cream md:text-sm',
+        'relative w-full bg-forest px-10 py-2 text-center text-xs font-medium text-cream md:text-sm',
         className,
       )}
       {...props}
     >
       <span className="inline-flex items-center gap-2">
         <Bone size={14} className="text-cream/80" />
-        Welcome offer: 30% off your first order + free shipping. Code{' '}
-        <span className="font-bold tracking-wider">WELCOME</span>
+        {CHECKOUT_LIVE ? (
+          <>
+            Welcome offer: 30% off your first order + free shipping. Code{' '}
+            <span className="font-bold tracking-wider">WELCOME</span>
+          </>
+        ) : (
+          'Meet PawBite. Three focused chews. Online ordering coming soon.'
+        )}
       </span>
       <button
         type="button"

@@ -10,17 +10,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // PawBite brand palette — locked in spec section 2
-        cream: '#F5EFE6',
-        'cream-2': '#EFE7D8',
-        forest: '#1F3A2E',
-        'forest-deep': '#142A20',
-        'forest-mid': '#2A4538',
-        terracotta: '#C8765B',
-        'terracotta-dark': '#B05D43',
-        warmyellow: '#E8B547',
-        pinky: '#F4B8A8',
-        mint: '#B8D4C4',
+        // Cobalt and cream direction adopted from the supplied PawBite reference.
+        cream: '#F8F0E3',
+        'cream-2': '#EFE3D1',
+        forest: '#293DA6',
+        'forest-deep': '#1F2C7C',
+        'forest-mid': '#3449AF',
+        terracotta: '#CC7959',
+        'terracotta-dark': '#A74F2F',
+        warmyellow: '#F5D778',
+        pinky: '#EDBDAA',
+        mint: '#C9D8B9',
         offwhite: '#FAFAFA',
         charcoal: '#2A2A2A',
         'cream-muted': '#D4CFC4',
@@ -30,9 +30,9 @@ const config: Config = {
       },
       boxShadow: {
         // Stacked drop shadow used on bouncy CTAs (Design 8 hybrid)
-        stack: '0 8px 0 -2px #1F3A2E',
-        'stack-sm': '0 4px 0 -2px #1F3A2E',
-        soft: '0 12px 32px -8px rgba(31, 58, 46, 0.18)',
+        stack: '0 8px 0 -2px #293DA6',
+        'stack-sm': '0 4px 0 -2px #293DA6',
+        soft: '0 12px 32px -8px rgba(41, 61, 166, 0.18)',
       },
       animation: {
         float: 'float 3s ease-in-out infinite',

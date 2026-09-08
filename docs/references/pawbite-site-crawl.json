@@ -1,0 +1,382 @@
+{
+  "source": "https://pawbite-site.vercel.app",
+  "captured": "2026-09-08",
+  "method": "Public HTML crawl following same-origin page links; no form submissions.",
+  "pageCount": 93,
+  "pages": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/about",
+      "status": 200
+    },
+    {
+      "path": "/breeds",
+      "status": 200
+    },
+    {
+      "path": "/concerns",
+      "status": 200
+    },
+    {
+      "path": "/editorial",
+      "status": 200
+    },
+    {
+      "path": "/ingredients",
+      "status": 200
+    },
+    {
+      "path": "/learn",
+      "status": 200
+    },
+    {
+      "path": "/merch",
+      "status": 200
+    },
+    {
+      "path": "/perks",
+      "status": 200
+    },
+    {
+      "path": "/privacy",
+      "status": 200
+    },
+    {
+      "path": "/products",
+      "status": 200
+    },
+    {
+      "path": "/products/calming-chews",
+      "status": 200
+    },
+    {
+      "path": "/products/daily-probiotic",
+      "status": 200
+    },
+    {
+      "path": "/products/hip-and-joint",
+      "status": 200
+    },
+    {
+      "path": "/quiz",
+      "status": 200
+    },
+    {
+      "path": "/returns",
+      "status": 200
+    },
+    {
+      "path": "/reviews",
+      "status": 200
+    },
+    {
+      "path": "/science",
+      "status": 200
+    },
+    {
+      "path": "/shipping",
+      "status": 200
+    },
+    {
+      "path": "/terms",
+      "status": 200
+    },
+    {
+      "path": "/vets",
+      "status": 200
+    },
+    {
+      "path": "/breeds/australian-shepherd",
+      "status": 200
+    },
+    {
+      "path": "/breeds/beagle",
+      "status": 200
+    },
+    {
+      "path": "/breeds/bernese-mountain-dog",
+      "status": 200
+    },
+    {
+      "path": "/breeds/boston-terrier",
+      "status": 200
+    },
+    {
+      "path": "/breeds/boxer",
+      "status": 200
+    },
+    {
+      "path": "/breeds/brittany",
+      "status": 200
+    },
+    {
+      "path": "/breeds/bulldog",
+      "status": 200
+    },
+    {
+      "path": "/breeds/cavalier-king-charles-spaniel",
+      "status": 200
+    },
+    {
+      "path": "/breeds/dachshund",
+      "status": 200
+    },
+    {
+      "path": "/breeds/doodle",
+      "status": 200
+    },
+    {
+      "path": "/breeds/french-bulldog",
+      "status": 200
+    },
+    {
+      "path": "/breeds/german-shepherd",
+      "status": 200
+    },
+    {
+      "path": "/breeds/golden-retriever",
+      "status": 200
+    },
+    {
+      "path": "/breeds/great-dane",
+      "status": 200
+    },
+    {
+      "path": "/breeds/havanese",
+      "status": 200
+    },
+    {
+      "path": "/breeds/labrador-retriever",
+      "status": 200
+    },
+    {
+      "path": "/breeds/mini-schnauzer",
+      "status": 200
+    },
+    {
+      "path": "/breeds/pointer",
+      "status": 200
+    },
+    {
+      "path": "/breeds/pomeranian",
+      "status": 200
+    },
+    {
+      "path": "/breeds/poodle",
+      "status": 200
+    },
+    {
+      "path": "/breeds/rottweiler",
+      "status": 200
+    },
+    {
+      "path": "/breeds/shetland-sheepdog",
+      "status": 200
+    },
+    {
+      "path": "/breeds/shih-tzu",
+      "status": 200
+    },
+    {
+      "path": "/breeds/siberian-husky",
+      "status": 200
+    },
+    {
+      "path": "/breeds/yorkshire-terrier",
+      "status": 200
+    },
+    {
+      "path": "/concerns/arthritis",
+      "status": 200
+    },
+    {
+      "path": "/concerns/food-allergies",
+      "status": 200
+    },
+    {
+      "path": "/concerns/gas-and-bloating",
+      "status": 200
+    },
+    {
+      "path": "/concerns/hip-pain",
+      "status": 200
+    },
+    {
+      "path": "/concerns/itchy-skin-and-coat",
+      "status": 200
+    },
+    {
+      "path": "/concerns/loose-stool",
+      "status": 200
+    },
+    {
+      "path": "/concerns/picky-eaters",
+      "status": 200
+    },
+    {
+      "path": "/concerns/post-antibiotic-recovery",
+      "status": 200
+    },
+    {
+      "path": "/concerns/sensitive-stomach",
+      "status": 200
+    },
+    {
+      "path": "/concerns/slow-to-get-up",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/ashwagandha",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/bacillus-coagulans",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/bifidobacterium-animalis",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/chamomile",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/chicory-inulin",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/chondroitin-sulfate",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/colostrum",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/glucosamine-hcl",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/green-lipped-mussel",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/hemp",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/hyaluronic-acid",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/l-theanine",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/lactobacillus-acidophilus",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/lactobacillus-plantarum",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/lactobacillus-rhamnosus",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/msm",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/pumpkin-powder",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/quercetin",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/salmon-oil-omega-3",
+      "status": 200
+    },
+    {
+      "path": "/ingredients/turmeric-curcumin",
+      "status": 200
+    },
+    {
+      "path": "/learn/best-dog-probiotic-2026",
+      "status": 200
+    },
+    {
+      "path": "/learn/best-hip-and-joint-supplement-for-dogs-2026",
+      "status": 200
+    },
+    {
+      "path": "/learn/cosequin-vs-pawbite-hip-joint",
+      "status": 200
+    },
+    {
+      "path": "/learn/do-dogs-need-probiotics",
+      "status": 200
+    },
+    {
+      "path": "/learn/glucosamine-for-dogs-complete-guide",
+      "status": 200
+    },
+    {
+      "path": "/learn/gut-health-in-dogs-signs-of-imbalance",
+      "status": 200
+    },
+    {
+      "path": "/learn/how-long-does-it-take-for-probiotics-to-work-in-dogs",
+      "status": 200
+    },
+    {
+      "path": "/learn/how-to-tell-if-your-dog-has-arthritis",
+      "status": 200
+    },
+    {
+      "path": "/learn/is-my-dogs-poop-normal-color-chart",
+      "status": 200
+    },
+    {
+      "path": "/learn/petlab-vs-pawbite-probiotic",
+      "status": 200
+    },
+    {
+      "path": "/learn/probiotic-strains-for-dogs-explained",
+      "status": 200
+    },
+    {
+      "path": "/learn/probiotic-vs-prebiotic-vs-postbiotic-for-dogs",
+      "status": 200
+    },
+    {
+      "path": "/learn/puppy-vs-senior-dog-supplements-what-to-know",
+      "status": 200
+    },
+    {
+      "path": "/learn/signs-of-joint-pain-in-dogs",
+      "status": 200
+    },
+    {
+      "path": "/learn/signs-your-dog-needs-a-probiotic",
+      "status": 200
+    },
+    {
+      "path": "/products/daily-duo",
+      "status": 200
+    },
+    {
+      "path": "/vets/m-hayes",
+      "status": 200
+    }
+  ],
+  "assetsDiscovered": 60,
+  "reusedAsset": "Inline PawBite vector wordmark from the homepage header, reconstructed using its six original path elements."
+}

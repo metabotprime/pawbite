@@ -5,6 +5,7 @@ import { BowlIllustration } from '@/components/brand/illustrations/journal/bowl-
 import { BoneWithSparkle } from '@/components/brand/illustrations/journal/bone-with-sparkle';
 import { ClockIllustration } from '@/components/brand/illustrations/journal/clock-illustration';
 import { journalEntries } from '@/data/journal';
+import { VET_REVIEW_LIVE } from '@/data/vets';
 
 const illustrationMap = {
   bowl: BowlIllustration,
@@ -51,7 +52,11 @@ export function JournalTeaser() {
                   <h3 className="fraunces-soft mb-3 text-xl font-bold leading-tight text-forest group-hover:text-terracotta">
                     {entry.title}
                   </h3>
-                  <p className="text-xs text-charcoal/60">Reviewed by {entry.reviewedBy}</p>
+                  <p className="text-xs text-charcoal/60">
+                    {VET_REVIEW_LIVE
+                      ? `Reviewed by ${entry.reviewedBy}`
+                      : 'Veterinary review pending'}
+                  </p>
                 </div>
               </Link>
             );

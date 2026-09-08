@@ -3,7 +3,6 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { Canister } from '@/components/brand/canister';
-import { Blob } from '@/components/brand/illustrations/decor/blob';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Shield } from '@/components/brand/illustrations/icons/shield';
@@ -18,8 +17,7 @@ export function PdpHero({ product }: { product: ProductDetail }) {
   return (
     <div className="grid items-start gap-12 lg:grid-cols-2">
       {/* Image / canister */}
-      <div className="relative flex h-96 items-center justify-center rounded-3xl bg-cream-2 lg:h-[520px]">
-        <Blob variant={2} color={product.blobColor} className="absolute inset-12 h-auto" />
+      <div className="relative flex h-96 items-center justify-center rounded-2xl bg-cream-2 lg:h-[520px]">
         {product.imageSrc ? (
           <Image
             src={product.imageSrc}
@@ -47,7 +45,7 @@ export function PdpHero({ product }: { product: ProductDetail }) {
           <span className="text-sm text-charcoal/70">Vet-formulated • 90-day guarantee</span>
         </div>
 
-        <h1 className="fraunces-soft text-balance text-4xl font-bold leading-tight md:text-5xl">
+        <h1 className="editorial-heading text-balance text-4xl leading-tight md:text-6xl">
           {product.name}
         </h1>
 
@@ -59,6 +57,7 @@ export function PdpHero({ product }: { product: ProductDetail }) {
           <div className="mb-4 flex gap-2">
             <button
               type="button"
+              aria-pressed={subscribe}
               onClick={() => setSubscribe(true)}
               className={cn(
                 'flex-1 rounded-full border-2 px-4 py-2 text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2',
@@ -71,6 +70,7 @@ export function PdpHero({ product }: { product: ProductDetail }) {
             </button>
             <button
               type="button"
+              aria-pressed={!subscribe}
               onClick={() => setSubscribe(false)}
               className={cn(
                 'flex-1 rounded-full border-2 px-4 py-2 text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2',

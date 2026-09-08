@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/layout/container';
-import { Mascot } from '@/components/brand/illustrations/characters/mascot';
+import { Wordmark } from '@/components/brand/wordmark';
 
 const navLinks = [
   { href: '/products', label: 'Shop' },
@@ -33,25 +33,19 @@ export function Header() {
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-forest/10 bg-cream/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-40 border-b border-forest/10 bg-offwhite/95 backdrop-blur-sm">
       <Container>
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           <Link href="/" className="group flex items-center gap-2">
-            <Mascot
-              variant="peeking"
-              size={36}
-              bodyColor="#E8B547"
-              className="group-hover:animate-wiggle"
-            />
-            <span className="font-display text-2xl leading-none text-forest">PawBite</span>
+            <Wordmark />
           </Link>
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav aria-label="Main navigation" className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-forest transition-colors hover:text-terracotta"
+                className="text-sm font-extrabold uppercase tracking-wide text-forest transition-colors hover:text-terracotta"
               >
                 {link.label}
               </Link>

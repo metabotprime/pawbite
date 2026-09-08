@@ -10,7 +10,7 @@ const buttonVariants = cva(
       variant: {
         // Primary CTA with the bouncy stacked shadow from Design 8
         primary:
-          'bg-terracotta text-cream rounded-full shadow-stack hover:translate-y-[2px] hover:shadow-stack-sm active:translate-y-[4px] active:shadow-none',
+          'bg-terracotta-dark text-cream rounded-full shadow-stack hover:translate-y-[2px] hover:shadow-stack-sm active:translate-y-[4px] active:shadow-none',
         // Secondary outlined CTA
         outline:
           'border-2 border-forest bg-transparent text-forest rounded-full hover:bg-forest hover:text-cream',

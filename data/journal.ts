@@ -1,3 +1,5 @@
+import { blogPosts } from './blog-posts';
+
 export type JournalEntry = {
   slug: string;
   category: string;
@@ -7,29 +9,25 @@ export type JournalEntry = {
   illustration: 'bowl' | 'bone' | 'clock';
 };
 
-export const journalEntries: JournalEntry[] = [
-  {
-    slug: 'signs-your-dog-needs-a-probiotic',
-    category: 'Gut health',
-    title: 'Signs your dog needs a probiotic',
-    readMin: 6,
-    reviewedBy: 'Dr. M. Hayes, DVM',
-    illustration: 'bowl',
-  },
-  {
-    slug: 'how-long-until-joint-chews-start-working',
-    category: 'Hip + joint',
-    title: 'How long until joint chews start working?',
-    readMin: 4,
-    reviewedBy: 'Dr. M. Hayes, DVM',
-    illustration: 'bone',
-  },
-  {
-    slug: 'is-my-dogs-poop-normal-color-chart',
-    category: 'Gut health',
-    title: "Is my dog's poop normal? A color guide",
-    readMin: 5,
-    reviewedBy: 'Dr. M. Hayes, DVM',
-    illustration: 'clock',
-  },
-];
+const featured = [
+  { slug: 'signs-your-dog-needs-a-probiotic', illustration: 'bowl' },
+  { slug: 'signs-of-joint-pain-in-dogs', illustration: 'bone' },
+  { slug: 'is-my-dogs-poop-normal-color-chart', illustration: 'clock' },
+] as const;
+
+// Resolve cards from published content so titles, slugs, and reading times stay in sync.
+export const journalEntries: JournalEntry[] = featured.flatMap(({ slug, illustration }) => {
+  const post = blogPosts.find((entry) => entry.slug === slug);
+  return post
+    ? [
+        {
+          slug: post.slug,
+          category: post.category,
+          title: post.title,
+          readMin: post.readMin,
+          reviewedBy: post.byline.reviewedBy ?? '',
+          illustration,
+        },
+      ]
+    : [];
+});

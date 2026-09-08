@@ -1,10 +1,9 @@
 export const SITE_NAME = 'PawBite';
 export const SITE_DESCRIPTION =
   'Vet-formulated dog supplements: a daily probiotic chew, a hip & joint chew, and a calming chew. Real named strains, clinical doses, and every claim cited to a study.';
-// Fallback is the real production domain (not the *.vercel.app alias) so canonicals,
-// sitemap, OG, and schema URLs never bake the preview host. Still set
-// NEXT_PUBLIC_SITE_URL in each environment (see .env.example) — this is just the safety net.
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://pawbite.com';
+// The repo homepage is the verified public deployment. pawbite.com currently redirects
+// to a domain-sale listing. Override only after the intended custom domain is connected.
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://pawbite-zeta.vercel.app';
 export const ORG_LEGAL_NAME = 'PawBite Inc.';
 export const ORG_LOCATION = 'Hudson Valley, NY';
 
