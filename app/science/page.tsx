@@ -1,3 +1,4 @@
+import { socialMetadata } from '@/lib/social';
 import type { Metadata } from 'next';
 import { ContentPage, faqPageSchema, articleSchema } from '@/components/content/content-page';
 import type {
@@ -166,11 +167,12 @@ export const metadata: Metadata = {
   title: PAGE_TITLE,
   description: PAGE_TLDR,
   alternates: { canonical: PAGE_URL },
-  openGraph: {
+  ...socialMetadata({
     title: 'The science behind PawBite',
     description: PAGE_TLDR,
     type: 'article',
-  },
+    url: PAGE_URL,
+  }),
 };
 
 export default function SciencePage() {

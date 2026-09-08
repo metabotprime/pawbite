@@ -215,7 +215,7 @@ export function articleSchema({
     '@type': 'Article',
     headline: title,
     description,
-    image: `${SITE_URL}/og-default.png`,
+    image: `${SITE_URL}/share/pawbite-line-v2.png`,
     author: { '@type': 'Organization', name: byline.author },
     // Only assert a named reviewer once a real DVM has signed (VET_REVIEW_LIVE).
     ...(VET_REVIEW_LIVE && byline.reviewedBy
@@ -226,7 +226,7 @@ export function articleSchema({
     publisher: {
       '@type': 'Organization',
       name: SITE_NAME,
-      logo: { '@type': 'ImageObject', url: `${SITE_URL}/og-default.png` },
+      logo: { '@type': 'ImageObject', url: `${SITE_URL}/brand/pawbite-wordmark.png` },
     },
     mainEntityOfPage: url,
     ...(sources && sources.length > 0

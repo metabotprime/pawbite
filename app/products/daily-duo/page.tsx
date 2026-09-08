@@ -1,3 +1,4 @@
+import { socialMetadata } from '@/lib/social';
 import { ProductVisual } from '@/components/brand/product-visual';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -24,11 +25,12 @@ export const metadata: Metadata = {
   description:
     'Daily Probiotic + Hip + Joint in one dog supplement bundle — gut and joints, the two systems most dogs need supported daily. Save 32% on subscribe and save.',
   alternates: { canonical: `${SITE_URL}/products/daily-duo` },
-  openGraph: {
+  ...socialMetadata({
     title: 'The Daily Duo for Dogs — Save 32%',
     description: 'Daily Probiotic + Hip + Joint, bundled. Gut and joints, covered daily.',
-    images: [dailyProbiotic, hipAndJoint].map((product) => ({ url: product.imageSrc! })),
-  },
+    url: `${SITE_URL}/products/daily-duo`,
+    image: '/share/daily-duo-v2.png',
+  }),
 };
 
 const duoProductSchema = {

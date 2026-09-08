@@ -12,7 +12,7 @@ export function organizationSchema() {
     '@type': 'Organization',
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/og-default.png`,
+    logo: `${SITE_URL}/brand/pawbite-wordmark.png`,
     description: SITE_DESCRIPTION,
     contactPoint: {
       '@type': 'ContactPoint',

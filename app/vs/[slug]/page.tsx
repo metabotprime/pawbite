@@ -1,3 +1,4 @@
+import { socialMetadata } from '@/lib/social';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { ContentPage, faqPageSchema, articleSchema } from '@/components/content/content-page';
@@ -17,11 +18,12 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: { absolute: `${vs.competitorName} vs PawBite: Honest Comparison & Alternative` },
     description: vs.tldr.length > 155 ? `${vs.tldr.slice(0, 152).trimEnd()}…` : vs.tldr,
     alternates: { canonical: `${SITE_URL}/vs/${vs.slug}` },
-    openGraph: {
+    ...socialMetadata({
       title: `${vs.competitorName} vs PawBite — honest comparison`,
       description: 'A fair, side-by-side look at the formulas, strains, doses, and price.',
       type: 'article',
-    },
+      url: `${SITE_URL}/vs/${vs.slug}`,
+    }),
   };
 }
 

@@ -1,3 +1,4 @@
+import { socialMetadata } from '@/lib/social';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Section } from '@/components/layout/section';
@@ -21,12 +22,13 @@ export const metadata: Metadata = {
   description:
     'Subscribe to PawBite and save 20% on every order, get free shipping, a 90-day money-back guarantee, and the ability to skip, pause, or cancel anytime — no calls, no fees.',
   alternates: { canonical: `${SITE_URL}/perks` },
-  openGraph: {
+  ...socialMetadata({
     title: 'PawBite subscriber perks',
     description:
       'Save 20%, free shipping, skip or cancel anytime in one click, 90-day money-back guarantee.',
     type: 'website',
-  },
+    url: `${SITE_URL}/perks`,
+  }),
 };
 
 const perks = [

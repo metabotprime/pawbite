@@ -1,3 +1,4 @@
+import { socialMetadata } from '@/lib/social';
 import type { Metadata } from 'next';
 import { SITE_URL } from '@/lib/seo';
 
@@ -9,11 +10,12 @@ export const metadata: Metadata = {
   description:
     "Answer a few questions about your dog's age, size, and needs, and we'll recommend the right PawBite chew — probiotic, hip & joint, calming, or the Daily Duo.",
   alternates: { canonical: `${SITE_URL}/quiz` },
-  openGraph: {
+  ...socialMetadata({
     title: 'Find the right dog chew — 60-second quiz',
     description: "Age, size, and needs in, a vet-formulated recommendation out. It's free.",
     type: 'website',
-  },
+    url: `${SITE_URL}/quiz`,
+  }),
 };
 
 export default function QuizLayout({ children }: { children: React.ReactNode }) {

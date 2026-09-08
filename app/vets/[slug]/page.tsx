@@ -1,3 +1,4 @@
+import { socialMetadata } from '@/lib/social';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -29,11 +30,12 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     alternates: { canonical: `${SITE_URL}/vets/${vet.slug}` },
     // Keep placeholder advisor profiles out of the index until a real DVM signs.
     ...(!VET_REVIEW_LIVE && { robots: { index: false, follow: true } }),
-    openGraph: {
+    ...socialMetadata({
       title: vet.name,
       description: 'PawBite veterinary advisory profile.',
       type: 'profile',
-    },
+      url: `${SITE_URL}/vets/${vet.slug}`,
+    }),
   };
 }
 

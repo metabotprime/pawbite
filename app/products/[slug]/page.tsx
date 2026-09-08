@@ -1,3 +1,4 @@
+import { socialMetadata } from '@/lib/social';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { Section } from '@/components/layout/section';
@@ -30,12 +31,12 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: product.seoTitle,
     description: product.seoDescription,
     alternates: { canonical: `${SITE_URL}/products/${product.slug}` },
-    openGraph: {
+    ...socialMetadata({
       title: `${product.seoTitle} · PawBite`,
       description: product.seoDescription,
-      // openGraph override replaces the root default entirely — re-supply an image.
-      images: [{ url: product.imageSrc ?? '/og-default.png' }],
-    },
+      url: `${SITE_URL}/products/${product.slug}`,
+      image: `/share/${product.slug}-v2.png`,
+    }),
   };
 }
 

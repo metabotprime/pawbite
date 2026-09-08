@@ -1,3 +1,4 @@
+import { socialMetadata } from '@/lib/social';
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import { fontDisplay, fontSerif, fontSans, fontHand, fontMono } from '@/lib/fonts';
@@ -26,20 +27,13 @@ export const metadata: Metadata = {
   keywords: ['dog probiotic', 'dog joint supplement', 'calming chews for dogs', 'dog gut health'],
   authors: [{ name: SITE_NAME }],
   verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: SITE_URL,
-    siteName: SITE_NAME,
-    title: `${SITE_NAME} | Dog Supplements for Gut, Joints & Calm`,
-    description: SITE_DESCRIPTION,
-    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: SITE_NAME }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `${SITE_NAME} | Dog Supplements for Gut, Joints & Calm`,
-    description: SITE_DESCRIPTION,
-    images: ['/og-default.png'],
+  ...socialMetadata(),
+  icons: {
+    icon: [
+      { url: '/brand/pawbite-icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon.svg?v=2', sizes: 'any', type: 'image/svg+xml' },
+    ],
+    apple: [{ url: '/apple-icon.png?v=2', sizes: '180x180', type: 'image/png' }],
   },
   robots: {
     index: true,

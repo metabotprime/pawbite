@@ -1,3 +1,4 @@
+import { socialMetadata } from '@/lib/social';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { ContentPage, faqPageSchema, articleSchema } from '@/components/content/content-page';
@@ -15,7 +16,12 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: post.title,
     description: post.tldr,
     alternates: { canonical: `${SITE_URL}/learn/${post.slug}` },
-    openGraph: { title: post.title, description: post.tldr, type: 'article' },
+    ...socialMetadata({
+      title: post.title,
+      description: post.tldr,
+      type: 'article',
+      url: `${SITE_URL}/learn/${post.slug}`,
+    }),
   };
 }
 

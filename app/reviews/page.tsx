@@ -1,3 +1,4 @@
+import { socialMetadata } from '@/lib/social';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Section } from '@/components/layout/section';
@@ -14,12 +15,13 @@ export const metadata: Metadata = {
   description:
     'PawBite reviews are coming. We are pre-launch — here are a few testimonials from dogs who tested the formulas with us.',
   alternates: { canonical: `${SITE_URL}/reviews` },
-  openGraph: {
+  ...socialMetadata({
     title: 'Reviews — coming soon',
     description:
       'PawBite is pre-launch. Here are a few testimonials from dogs who tested the formulas with us.',
     type: 'website',
-  },
+    url: `${SITE_URL}/reviews`,
+  }),
 };
 
 const filters = [

@@ -1,3 +1,4 @@
+import { socialMetadata } from '@/lib/social';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Section } from '@/components/layout/section';
@@ -19,12 +20,13 @@ export const metadata: Metadata = {
   description:
     "How PawBite's editorial review works: every claim cites a peer-reviewed study, and our veterinary advisory board — real names, not logos — is being finalized before launch.",
   alternates: { canonical: `${SITE_URL}/vets` },
-  openGraph: {
+  ...socialMetadata({
     title: 'The vets behind PawBite',
     description:
       'Source-cited editorial review today. Named veterinary advisors signing every page as the board is finalized.',
     type: 'website',
-  },
+    url: `${SITE_URL}/vets`,
+  }),
 };
 
 const reviewSteps = [

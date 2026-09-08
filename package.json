@@ -17,7 +17,8 @@
     "test:run": "vitest run",
     "test:watch": "vitest --watch",
     "seo": "node scripts/seo-toolkit.mjs",
-    "seo:audit": "python3 scripts/seo-audit.py"
+    "seo:audit": "python3 scripts/seo-audit.py",
+    "assets:share": "node scripts/generate-share-assets.mjs"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
@@ -48,6 +49,7 @@
     "postcss": "^8",
     "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.8.0",
+    "sharp": "^0.35.4",
     "tailwindcss": "^3.4.1",
     "typescript": "^5",
     "vitest": "^4.1.6"
