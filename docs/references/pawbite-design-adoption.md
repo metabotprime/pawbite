@@ -56,3 +56,9 @@ Durable raw scrape archive: `/Users/christosi/Documents/New project/artifacts/pa
 - Both retired article URLs return HTTP 301 to their published comparison and preserve query parameters.
 - Desktop and 390-pixel mobile checks cover navigation, Escape dismissal, product selection, and horizontal overflow.
 - Calm’s rendered Product schema retains PreOrder availability and the original $27 subscription / $34 one-time range.
+
+## Product photo follow-up
+
+The owner subsequently requested the friend’s actual product photos. The three original PNGs from `https://pawbite-site.vercel.app/product/` are now self-hosted under `public/products/reference/`. Homepage, cards, product pages, and social/product metadata use these assets. The Daily Duo displays the Probiotic and Hip + Joint photos together in the page layout. The PNGs are unchanged; their intrinsic dimensions are respected.
+
+This supersedes the table’s earlier decision to retain the original renders. Pricing, formulas, dosing, and product count data remain unchanged. The supplied artwork visibly says 80 chews for Probiotic and Calm, and 50 for Hip + Joint; these differ from the repo’s 30, 30, and 60 counts. That artwork discrepancy was reported to the owner. No packaging text was edited or product facts inferred from the photos.

@@ -101,11 +101,11 @@ export function HeroSection() {
               key={product.slug}
               src={product.imageSrc!}
               alt={`PawBite ${product.name}, ${product.countLabel.toLowerCase()}`}
-              width={896}
-              height={1216}
+              width={product.imageWidth ?? 896}
+              height={product.imageHeight ?? 1216}
               priority={selected === 0}
               sizes="(max-width: 1023px) 65vw, 400px"
-              className="relative h-[320px] w-auto -rotate-6 object-contain drop-shadow-2xl sm:h-[390px] lg:h-[460px]"
+              className="relative h-[320px] w-auto max-w-full -rotate-6 object-contain drop-shadow-2xl sm:h-[390px] lg:h-[460px]"
             />
             <span className="absolute bottom-4 right-2 rotate-6 rounded-full bg-forest px-5 py-3 font-serif text-lg italic text-cream sm:right-6">
               Made for your dog.

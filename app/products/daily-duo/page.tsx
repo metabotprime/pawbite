@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { ProductVisual } from '@/components/brand/product-visual';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Section } from '@/components/layout/section';
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'The Daily Duo for Dogs — Save 32%',
     description: 'Daily Probiotic + Hip + Joint, bundled. Gut and joints, covered daily.',
-    images: [{ url: '/products/daily-duo.png' }],
+    images: [dailyProbiotic, hipAndJoint].map((product) => ({ url: product.imageSrc! })),
   },
 };
 
@@ -41,7 +41,7 @@ const duoProductSchema = {
   brand: { '@type': 'Brand', name: 'PawBite' },
   sku: 'daily-duo',
   url: `${SITE_URL}/products/daily-duo`,
-  image: `${SITE_URL}/products/daily-duo.png`,
+  image: [dailyProbiotic, hipAndJoint].map((product) => `${SITE_URL}${product.imageSrc}`),
   isRelatedTo: [
     { '@type': 'Product', name: 'Daily Probiotic', url: `${SITE_URL}/products/daily-probiotic` },
     { '@type': 'Product', name: 'Hip + Joint', url: `${SITE_URL}/products/hip-and-joint` },
@@ -116,13 +116,11 @@ export default function DailyDuoPage() {
           <div className="grid items-start gap-12 lg:grid-cols-2">
             <div className="relative flex h-96 items-center justify-center rounded-3xl bg-cream-2 lg:h-[520px]">
               <Blob variant={2} color="mint" className="absolute inset-8 h-auto" />
-              <Image
-                src={dailyDuo.imageSrc!}
-                alt="PawBite Daily Duo — Daily Probiotic and Hip + Joint canisters together"
-                width={dailyDuo.imageWidth!}
-                height={dailyDuo.imageHeight!}
+              <ProductVisual
+                product={dailyDuo}
                 priority
-                className="relative z-10 max-h-72 w-auto max-w-full drop-shadow-2xl lg:max-h-[440px]"
+                className="z-10 h-full w-full px-4"
+                imageClassName="h-72 lg:h-[360px]"
               />
             </div>
 

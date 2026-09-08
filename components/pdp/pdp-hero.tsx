@@ -22,10 +22,10 @@ export function PdpHero({ product }: { product: ProductDetail }) {
           <Image
             src={product.imageSrc}
             alt={`PawBite ${product.name} canister`}
-            width={896}
-            height={1216}
+            width={product.imageWidth ?? 896}
+            height={product.imageHeight ?? 1216}
             priority
-            className="relative z-10 h-72 w-auto drop-shadow-2xl lg:h-[420px]"
+            className="relative z-10 h-72 w-auto max-w-full object-contain drop-shadow-2xl lg:h-[420px]"
           />
         ) : (
           <Canister
