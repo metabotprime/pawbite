@@ -3,7 +3,6 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Section } from '@/components/layout/section';
 import { Container } from '@/components/layout/container';
-import { Blob } from '@/components/brand/illustrations/decor/blob';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { PdpFaq } from '@/components/pdp/pdp-faq';
@@ -114,15 +113,23 @@ export default function DailyDuoPage() {
       <Section background="cream" spacing="default">
         <Container>
           <div className="grid items-start gap-12 lg:grid-cols-2">
-            <div className="relative flex h-96 items-center justify-center rounded-3xl bg-cream-2 lg:h-[520px]">
-              <Blob variant={2} color="mint" className="absolute inset-8 h-auto" />
-              <ProductVisual
-                product={dailyDuo}
-                priority
-                className="z-10 h-full w-full px-4"
-                imageClassName="h-72 lg:h-[360px]"
-              />
-            </div>
+            <figure className="overflow-hidden rounded-[2rem] border border-forest/10 bg-offwhite lg:sticky lg:top-28">
+              <ProductVisual product={dailyDuo} priority className="rounded-none" />
+              <figcaption className="grid grid-cols-2 gap-4 p-5 text-center">
+                <div>
+                  <p className="font-bold">Daily Probiotic</p>
+                  <p className="mt-1 text-xs text-charcoal">
+                    {dailyProbiotic.countLabel.toLowerCase()}
+                  </p>
+                </div>
+                <div>
+                  <p className="font-bold">Hip + Joint</p>
+                  <p className="mt-1 text-xs text-charcoal">
+                    {hipAndJoint.countLabel.toLowerCase()}
+                  </p>
+                </div>
+              </figcaption>
+            </figure>
 
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">

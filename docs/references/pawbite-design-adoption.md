@@ -62,3 +62,13 @@ Durable raw scrape archive: `/Users/christosi/Documents/New project/artifacts/pa
 The owner subsequently requested the friend’s actual product photos. The three original PNGs from `https://pawbite-site.vercel.app/product/` are now self-hosted under `public/products/reference/`. Homepage, cards, product pages, and social/product metadata use these assets. The Daily Duo displays the Probiotic and Hip + Joint photos together in the page layout. The PNGs are unchanged; their intrinsic dimensions are respected.
 
 This supersedes the table’s earlier decision to retain the original renders. Pricing, formulas, dosing, and product count data remain unchanged. The supplied artwork visibly says 80 chews for Probiotic and Calm, and 50 for Hip + Joint; these differ from the repo’s 30, 30, and 60 counts. That artwork discrepancy was reported to the owner. No packaging text was edited or product facts inferred from the photos.
+
+## Higgsfield studio follow-up
+
+The owner requested improved photos and page layouts using Higgsfield. Three coordinated 2048px square studio visuals now replace the raw reference cutouts on the storefront. Source images, generation IDs, output URLs, and label-count decisions are recorded in `pawbite-studio-photos.json`. WebP exports total 379,276 bytes; generation used 6 existing credits, with no purchase or refinement runs.
+
+The homepage keeps its five-second Calming / Hip & Joint / Gut Health rotation, with a full image panel and a caption outside the photo. Product cards display the square studio photos without added shadows or overlapping graphics. Product pages add a native modal image viewer, keyboard dismissal and focus restoration, plus count/flavor details. The Duo uses a paired photo layout. Product facts, pricing, formulas, dosing, and launch flags are unchanged.
+
+Validation: TypeScript, lint, formatting, TSX parse, all 14 tests, and the 107-page production build pass. Browser checks cover desktop homepage and product layout, 390px mobile homepage and Duo, image loading, click and keyboard photo enlargement, Escape and close-button dismissal, restored focus, and correct one-time pricing. No horizontal overflow or browser console errors were found in these checks.
+
+Original PNGs and optimized WebPs are archived in `/Users/christosi/Documents/New project/artifacts/pawbite-studio-photos-2026-09-08.zip`. These generated website visuals are not a production packaging proof.

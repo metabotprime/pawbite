@@ -1,8 +1,8 @@
 'use client';
 
 import * as React from 'react';
-import Image from 'next/image';
 import { Canister } from '@/components/brand/canister';
+import { ProductPhoto } from '@/components/pdp/product-photo';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Shield } from '@/components/brand/illustrations/icons/shield';
@@ -15,28 +15,35 @@ export function PdpHero({ product }: { product: ProductDetail }) {
   const savings = product.retailPrice - product.subPrice;
 
   return (
-    <div className="grid items-start gap-12 lg:grid-cols-2">
-      {/* Image / canister */}
-      <div className="relative flex h-96 items-center justify-center rounded-2xl bg-cream-2 lg:h-[520px]">
+    <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
+      <div className="lg:sticky lg:top-28">
         {product.imageSrc ? (
-          <Image
-            src={product.imageSrc}
-            alt={`PawBite ${product.name} canister`}
-            width={product.imageWidth ?? 896}
-            height={product.imageHeight ?? 1216}
-            priority
-            className="relative z-10 h-72 w-auto max-w-full object-contain drop-shadow-2xl lg:h-[420px]"
-          />
+          <ProductPhoto product={product} />
         ) : (
-          <Canister
-            name={product.shortName}
-            bandColor={product.bandColor}
-            countLabel={product.countLabel}
-            tagline={product.tagline}
-            size="lg"
-            className="relative z-10"
-          />
+          <div className="flex aspect-square items-center justify-center rounded-3xl bg-cream-2">
+            <Canister
+              name={product.shortName}
+              bandColor={product.bandColor}
+              countLabel={product.countLabel}
+              tagline={product.tagline}
+              size="lg"
+            />
+          </div>
         )}
+        <dl className="mt-5 grid grid-cols-2 divide-x divide-forest/15 rounded-2xl border border-forest/15 bg-offwhite py-4 text-center">
+          <div className="px-3">
+            <dt className="text-[10px] font-bold uppercase tracking-[0.14em] text-charcoal/70">
+              Inside every tin
+            </dt>
+            <dd className="mt-1 text-sm font-bold">{product.countLabel.toLowerCase()}</dd>
+          </div>
+          <div className="px-3">
+            <dt className="text-[10px] font-bold uppercase tracking-[0.14em] text-charcoal/70">
+              The flavor
+            </dt>
+            <dd className="mt-1 text-sm font-bold">{product.flavor}</dd>
+          </div>
+        </dl>
       </div>
 
       {/* Info */}
@@ -104,7 +111,7 @@ export function PdpHero({ product }: { product: ProductDetail }) {
           </p>
 
           <Button variant="primary" size="lg" className="w-full" disabled>
-            Pre-order — coming soon
+            Pre-order coming soon
           </Button>
         </div>
 

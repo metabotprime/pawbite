@@ -28,10 +28,10 @@ describe('homepage product rotation', () => {
   it('cycles all three headlines with their matching photo, price and destination, then loops', () => {
     render(<HeroSection />);
     for (const [headline, slug, price, photo] of [
-      ['CALMING', 'calm', '34.00', 'calming-tin-label'],
-      ['HIP & JOINT', 'hip-and-joint', '38.00', 'joint-tin-label'],
-      ['GUT HEALTH', 'daily-probiotic', '32.00', 'probiotic-tin-label'],
-      ['CALMING', 'calm', '34.00', 'calming-tin-label'],
+      ['CALMING', 'calm', '34.00', 'calm.webp'],
+      ['HIP & JOINT', 'hip-and-joint', '38.00', 'hip-and-joint.webp'],
+      ['GUT HEALTH', 'daily-probiotic', '32.00', 'daily-probiotic.webp'],
+      ['CALMING', 'calm', '34.00', 'calm.webp'],
     ]) {
       expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(headline);
       expect(screen.getByRole('link', { name: /Explore/ })).toHaveAttribute(

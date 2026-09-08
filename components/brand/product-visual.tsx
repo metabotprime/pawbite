@@ -20,27 +20,29 @@ export function ProductVisual({
   priority?: boolean;
 }) {
   return (
-    <div className={cn('relative flex h-56 items-center justify-center', className)}>
+    <div
+      className={cn(
+        'relative flex items-center justify-center overflow-hidden rounded-2xl',
+        className,
+      )}
+    >
       {product.imageSrc ? (
-        (product.slug === 'daily-duo' ? [dailyProbiotic, hipAndJoint] : [product]).map(
-          (item, index) => (
-            <Image
-              key={item.slug}
-              src={item.imageSrc!}
-              alt={`PawBite ${item.name} tin`}
-              width={item.imageWidth ?? 896}
-              height={item.imageHeight ?? 1216}
-              priority={priority}
-              sizes="(max-width: 767px) 50vw, 400px"
-              className={cn(
-                'relative z-10 h-48 w-auto max-w-full object-contain drop-shadow-xl',
-                product.slug === 'daily-duo' && 'max-w-[50%]',
-                index === 1 && '-ml-4',
-                imageClassName,
-              )}
-            />
-          ),
-        )
+        (product.slug === 'daily-duo' ? [dailyProbiotic, hipAndJoint] : [product]).map((item) => (
+          <Image
+            key={item.slug}
+            src={item.imageSrc!}
+            alt={`PawBite ${item.name} tin`}
+            width={item.imageWidth ?? 896}
+            height={item.imageHeight ?? 1216}
+            priority={priority}
+            sizes="(max-width: 767px) 50vw, 400px"
+            className={cn(
+              'aspect-square h-auto w-full object-cover',
+              product.slug === 'daily-duo' && 'w-1/2',
+              imageClassName,
+            )}
+          />
+        ))
       ) : (
         <Canister
           name={product.shortName}

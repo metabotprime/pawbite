@@ -1,0 +1,42 @@
+{
+  "created": "2026-09-08",
+  "source": "Owner-supplied friend site product photos",
+  "generationCredits": 6,
+  "aspectRatio": "1:1",
+  "dimensions": [
+    2048,
+    2048
+  ],
+  "outputs": [
+    {
+      "product": "calm",
+      "sourceImage": "https://pawbite-zeta.vercel.app/products/reference/calming-tin-label.png",
+      "generatedImage": "https://d8j0ntlcm91z4.cloudfront.net/user_3EmhjwFcq1NsfVMmKt8hd5kvdxT/hf_20260908_132816_e91f6517-d0fc-4579-9a54-5aee469f7d96.png",
+      "generationId": "e91f6517-d0fc-4579-9a54-5aee469f7d96",
+      "asset": "/products/studio/calm.webp",
+      "frontLabelCount": "30 SOFT CHEWS"
+    },
+    {
+      "product": "hip-and-joint",
+      "sourceImage": "https://pawbite-zeta.vercel.app/products/reference/joint-tin-label.png",
+      "generatedImage": "https://d8j0ntlcm91z4.cloudfront.net/user_3EmhjwFcq1NsfVMmKt8hd5kvdxT/hf_20260908_132815_291dc580-5743-4441-90ff-2b864b1257fd.png",
+      "generationId": "291dc580-5743-4441-90ff-2b864b1257fd",
+      "asset": "/products/studio/hip-and-joint.webp",
+      "frontLabelCount": "60 SOFT CHEWS"
+    },
+    {
+      "product": "daily-probiotic",
+      "sourceImage": "https://pawbite-zeta.vercel.app/products/reference/probiotic-tin-label.png",
+      "generatedImage": "https://d8j0ntlcm91z4.cloudfront.net/user_3EmhjwFcq1NsfVMmKt8hd5kvdxT/hf_20260908_132815_651a8097-28d6-4d2b-90b6-a0554f08b250.png",
+      "generationId": "651a8097-28d6-4d2b-90b6-a0554f08b250",
+      "asset": "/products/studio/daily-probiotic.webp",
+      "frontLabelCount": "30 SOFT CHEWS"
+    }
+  ],
+  "notes": [
+    "Higgsfield-generated studio visuals, based on the owner-supplied product references.",
+    "Corrected front-label counts to match repository data and removed conflicting weights and generic front-label health copy.",
+    "These are website visuals, not production-ready packaging artwork; small peripheral label print has not been certified.",
+    "Original output PNGs archived separately; WebP export at quality 90 preserves 2048 by 2048 dimensions."
+  ]
+}

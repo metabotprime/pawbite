@@ -29,12 +29,12 @@ export default function ProductsCollectionPage() {
             <span className="font-serif italic">One very good dog.</span>
           </h1>
           <p className="mx-auto max-w-xl text-lg text-charcoal">
-            Gut, joints, and calm. a focused chew for each. The Duo bundles the two most dogs start
+            Gut, joints, and calm. A focused chew for each. The Duo bundles the two most dogs start
             with and saves 32%.
           </p>
         </div>
 
-        <div className="grid items-end gap-8 md:grid-cols-3">
+        <div className="grid items-stretch gap-6 md:grid-cols-3">
           {singles.map((p, i) => (
             <ProductCard
               key={p.slug}

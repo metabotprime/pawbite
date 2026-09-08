@@ -28,13 +28,11 @@ export function ProductShowcase() {
               href={`/products/${product.slug}`}
               className="group flex flex-col overflow-hidden rounded-2xl border border-forest/15 bg-offwhite transition-transform hover:-translate-y-1"
             >
-              <div className={`${['bg-mint', 'bg-warmyellow', 'bg-pinky'][i]} px-6 pb-7 pt-4`}>
-                <p className="text-xs font-bold uppercase tracking-widest">
+              <ProductVisual product={product} className="rounded-none" />
+              <div className="flex flex-1 flex-col p-6">
+                <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.14em] text-charcoal/70">
                   0{i + 1} / {product.tagline}
                 </p>
-                <ProductVisual product={product} className="mt-5" />
-              </div>
-              <div className="flex flex-1 flex-col p-6">
                 <h3 className="mb-2 text-2xl font-bold">{product.name}</h3>
                 <p className="mb-6 text-sm leading-relaxed text-charcoal">
                   {product.oneLineDescription}

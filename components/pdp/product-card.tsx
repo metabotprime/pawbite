@@ -20,7 +20,7 @@ export function ProductCard({
     <Link
       href={`/products/${product.slug}`}
       className={cn(
-        'group relative block rounded-3xl bg-offwhite p-6 transition-transform duration-200 hover:-translate-y-1',
+        'group relative block rounded-3xl border border-forest/15 bg-offwhite p-3 transition-transform duration-200 hover:-translate-y-1',
         featured && 'border-2 border-terracotta md:scale-105',
       )}
       style={{ transform: rotation ? `rotate(${rotation}deg)` : undefined }}
@@ -33,13 +33,13 @@ export function ProductCard({
           {product.badge}
         </Badge>
       )}
-      <ProductVisual product={product} blobVariant={blobVariant} className="mb-6" />
-      <div className="text-center">
-        <h3 className="fraunces-soft mb-2 text-2xl font-bold text-forest">{product.name}</h3>
+      <ProductVisual product={product} blobVariant={blobVariant} className="mb-5" />
+      <div className="px-3 pb-3 text-left">
+        <h3 className="mb-2 text-2xl font-bold text-forest">{product.name}</h3>
         <p className="mb-4 min-h-[4rem] text-sm leading-relaxed text-charcoal">
           {product.oneLineDescription}
         </p>
-        <div className="mb-4 flex items-baseline justify-center gap-2">
+        <div className="mb-4 flex flex-wrap items-baseline gap-2">
           <span className="text-2xl font-bold text-terracotta">
             ${product.subPrice.toFixed(product.subPrice % 1 === 0 ? 0 : 2)}
           </span>

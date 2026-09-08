@@ -23,7 +23,7 @@ export type Product = {
   subPrice: number;
   badge?: string;
   commerce?: ProductCommerce;
-  /** Transparent-bg product render in /public. Falls back to the CSS <Canister> when absent. */
+  /** Studio product photo in /public. Falls back to the CSS <Canister> when absent. */
   imageSrc?: string;
   /** Intrinsic dimensions of imageSrc. Used to preserve the source photo aspect ratio. */
   imageWidth?: number;
@@ -42,9 +42,9 @@ export const products: Product[] = [
     oneLineDescription: '5 strains. 5 billion CFUs. The one your dog eats every day.',
     retailPrice: 32,
     subPrice: 26,
-    imageSrc: '/products/reference/probiotic-tin-label.png',
-    imageWidth: 1599,
-    imageHeight: 1830,
+    imageSrc: '/products/studio/daily-probiotic.webp',
+    imageWidth: 2048,
+    imageHeight: 2048,
   },
   {
     slug: 'hip-and-joint',
@@ -58,9 +58,9 @@ export const products: Product[] = [
       'Glucosamine, chondroitin, MSM, green-lipped mussel, turmeric. Built to keep moving.',
     retailPrice: 38,
     subPrice: 30,
-    imageSrc: '/products/reference/joint-tin-label.png',
-    imageWidth: 1599,
-    imageHeight: 1830,
+    imageSrc: '/products/studio/hip-and-joint.webp',
+    imageWidth: 2048,
+    imageHeight: 2048,
   },
   {
     slug: 'calm',
@@ -74,9 +74,9 @@ export const products: Product[] = [
       'L-theanine, chamomile, ashwagandha, and a gut-brain probiotic. For fireworks, vet visits, and everyday nerves.',
     retailPrice: 34,
     subPrice: 27,
-    imageSrc: '/products/reference/calming-tin-label.png',
-    imageWidth: 1599,
-    imageHeight: 1829,
+    imageSrc: '/products/studio/calm.webp',
+    imageWidth: 2048,
+    imageHeight: 2048,
   },
   {
     slug: 'daily-duo',
@@ -90,9 +90,9 @@ export const products: Product[] = [
     retailPrice: 70,
     subPrice: 47.6,
     badge: 'Save 32%',
-    imageSrc: '/products/reference/probiotic-tin-label.png',
-    imageWidth: 1599,
-    imageHeight: 1830,
+    imageSrc: '/products/studio/daily-probiotic.webp',
+    imageWidth: 2048,
+    imageHeight: 2048,
   },
 ];
 

@@ -16,7 +16,6 @@ const slides = [
     last: 'FOR DOGS.',
     description:
       'L-theanine, chamomile, ashwagandha, and a probiotic. Meet our calming chew, made without CBD, melatonin, or sedatives.',
-    color: 'bg-mint',
     note: 'CALMING CHEW',
   },
   {
@@ -27,7 +26,6 @@ const slides = [
     last: 'FOR DOGS.',
     description:
       'Glucosamine, chondroitin, MSM, and green-lipped mussel. A focused soft chew for your dog’s joint-care routine.',
-    color: 'bg-pinky',
     note: 'HIP + JOINT',
   },
   {
@@ -38,7 +36,6 @@ const slides = [
     last: 'FOR DOGS.',
     description:
       'Five named probiotic strains. Five billion CFUs. Plus chicory inulin and pumpkin in one daily soft chew.',
-    color: 'bg-warmyellow',
     note: 'DAILY PROBIOTIC',
   },
 ];
@@ -83,7 +80,7 @@ export function HeroSection() {
       }}
     >
       <Container>
-        <div className="grid gap-8 lg:grid-cols-[1.12fr_1fr] lg:items-center lg:gap-12">
+        <div className="grid gap-8 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-10">
           <div>
             <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em]">
               {CHECKOUT_LIVE ? 'Meet the line' : 'Pre-launch'} / {slide.note}
@@ -98,7 +95,7 @@ export function HeroSection() {
               </span>
               <span className="block">{slide.last}</span>
             </h1>
-            <p className="mt-6 min-h-[7.5rem] max-w-lg text-base leading-relaxed text-charcoal sm:min-h-[5.25rem] md:text-lg">
+            <p className="mt-6 min-h-[6rem] max-w-lg text-base leading-relaxed text-charcoal sm:min-h-[5.25rem] md:text-lg">
               {slide.description}
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
@@ -116,30 +113,25 @@ export function HeroSection() {
               </p>
             </div>
           </div>
-          <div className="relative isolate flex min-h-[330px] items-center justify-center lg:min-h-[490px]">
-            <div
-              className={`absolute aspect-square w-[85%] max-w-[430px] rounded-full ${slide.color}`}
-              aria-hidden="true"
-            />
-            <div className="absolute left-2 top-4 -rotate-12 rounded-full border-2 border-forest bg-cream px-4 py-2 text-xs font-bold uppercase tracking-wide sm:left-6 lg:top-10">
-              Good stuff.
-              <br />
-              Nothing weird.
-            </div>
+          <figure className="overflow-hidden rounded-[2rem] border border-forest/10 bg-offwhite shadow-soft">
             <Image
               key={product.slug}
               src={product.imageSrc!}
               alt={`PawBite ${product.name}, ${product.countLabel.toLowerCase()}`}
-              width={product.imageWidth ?? 896}
-              height={product.imageHeight ?? 1216}
+              width={product.imageWidth ?? 2048}
+              height={product.imageHeight ?? 2048}
               priority={selected === 0}
-              sizes="(max-width: 1023px) 65vw, 400px"
-              className="relative h-[320px] w-auto max-w-full -rotate-6 object-contain drop-shadow-2xl sm:h-[390px] lg:h-[460px]"
+              sizes="(max-width: 1023px) calc(100vw - 48px), 520px"
+              className="aspect-square w-full object-cover"
             />
-            <span className="absolute bottom-4 right-2 rotate-6 rounded-full bg-forest px-5 py-3 font-serif text-lg italic text-cream sm:right-6">
-              Made for your dog.
-            </span>
-          </div>
+            <figcaption className="flex items-center justify-between gap-4 border-t border-forest/10 px-6 py-4">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.14em]">{slide.label}</p>
+                <p className="mt-1 text-xs text-charcoal">{product.countLabel.toLowerCase()}</p>
+              </div>
+              <span className="font-serif text-xl italic">Made for your dog.</span>
+            </figcaption>
+          </figure>
         </div>
         <div
           className="mt-10 flex flex-wrap gap-2 border-t border-forest/15 pt-5"
