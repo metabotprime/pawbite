@@ -34,7 +34,7 @@ export function PdpHero({ product }: { product: ProductDetail }) {
         <dl className="mt-5 grid grid-cols-2 divide-x divide-forest/15 rounded-2xl border border-forest/15 bg-offwhite py-4 text-center">
           <div className="px-3">
             <dt className="text-[10px] font-bold uppercase tracking-[0.14em] text-charcoal/70">
-              Inside every tin
+              Inside every tube
             </dt>
             <dd className="mt-1 text-sm font-bold">{product.countLabel.toLowerCase()}</dd>
           </div>

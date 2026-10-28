@@ -31,7 +31,7 @@ export function ProductVisual({
           <Image
             key={item.slug}
             src={item.imageSrc!}
-            alt={`PawBite ${item.name} packaging preview`}
+            alt={`PawBite ${item.name} paper tube packaging preview`}
             width={item.imageWidth ?? 896}
             height={item.imageHeight ?? 1216}
             priority={priority}

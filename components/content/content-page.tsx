@@ -215,7 +215,7 @@ export function articleSchema({
     '@type': 'Article',
     headline: title,
     description,
-    image: `${SITE_URL}/share/pawbite-line-r2.png`,
+    image: `${SITE_URL}/share/pawbite-line-paper-v1.png`,
     author: { '@type': 'Organization', name: byline.author },
     // Only assert a named reviewer once a real DVM has signed (VET_REVIEW_LIVE).
     ...(VET_REVIEW_LIVE && byline.reviewedBy

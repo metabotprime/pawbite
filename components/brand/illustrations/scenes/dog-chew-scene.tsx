@@ -19,7 +19,7 @@ export function DogChewScene({ size = 400, className, ...props }: Props) {
       {/* Floor shadow */}
       <ellipse cx="200" cy="270" rx="160" ry="12" fill="#1F3A2E" opacity="0.08" />
 
-      {/* Left canister */}
+      {/* Left paper tube */}
       <g transform="translate(40, 110)">
         <rect
           x="0"
@@ -31,17 +31,17 @@ export function DogChewScene({ size = 400, className, ...props }: Props) {
           stroke="#1F3A2E"
           strokeWidth="2"
         />
-        <rect x="0" y="0" width="60" height="6" rx="3" fill="#1F3A2E" fillOpacity="0.15" />
+        <rect x="0" y="0" width="60" height="8" rx="3" fill="#293DA6" />
         <rect x="0" y="50" width="60" height="20" fill="#E8B547" />
         <text x="30" y="64" textAnchor="middle" fontSize="10" fontWeight="bold" fill="#1F3A2E">
-          DAILY
+          PROBIOTIC
         </text>
         <text x="30" y="20" textAnchor="middle" fontSize="6" fill="#1F3A2E">
           PawBite
         </text>
       </g>
 
-      {/* Right canister */}
+      {/* Right paper tube */}
       <g transform="translate(300, 105)">
         <rect
           x="0"
@@ -53,10 +53,10 @@ export function DogChewScene({ size = 400, className, ...props }: Props) {
           stroke="#1F3A2E"
           strokeWidth="2"
         />
-        <rect x="0" y="0" width="60" height="6" rx="3" fill="#1F3A2E" fillOpacity="0.15" />
+        <rect x="0" y="0" width="60" height="8" rx="3" fill="#293DA6" />
         <rect x="0" y="55" width="60" height="20" fill="#C8765B" />
-        <text x="30" y="69" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#F5EFE6">
-          HIP+JOINT
+        <text x="30" y="69" textAnchor="middle" fontSize="5.5" fontWeight="bold" fill="#F5EFE6">
+          JOINT + MOBILITY
         </text>
         <text x="30" y="20" textAnchor="middle" fontSize="6" fill="#1F3A2E">
           PawBite

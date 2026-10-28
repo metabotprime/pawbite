@@ -65,8 +65,8 @@ If the canister arrives crushed, leaking, or open, send us a photo at help@pawbi
 If your package is sent to the wrong address because you typed it wrong, we can still help. We'll redirect the original (if possible) or send a replacement at cost.`,
         },
         {
-          heading: 'Sustainability.',
-          body: "Our canisters are recyclable HDPE. The mailer is curbside-recyclable paper-based. We don't use plastic peanuts, bubble wrap, or air pillows — the canister is sturdy enough to ship without them. The shipping label adhesive is plant-based.",
+          heading: 'Packaging.',
+          body: 'Our products are packaged in paper tubes. Follow the storage directions printed on each product label.',
         },
       ]}
       contactNote="Email help@pawbite.com. We respond within one business day."

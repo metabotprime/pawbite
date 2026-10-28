@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description:
       'Probiotic Chews + Joint + Mobility Chews, bundled. Approximately 80 soft chews per can.',
     url: `${SITE_URL}/products/daily-duo`,
-    image: '/share/daily-duo-r2.png',
+    image: '/share/daily-duo-paper-v1.png',
   }),
 };
 

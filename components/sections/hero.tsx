@@ -117,7 +117,7 @@ export function HeroSection() {
             <Image
               key={product.slug}
               src={product.imageSrc!}
-              alt={`PawBite ${product.name} packaging preview, ${product.countLabel.toLowerCase()}`}
+              alt={`PawBite ${product.name} paper tube packaging preview, ${product.countLabel.toLowerCase()}`}
               width={product.imageWidth ?? 2048}
               height={product.imageHeight ?? 2048}
               priority={selected === 0}

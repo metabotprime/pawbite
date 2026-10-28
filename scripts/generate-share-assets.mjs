@@ -17,7 +17,7 @@ const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect 
 const logo = (width = 290) =>
   h('img', { src: svgData(wordmark), width, height: (width * 283.34) / 873.85 });
 const photo = async (slug) =>
-  `data:image/png;base64,${(await sharp(`public/products/studio/${slug}-r2.webp`).png().toBuffer()).toString('base64')}`;
+  `data:image/png;base64,${(await sharp(`public/products/studio/${slug}-paper-v1.webp`).png().toBuffer()).toString('base64')}`;
 const items = [
   {
     slug: 'calm',
@@ -73,7 +73,7 @@ function collection(selected) {
     ),
     box(
       { position: 'absolute', bottom: 29, left: 48, fontSize: 20 },
-      'Dog supplement chews • Packaging preview',
+      'Dog supplement chews • Paper tube preview',
     ),
     box({ position: 'absolute', bottom: 29, right: 48, fontSize: 20 }, 'pawbite.com'),
   ]);
@@ -81,10 +81,10 @@ function collection(selected) {
 await mkdir('public/share', { recursive: true });
 await mkdir('public/brand', { recursive: true });
 const defaultCard = await png(collection(items), 1200, 630);
-await writeFile('public/share/pawbite-line-r2.png', defaultCard);
+await writeFile('public/share/pawbite-line-paper-v1.png', defaultCard);
 await writeFile('public/og-default.png', defaultCard);
 await writeFile(
-  'public/share/daily-duo-r2.png',
+  'public/share/daily-duo-paper-v1.png',
   await png(collection([items[1], items[2]]), 1200, 630),
 );
 for (const item of items) {
@@ -104,7 +104,7 @@ for (const item of items) {
     }),
     box({ position: 'absolute', left: 52, bottom: 44, fontSize: 22 }, 'pawbite.com'),
   ]);
-  await writeFile(`public/share/${item.slug}-r2.png`, await png(element, 1200, 630));
+  await writeFile(`public/share/${item.slug}-paper-v1.png`, await png(element, 1200, 630));
 }
 await writeFile('public/brand/pawbite-wordmark.svg', wordmark + '\n');
 await writeFile('public/brand/pawbite-wordmark.png', await png(logo(874), 874, 284));

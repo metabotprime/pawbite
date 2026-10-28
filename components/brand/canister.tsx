@@ -55,8 +55,8 @@ export function Canister({
       )}
       {...props}
     >
-      <div className="absolute left-0 right-0 top-0 h-3 rounded-t-2xl bg-forest/15" />
-      <div className="absolute bottom-2 left-2 top-3 w-2 rounded-full bg-white/30" />
+      <div className="absolute left-0 right-0 top-0 h-3 rounded-t-2xl border-b border-forest/20 bg-forest" />
+      <div className="absolute bottom-0 left-0 right-0 h-1 border-t border-forest/10 bg-cream-2" />
       <div className="absolute left-0 right-0 top-5 text-center">
         <span className="font-display text-xs tracking-wide text-forest">PawBite</span>
       </div>
