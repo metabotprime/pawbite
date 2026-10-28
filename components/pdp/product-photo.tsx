@@ -15,12 +15,12 @@ export function ProductPhoto({ product }: { product: Product }) {
         type="button"
         className="group relative block w-full cursor-zoom-in overflow-hidden rounded-[2rem] border border-forest/10"
         onClick={() => dialog.current?.showModal()}
-        aria-label={`Enlarge ${product.name} photo`}
+        aria-label={`Enlarge ${product.name} packaging preview`}
         aria-haspopup="dialog"
       >
         <Image
           src={product.imageSrc}
-          alt={`PawBite ${product.name} tin, ${product.countLabel.toLowerCase()}`}
+          alt={`PawBite ${product.name} packaging preview, ${product.countLabel.toLowerCase()}`}
           width={product.imageWidth ?? 2048}
           height={product.imageHeight ?? 2048}
           priority
@@ -31,9 +31,10 @@ export function ProductPhoto({ product }: { product: Product }) {
           <Maximize2 size={14} aria-hidden="true" /> A closer look
         </span>
       </button>
+      <p className="mt-2 text-center text-xs text-charcoal/65">Packaging preview</p>
       <dialog
         ref={dialog}
-        aria-label={`${product.name} photo`}
+        aria-label={`${product.name} packaging preview`}
         className="m-auto max-h-[92dvh] w-[min(92vw,850px)] max-w-none overflow-auto rounded-3xl bg-cream p-0 shadow-2xl backdrop:bg-charcoal/75"
       >
         <div className="sticky top-0 z-10 flex items-center justify-between gap-4 border-b border-forest/10 bg-cream px-5 py-3">
@@ -49,7 +50,7 @@ export function ProductPhoto({ product }: { product: Product }) {
         </div>
         <Image
           src={product.imageSrc}
-          alt={`Enlarged PawBite ${product.name} tin`}
+          alt={`Enlarged PawBite ${product.name} packaging preview`}
           width={product.imageWidth ?? 2048}
           height={product.imageHeight ?? 2048}
           sizes="(max-width: 923px) 92vw, 850px"

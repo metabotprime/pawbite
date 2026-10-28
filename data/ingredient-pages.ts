@@ -152,7 +152,7 @@ export const ingredientPages: IngredientPage[] = [
     },
     safetyNotes:
       'BB-12 has Generally Recognized as Safe status and is one of the most extensively safety-tested probiotic strains. Adverse effects are rare and limited to transient gas in the first week. As with all live probiotics, avoid in dogs with severe immune compromise unless directed by a vet.',
-    byline: defaultByline,
+    byline: { ...defaultByline, updatedDate: '2026-10-28' },
     sections: [
       {
         heading: 'The most-studied probiotic in the world',
@@ -164,7 +164,7 @@ export const ingredientPages: IngredientPage[] = [
       },
       {
         heading: 'Why it pairs with Lactobacillus strains',
-        body: 'Bifidobacteria dominate the canine large intestine while Lactobacillus species are more prominent in the small intestine. A multi-strain formula covers more gut real estate than a single strain. Putting BB-12 alongside L. acidophilus and L. plantarum gives your dog probiotic activity across the full length of the gut, which is why PawBite Daily Probiotic uses a five-strain blend instead of a single mega-dose of one strain.',
+        body: 'Bifidobacteria dominate the canine large intestine while Lactobacillus species are more prominent in the small intestine. A multi-strain formula covers more gut real estate than a single strain. PawBite Probiotic Chews lists Bifidobacterium animalis alongside four other named strains at 500 million CFU each per chew. Its label does not identify BB-12 or another specific clinical strain.',
       },
     ],
     sources: [
@@ -237,7 +237,7 @@ export const ingredientPages: IngredientPage[] = [
     },
     safetyNotes:
       'L. acidophilus has been used safely in human and animal supplements for over fifty years. Side effects are limited to mild gas in the first few days. Avoid in dogs with severe immune compromise without a vet check.',
-    byline: defaultByline,
+    byline: { ...defaultByline, updatedDate: '2026-10-28' },
     sections: [
       {
         heading: 'The classic gut workhorse',
@@ -299,7 +299,7 @@ export const ingredientPages: IngredientPage[] = [
       {
         question: 'What is the difference between NCFM and other acidophilus strains?',
         answer:
-          'NCFM is one specific, well-characterized strain with decades of published research. Generic "acidophilus" on a label could be any strain, which is why we name our strains and stick to ones with documented evidence.',
+          'NCFM is one specific, well-characterized strain with decades of published research. Generic "acidophilus" on a label could be any strain. PawBite lists Lactobacillus acidophilus, but its current label does not identify NCFM.',
       },
     ],
   },
@@ -320,7 +320,7 @@ export const ingredientPages: IngredientPage[] = [
     },
     safetyNotes:
       'L. plantarum 299v has a strong safety record in both human and animal studies. Mild gas during the first week is the most common observation. Not recommended for severely immune-compromised dogs without veterinary supervision.',
-    byline: defaultByline,
+    byline: { ...defaultByline, updatedDate: '2026-10-28' },
     sections: [
       {
         heading: 'Why 299v is the named strain',
@@ -332,7 +332,7 @@ export const ingredientPages: IngredientPage[] = [
       },
       {
         heading: 'Pairing with prebiotic fiber',
-        body: 'L. plantarum loves chicory inulin. The fiber gives it a substrate to ferment, which boosts colonization and short-chain fatty acid production. This is the synbiotic effect — probiotic plus prebiotic together perform better than either alone. PawBite Daily Probiotic uses both intentionally for this reason.',
+        body: 'L. plantarum loves chicory inulin. The fiber gives it a substrate to ferment, which boosts colonization and short-chain fatty acid production. This is the synbiotic effect — probiotic plus prebiotic together perform better than either alone. PawBite Probiotic Chews lists Lactobacillus plantarum and inulin, but the label does not specify a chicory source for the inulin.',
       },
     ],
     sources: [
@@ -489,7 +489,7 @@ export const ingredientPages: IngredientPage[] = [
     },
     safetyNotes:
       'Inulin is well tolerated by most dogs. At doses above the typical range some dogs develop gas or soft stool as the gut adjusts — start at half-dose for the first week if your dog has a sensitive stomach. Dogs with confirmed fructan intolerance should avoid it.',
-    byline: defaultByline,
+    byline: { ...defaultByline, updatedDate: '2026-10-28' },
     sections: [
       {
         heading: 'Why prebiotics matter as much as probiotics',
@@ -524,7 +524,7 @@ export const ingredientPages: IngredientPage[] = [
         journal: 'Journal of Animal Science',
       },
     ],
-    inProducts: ['daily-probiotic'],
+    inProducts: [],
     recommendsProduct: 'daily-probiotic',
     faqs: [
       {
@@ -653,7 +653,7 @@ export const ingredientPages: IngredientPage[] = [
     },
     safetyNotes:
       'Glucosamine HCl is one of the most well-studied joint supplement ingredients with an excellent safety profile. Mild GI upset in the first week is the most common observation. Dogs with diabetes should be monitored as some studies suggest a small effect on blood sugar — talk to your vet first. Shellfish-allergic dogs are exceptionally rare but theoretically should avoid it.',
-    byline: defaultByline,
+    byline: { ...defaultByline, updatedDate: '2026-10-28' },
     sections: [
       {
         heading: 'The single most studied joint ingredient',
@@ -669,7 +669,7 @@ export const ingredientPages: IngredientPage[] = [
       },
       {
         heading: 'Pairing with chondroitin and MSM',
-        body: 'The classic joint stack is glucosamine plus chondroitin plus MSM. Chondroitin works on a different cartilage pathway and the two together perform better than either alone in most studies. MSM adds anti-inflammatory sulfur compounds. PawBite Hip + Joint uses all three at evidence-based doses for this reason.',
+        body: 'The classic joint stack is glucosamine plus chondroitin plus MSM. Chondroitin works on a different cartilage pathway and the two together perform better than either alone in most studies. MSM adds anti-inflammatory sulfur compounds. PawBite Joint + Mobility Chews lists glucosamine HCl 250 mg, chondroitin sulfate 125 mg and MSM 125 mg per 2.5 g chew. Ingredient research does not establish the effects of the finished formula.',
       },
     ],
     sources: [
@@ -1077,7 +1077,7 @@ export const ingredientPages: IngredientPage[] = [
     },
     safetyNotes:
       'Oral hyaluronic acid has an excellent safety profile in dogs. No significant drug interactions or contraindications are known at supplement doses. Mild GI upset in the first week is uncommon but possible.',
-    byline: defaultByline,
+    byline: { ...defaultByline, updatedDate: '2026-10-28' },
     sections: [
       {
         heading: 'The bioavailability debate',
@@ -1114,7 +1114,7 @@ export const ingredientPages: IngredientPage[] = [
         journal: 'Equine Veterinary Journal',
       },
     ],
-    inProducts: ['hip-and-joint'],
+    inProducts: [],
     recommendsProduct: 'hip-and-joint',
     faqs: [
       {
@@ -1161,7 +1161,7 @@ export const ingredientPages: IngredientPage[] = [
     },
     safetyNotes:
       'Salmon oil is safe for most dogs at recommended doses. Very high doses can cause loose stool and may thin the blood — caution in dogs on anticoagulants or before surgery. Vitamin E is sometimes added to prevent oxidation; check the label. Watch for rancidity — fishy or sour-smelling oil should be discarded.',
-    byline: defaultByline,
+    byline: { ...defaultByline, updatedDate: '2026-10-28' },
     sections: [
       {
         heading: 'The single most evidence-backed supplement',
@@ -1169,7 +1169,7 @@ export const ingredientPages: IngredientPage[] = [
       },
       {
         heading: 'Joint-specific benefit',
-        body: 'For joint inflammation specifically, EPA is the more important of the two omega-3s because it directly competes with arachidonic acid in the prostaglandin pathway. Studies show measurable reductions in inflammatory markers and improvements in mobility in dogs with osteoarthritis on EPA-rich fish oil. The effect builds over 8-12 weeks. PawBite Hip + Joint uses salmon oil specifically for this reason — it pairs with glucosamine and chondroitin to attack both the structural and inflammatory sides of joint discomfort.',
+        body: 'For joint inflammation specifically, EPA is the more important of the two omega-3s because it directly competes with arachidonic acid in the prostaglandin pathway. Studies show measurable reductions in inflammatory markers and improvements in mobility in dogs with osteoarthritis on EPA-rich fish oil. The effect builds over 8-12 weeks. Salmon oil is not listed in the current PawBite Joint + Mobility Chews formula.',
       },
       {
         heading: 'Skin, coat, and beyond',
@@ -1202,7 +1202,7 @@ export const ingredientPages: IngredientPage[] = [
         journal: 'Prostaglandins, Leukotrienes and Essential Fatty Acids',
       },
     ],
-    inProducts: ['hip-and-joint'],
+    inProducts: [],
     recommendsProduct: 'hip-and-joint',
     faqs: [
       {
@@ -1337,7 +1337,7 @@ export const ingredientPages: IngredientPage[] = [
     },
     safetyNotes:
       'L-theanine has an excellent safety record. It is non-sedating, non-habit-forming, and has no significant drug interactions. Side effects are rare and usually limited to very mild lethargy at high doses. Safe to combine with other calming supplements and with most prescription anxiety medications under vet guidance.',
-    byline: defaultByline,
+    byline: { ...defaultByline, updatedDate: '2026-10-28' },
     sections: [
       {
         heading: 'Calm without sedation',
@@ -1396,9 +1396,9 @@ export const ingredientPages: IngredientPage[] = [
           'Generally yes, but mention it to your vet. L-theanine works on different pathways than most prescription anxiolytics and can complement them. Always disclose all supplements.',
       },
       {
-        question: 'Why no PawBite calming chew yet?',
+        question: 'Does PawBite offer Calming Chews?',
         answer:
-          'A calming formula is on our roadmap. We are taking time on formulation because every dog responds differently and we want to get the multi-ingredient blend right. In the meantime, gut health (which directly affects mood through the gut-brain axis) is a sensible starting point.',
+          'PawBite Calming Chews are for dogs during busy, noisy days. Each 2.5 g chew lists Ashwagandha Root Extract 75 mg, L-Theanine 50 mg and Chamomile Extract 50 mg. See the product page for the current label and availability.',
       },
     ],
   },
@@ -1419,7 +1419,7 @@ export const ingredientPages: IngredientPage[] = [
     },
     safetyNotes:
       'Hemp seed oil is very safe. Hemp extract with CBD is safe for most dogs but should not contain THC — make sure products are tested for THC content. CBD can interact with some drugs metabolized by the liver (CYP450 pathway) including certain anti-seizure medications. Always check with your vet if your dog is on prescription medication.',
-    byline: defaultByline,
+    byline: { ...defaultByline, updatedDate: '2026-10-28' },
     sections: [
       {
         heading: 'Hemp seed oil vs hemp extract — different products',
@@ -1456,7 +1456,7 @@ export const ingredientPages: IngredientPage[] = [
         journal: 'Euphytica',
       },
     ],
-    inProducts: ['calm'],
+    inProducts: [],
     recommendsProduct: 'calm',
     faqs: [
       {
@@ -1586,7 +1586,7 @@ export const ingredientPages: IngredientPage[] = [
     },
     safetyNotes:
       'Ashwagandha is generally safe for healthy dogs at supplement doses. Avoid in dogs with autoimmune disease (it can stimulate immune activity) and in dogs on thyroid medication (it can mildly affect thyroid hormone levels). Mild GI upset in the first week is uncommon but possible. Use cautiously in pregnant or nursing dogs.',
-    byline: defaultByline,
+    byline: { ...defaultByline, updatedDate: '2026-10-28' },
     sections: [
       {
         heading: 'What "adaptogen" actually means',
@@ -1646,9 +1646,9 @@ export const ingredientPages: IngredientPage[] = [
           'Use cautiously. Ashwagandha can stimulate immune activity, which is desirable in healthy dogs but potentially counterproductive in autoimmune disease. Talk to your vet before starting.',
       },
       {
-        question: 'Why is PawBite recommending Daily Duo for stress?',
+        question: 'Which PawBite product lists ashwagandha?',
         answer:
-          'The gut and brain are deeply connected through the vagus nerve and through bacterial metabolites that influence mood. A healthy gut supports a calmer dog. Daily Duo gives gut and joint support together, which addresses two systems most stress-affected dogs need help with simultaneously.',
+          'PawBite Calming Chews lists Ashwagandha Root Extract 75 mg per 2.5 g chew, alongside L-Theanine and Chamomile Extract. Follow the product label directions and cautions.',
       },
     ],
   },
@@ -1669,7 +1669,7 @@ export const ingredientPages: IngredientPage[] = [
     },
     safetyNotes:
       'Bovine colostrum is generally safe and well-tolerated. The main caution is dogs with severe dairy allergies — colostrum is processed differently than regular milk but still derived from dairy. Mild loose stool in the first week is occasional and resolves quickly. No significant drug interactions are known.',
-    byline: defaultByline,
+    byline: { ...defaultByline, updatedDate: '2026-10-28' },
     sections: [
       {
         heading: 'Why bovine colostrum works across species',
@@ -1730,7 +1730,7 @@ export const ingredientPages: IngredientPage[] = [
       {
         question: 'Why is PawBite not selling colostrum yet?',
         answer:
-          'It is on the roadmap as part of a future skin and immune support chew. For now, our Daily Probiotic addresses many of the same gut-barrier goals through a different mechanism (probiotic balance and prebiotic fiber).',
+          'It is on the roadmap as part of a future skin and immune support chew. Colostrum is not listed in the current Probiotic Chews, Joint + Mobility Chews or Calming Chews formulas.',
       },
     ],
   },

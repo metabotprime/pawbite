@@ -45,18 +45,18 @@ ${SITE_DESCRIPTION}
 
 ## What we make
 
-- A daily probiotic chew for dogs (5 strains, 5 billion CFUs, vet-formulated)
-- A hip + joint chew for dogs (glucosamine, chondroitin, MSM, green-lipped mussel)
-- A calming chew for dogs (L-theanine, ashwagandha, chamomile, gut-brain probiotic; non-sedating)
+- Probiotic Chews for dogs: 5 named strains, 2.5 billion CFU per 2.5 g chew. For dogs' gut wellness.
+- Joint + Mobility Chews: Support your dog's active lifestyle. Glucosamine HCl 250 mg, Chondroitin Sulfate 125 mg, MSM 125 mg, Green-Lipped Mussel 125 mg and Turmeric Extract 50 mg per 2.5 g chew.
+- Calming Chews for dogs: Ashwagandha Root Extract 75 mg, L-Theanine 50 mg and Chamomile Extract 50 mg per 2.5 g chew. For dogs during busy, noisy days.
 - A subscription bundle of the two daily essentials (The Daily Duo)
 
 ## Key pages
 
 - [Home](${SITE_URL}): The good stuff your dog needs. Nothing weird.
 - [Shop the line](${SITE_URL}/products): All three chews and the Daily Duo bundle.
-- [Daily Probiotic](${SITE_URL}/products/daily-probiotic)
-- [Hip + Joint](${SITE_URL}/products/hip-and-joint)
-- [Calming Chew](${SITE_URL}/products/calm): L-theanine, ashwagandha, chamomile, and a gut-brain probiotic. Calm without sedation.
+- [Probiotic Chews](${SITE_URL}/products/daily-probiotic)
+- [Joint + Mobility Chews](${SITE_URL}/products/hip-and-joint)
+- [Calming Chews](${SITE_URL}/products/calm): For dogs during busy, noisy days. Ashwagandha Root Extract, L-Theanine and Chamomile Extract; no Bacillus coagulans in the final formula.
 - [The Daily Duo](${SITE_URL}/products/daily-duo): The two daily essentials bundled. Save 32% when you subscribe.
 - [Find the right chew (quiz)](${SITE_URL}/quiz)
 
@@ -64,10 +64,10 @@ ${SITE_DESCRIPTION}
 
 ${availability} Prices in USD; subscription = Subscribe & Save 20%, free shipping, cancel anytime.
 
-- Daily Probiotic (30 soft chews): ${price(dailyProbiotic)}
-- Hip + Joint (60 soft chews): ${price(hipAndJoint)}
-- Calming Chew (30 soft chews): ${price(calm)}
-- The Daily Duo (Probiotic + Hip + Joint bundle): ${price(dailyDuo)} — saves 32% vs buying both separately
+- Probiotic Chews (80 soft chews, 2.5 g each, 200 g): ${price(dailyProbiotic)}
+- Joint + Mobility Chews (80 soft chews, 2.5 g each, 200 g): ${price(hipAndJoint)}
+- Calming Chews (80 soft chews, 2.5 g each, 200 g): ${price(calm)}
+- The Daily Duo (Probiotic + Joint + Mobility Chews bundle): ${price(dailyDuo)} — saves 32% vs buying both separately
 
 ## Content hubs
 

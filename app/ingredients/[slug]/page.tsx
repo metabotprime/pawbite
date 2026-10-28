@@ -24,9 +24,9 @@ export default function IngredientPage({ params }: { params: { slug: string } })
 
   const title = `${ing.ingredientName} for dogs.`;
   const productLabels: Record<'daily-probiotic' | 'hip-and-joint' | 'calm', string> = {
-    'daily-probiotic': 'Daily Probiotic',
-    'hip-and-joint': 'Hip + Joint',
-    calm: 'Calming Chew',
+    'daily-probiotic': 'Probiotic Chews',
+    'hip-and-joint': 'Joint + Mobility Chews',
+    calm: 'Calming Chews',
   };
   const inProductsLine = ing.inProducts.length
     ? `Found in PawBite products: ${ing.inProducts.map((p) => productLabels[p]).join(', ')}.`

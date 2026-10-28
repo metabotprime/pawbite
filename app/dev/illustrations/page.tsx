@@ -139,20 +139,20 @@ export default function DevIllustrationsPage() {
         </Group>
 
         <Group title="Product canister" subtitle="CSS mockup for PDPs">
-          <Item label="Daily Probiotic (md)">
+          <Item label="Probiotic Chews (md)">
             <Canister
               name="Daily"
               bandColor="warmyellow"
               tagline="probiotic + prebiotic"
-              countLabel="30 SOFT CHEWS"
+              countLabel="80 SOFT CHEWS"
             />
           </Item>
-          <Item label="Hip + Joint (md)">
+          <Item label="Joint + Mobility Chews (md)">
             <Canister
-              name="Hip+Joint"
+              name="Joint + Mobility"
               bandColor="terracotta"
               tagline="glucosamine + chondroitin"
-              countLabel="60 SOFT CHEWS"
+              countLabel="80 SOFT CHEWS"
             />
           </Item>
           <Item label="Daily Duo (md)">

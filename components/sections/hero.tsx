@@ -15,28 +15,28 @@ const slides = [
     accent: 'chews.',
     last: 'FOR DOGS.',
     description:
-      'L-theanine, chamomile, ashwagandha, and a probiotic. Meet our calming chew, made without CBD, melatonin, or sedatives.',
-    note: 'CALMING CHEW',
+      'For dogs during busy, noisy days. Ashwagandha Root Extract 75 mg, L-Theanine 50 mg and Chamomile Extract 50 mg per 2.5 g chew.',
+    note: 'CALMING CHEWS',
   },
   {
     product: hipAndJoint,
-    label: 'Joint support',
-    first: 'HIP & JOINT',
-    accent: 'chews.',
+    label: 'Joint + Mobility',
+    first: 'JOINT +',
+    accent: 'mobility chews.',
     last: 'FOR DOGS.',
     description:
-      'Glucosamine, chondroitin, MSM, and green-lipped mussel. A focused soft chew for your dog’s joint-care routine.',
-    note: 'HIP + JOINT',
+      "Support your dog's active lifestyle. Glucosamine, chondroitin, MSM, green-lipped mussel and turmeric in duck-flavored soft chews.",
+    note: 'JOINT + MOBILITY CHEWS',
   },
   {
     product: dailyProbiotic,
     label: 'Gut health',
-    first: 'GUT HEALTH',
+    first: 'PROBIOTIC',
     accent: 'chews.',
     last: 'FOR DOGS.',
     description:
-      'Five named probiotic strains. Five billion CFUs. Plus chicory inulin and pumpkin in one daily soft chew.',
-    note: 'DAILY PROBIOTIC',
+      "For dogs' gut wellness. 2.5 billion CFU across five named strains, plus inulin 100 mg and pumpkin powder 125 mg per 2.5 g chew.",
+    note: 'PROBIOTIC CHEWS',
   },
 ];
 
@@ -117,7 +117,7 @@ export function HeroSection() {
             <Image
               key={product.slug}
               src={product.imageSrc!}
-              alt={`PawBite ${product.name}, ${product.countLabel.toLowerCase()}`}
+              alt={`PawBite ${product.name} packaging preview, ${product.countLabel.toLowerCase()}`}
               width={product.imageWidth ?? 2048}
               height={product.imageHeight ?? 2048}
               priority={selected === 0}

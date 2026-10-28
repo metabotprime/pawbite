@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Shield } from '@/components/brand/illustrations/icons/shield';
 import type { ProductDetail } from '@/data/products-detail';
 import { cn } from '@/lib/utils';
+import { PRODUCT_DISCLAIMER } from '@/data/product-labels';
 
 export function PdpHero({ product }: { product: ProductDetail }) {
   const [subscribe, setSubscribe] = React.useState(true);
@@ -49,7 +50,7 @@ export function PdpHero({ product }: { product: ProductDetail }) {
       {/* Info */}
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-2">
-          <span className="text-sm text-charcoal/70">Vet-formulated • 90-day guarantee</span>
+          <span className="text-sm text-charcoal/70">90-day guarantee</span>
         </div>
 
         <h1 className="editorial-heading text-balance text-4xl leading-tight md:text-6xl">
@@ -59,6 +60,7 @@ export function PdpHero({ product }: { product: ProductDetail }) {
         <p className="font-hand text-2xl text-terracotta">{product.tagline}</p>
 
         <p className="text-base leading-relaxed text-charcoal">{product.longDescription}</p>
+        <p className="text-sm leading-relaxed text-charcoal/80">{PRODUCT_DISCLAIMER}</p>
 
         <div className="rounded-2xl border border-forest/15 bg-offwhite p-5">
           <div className="mb-4 flex gap-2">
@@ -117,7 +119,7 @@ export function PdpHero({ product }: { product: ProductDetail }) {
 
         <div className="flex items-center gap-3 pt-2 text-sm text-charcoal/70">
           <Shield size={18} className="text-forest" />
-          <span>90-day money-back guarantee · Free shipping over $40 · Vet-formulated</span>
+          <span>90-day money-back guarantee · Free shipping over $40</span>
         </div>
       </div>
     </div>

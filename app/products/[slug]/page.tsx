@@ -35,7 +35,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       title: `${product.seoTitle} · PawBite`,
       description: product.seoDescription,
       url: `${SITE_URL}/products/${product.slug}`,
-      image: `/share/${product.slug}-v2.png`,
+      image: `/share/${product.slug}-r2.png`,
     }),
   };
 }
@@ -55,6 +55,7 @@ export default function PdpPage({ params }: { params: { slug: string } }) {
     description: product.longDescription,
     brand: { '@type': 'Brand', name: 'PawBite' },
     sku: product.slug,
+    gtin12: product.upc,
     url: productUrl,
     ...(product.imageSrc && { image: `${SITE_URL}${product.imageSrc}` }),
     offers: {
@@ -99,11 +100,34 @@ export default function PdpPage({ params }: { params: { slug: string } }) {
         />
       </Section>
 
+      <Section background="offwhite" spacing="default">
+        <Container size="narrow">
+          <h2 className="mb-3 text-2xl font-bold">Full label information</h2>
+          <p className="mb-4 text-sm">UPC: {product.upc}</p>
+          <h3 className="mb-2 font-bold">Inactive ingredients</h3>
+          <p className="mb-4 text-sm leading-relaxed">{product.inactiveIngredients}</p>
+          <p className="mb-6 text-sm font-bold">{product.allergens}</p>
+          <h3 className="mb-2 font-bold">Guaranteed analysis</h3>
+          <dl className="mb-6 grid grid-cols-2 gap-2 text-sm">
+            {Object.entries(product.guaranteedAnalysis).map(([name, amount]) => (
+              <div key={name}>
+                <dt>{name}</dt>
+                <dd className="font-bold">{amount}</dd>
+              </div>
+            ))}
+          </dl>
+          <h3 className="mb-2 font-bold">Cautions</h3>
+          <p className="mb-4 text-sm leading-relaxed">{product.cautions}</p>
+          <h3 className="mb-2 font-bold">Storage</h3>
+          <p className="text-sm leading-relaxed">{product.storage}</p>
+        </Container>
+      </Section>
+
       <Section background="warmyellow" spacing="default">
         <DosingTable dosing={product.dosing} note={product.dosingNote} />
       </Section>
 
-      {VET_REVIEW_LIVE && (
+      {VET_REVIEW_LIVE && product.vetQuote && (
         <Section background="cream" spacing="default">
           <VetQuoteCard
             name={product.vetQuote.name}

@@ -32,7 +32,7 @@ Why are we so easy about this? Because if a dog doesn't respond well to a supple
 
 **Sudden adverse reaction:** Stop the chew, contact your vet, then email us. We'll refund the affected order and pause your subscription so you can decide whether to swap SKUs or cancel.
 
-**Allergic reaction discovered later:** If you've been on PawBite for months and discover your dog has developed a chicken sensitivity (we use chicken in Daily Probiotic and duck in Hip + Joint, so swapping flavors usually helps), email us and we'll work it out.
+**Allergic reaction discovered later:** If you've been on PawBite for months and discover your dog has developed a chicken sensitivity (both Probiotic Chews and Joint + Mobility Chews list chicken ingredients; flavor names do not identify every allergen), email us and we'll work it out.
 
 **Wrong product shipped:** Our fault — we ship the right thing at no charge and you can keep the wrong one.`,
         },

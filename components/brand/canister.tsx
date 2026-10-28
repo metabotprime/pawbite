@@ -37,7 +37,7 @@ const stickerColors: Record<NonNullable<CanisterProps['stickerColor']>, string> 
 export function Canister({
   name,
   bandColor,
-  countLabel = '30 SOFT CHEWS',
+  countLabel = '80 SOFT CHEWS',
   tagline,
   size = 'md',
   sticker,

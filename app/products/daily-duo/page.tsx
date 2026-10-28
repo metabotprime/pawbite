@@ -18,18 +18,20 @@ import {
   CHECKOUT_LIVE,
 } from '@/data/products';
 import { VET_REVIEW_LIVE } from '@/data/vets';
+import { PRODUCT_DISCLAIMER } from '@/data/product-labels';
 import { SITE_URL } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Daily Duo for Dogs — Probiotic + Hip & Joint Bundle (Save 32%)',
+  title: 'Daily Duo for Dogs | Probiotic + Joint + Mobility Chews (Save 32%)',
   description:
-    'Daily Probiotic + Hip + Joint in one dog supplement bundle — gut and joints, the two systems most dogs need supported daily. Save 32% on subscribe and save.',
+    'Probiotic Chews + Joint + Mobility Chews in one bundle. Approximately 80 soft chews per can. Save 32% on subscribe and save.',
   alternates: { canonical: `${SITE_URL}/products/daily-duo` },
   ...socialMetadata({
     title: 'The Daily Duo for Dogs — Save 32%',
-    description: 'Daily Probiotic + Hip + Joint, bundled. Gut and joints, covered daily.',
+    description:
+      'Probiotic Chews + Joint + Mobility Chews, bundled. Approximately 80 soft chews per can.',
     url: `${SITE_URL}/products/daily-duo`,
-    image: '/share/daily-duo-v2.png',
+    image: '/share/daily-duo-r2.png',
   }),
 };
 
@@ -38,14 +40,18 @@ const duoProductSchema = {
   '@type': 'Product',
   name: 'The Daily Duo for Dogs',
   description:
-    'A subscription bundle of PawBite Daily Probiotic and Hip + Joint — the two daily-essential dog chews, together at a discount.',
+    'A subscription bundle of PawBite Probiotic Chews and Joint + Mobility Chews — the two daily-essential dog chews, together at a discount.',
   brand: { '@type': 'Brand', name: 'PawBite' },
   sku: 'daily-duo',
   url: `${SITE_URL}/products/daily-duo`,
   image: [dailyProbiotic, hipAndJoint].map((product) => `${SITE_URL}${product.imageSrc}`),
   isRelatedTo: [
-    { '@type': 'Product', name: 'Daily Probiotic', url: `${SITE_URL}/products/daily-probiotic` },
-    { '@type': 'Product', name: 'Hip + Joint', url: `${SITE_URL}/products/hip-and-joint` },
+    { '@type': 'Product', name: 'Probiotic Chews', url: `${SITE_URL}/products/daily-probiotic` },
+    {
+      '@type': 'Product',
+      name: 'Joint + Mobility Chews',
+      url: `${SITE_URL}/products/hip-and-joint`,
+    },
   ],
   offers: {
     '@type': 'AggregateOffer',
@@ -62,12 +68,12 @@ const bundleFaqs = [
   {
     question: 'What’s included in the Daily Duo?',
     answer:
-      'One canister of Daily Probiotic (30 chicken-flavored soft chews) and one canister of Hip + Joint (60 duck-flavored soft chews). That’s a 30-day supply of both — your dog gets one probiotic chew and two joint chews per day for a medium-large dog.',
+      'One canister of Probiotic Chews and one canister of Joint + Mobility Chews. Each contains approximately 80 soft chews, 2.5 g each, net weight 200 g. Follow the directions on each product: under 25 lb, 2 chews per day; 25 lb and over, 3 chews per day.',
   },
   {
     question: 'How is the 32% off calculated?',
     answer:
-      'Retail total is $70 ($32 Probiotic + $38 Hip + Joint). The bundle discount knocks that to $59.50 (-15%). Adding Subscribe & Save stacks another 20% off, taking it to $47.60 (-32% total). The math is on the cart page.',
+      'Retail total is $70 ($32 Probiotic + $38 Joint + Mobility Chews). The bundle discount knocks that to $59.50 (-15%). Adding Subscribe & Save stacks another 20% off, taking it to $47.60 (-32% total). The math is on the cart page.',
   },
   {
     question: 'Can I get the bundle as a one-time order?',
@@ -77,12 +83,12 @@ const bundleFaqs = [
   {
     question: 'My dog only needs one of these. Should I still bundle?',
     answer:
-      'If your dog only needs one, save your money — buy the single SKU. The Duo makes sense when your dog actually needs both (e.g., senior dogs with mild GI issues, or any large breed where gut and joint support both matter long-term).',
+      'Choose the individual product if you only want one. Review the ingredients, allergens and directions for both products before choosing the bundle.',
   },
   {
     question: 'Can I swap one of the Duo products for a different SKU later?',
     answer:
-      'Yes. We also make a Calming chew (L-theanine, ashwagandha, chamomile, and a gut-brain probiotic) — so once you have a subscription, you can swap any chew in it with a single click from the account portal.',
+      'Yes. We also make Calming Chews (Ashwagandha Root Extract, L-Theanine and Chamomile Extract) — so once you have a subscription, you can swap any chew in it with a single click from the account portal.',
   },
   {
     question: 'How do skipping and cancelling work?',
@@ -119,13 +125,13 @@ export default function DailyDuoPage() {
               <ProductVisual product={dailyDuo} priority className="rounded-none" />
               <figcaption className="grid grid-cols-2 gap-4 p-5 text-center">
                 <div>
-                  <p className="font-bold">Daily Probiotic</p>
+                  <p className="font-bold">Probiotic Chews</p>
                   <p className="mt-1 text-xs text-charcoal">
                     {dailyProbiotic.countLabel.toLowerCase()}
                   </p>
                 </div>
                 <div>
-                  <p className="font-bold">Hip + Joint</p>
+                  <p className="font-bold">Joint + Mobility Chews</p>
                   <p className="mt-1 text-xs text-charcoal">
                     {hipAndJoint.countLabel.toLowerCase()}
                   </p>
@@ -135,7 +141,7 @@ export default function DailyDuoPage() {
 
             <div className="flex flex-col gap-4">
               <div className="flex items-center gap-2">
-                <span className="text-sm text-charcoal/70">Vet-formulated • 90-day guarantee</span>
+                <span className="text-sm text-charcoal/70">90-day guarantee</span>
                 <Badge variant="warmyellow">Most popular</Badge>
               </div>
 
@@ -144,18 +150,21 @@ export default function DailyDuoPage() {
               </h1>
               <p className="font-hand text-2xl text-terracotta">Both products, every day.</p>
               <p className="text-base leading-relaxed text-charcoal">
-                Daily Probiotic for the gut. Hip + Joint for the mobility. The two systems most dogs
-                need supported daily — bundled together so your dog never runs out of either.
+                Probiotic Chews for dogs&apos; gut wellness. Joint + Mobility Chews to support your
+                dog&apos;s active lifestyle. Each can contains approximately 80 soft chews, 2.5 g
+                each, net weight 200 g.
               </p>
+
+              <p className="text-sm text-charcoal/80">{PRODUCT_DISCLAIMER}</p>
 
               <div className="rounded-2xl border-2 border-terracotta bg-offwhite p-5">
                 <div className="mb-4 space-y-1 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-charcoal/70">Daily Probiotic</span>
+                    <span className="text-charcoal/70">Probiotic Chews</span>
                     <span className="font-mono text-charcoal">${dailyProbiotic.retailPrice}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-charcoal/70">Hip + Joint</span>
+                    <span className="text-charcoal/70">Joint + Mobility Chews</span>
                     <span className="font-mono text-charcoal">${hipAndJoint.retailPrice}</span>
                   </div>
                   <div className="flex justify-between border-t border-forest/15 pt-1 text-charcoal/70">

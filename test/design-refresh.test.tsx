@@ -14,14 +14,14 @@ describe('PawBite design refresh', () => {
   it('keeps the selected hero product, destination and price together', async () => {
     const user = userEvent.setup();
     render(<HeroSection />);
-    expect(screen.getByRole('link', { name: 'Explore Calm' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: `Explore ${calm.shortName}` })).toHaveAttribute(
       'href',
       '/products/calm',
     );
     expect(screen.getByText(`$${calm.retailPrice.toFixed(2)} one-time`)).toBeVisible();
     for (const [name, product] of [
       ['Gut health', dailyProbiotic],
-      ['Joint support', hipAndJoint],
+      ['Joint + Mobility', hipAndJoint],
     ] as const) {
       await user.click(screen.getByRole('button', { name }));
       expect(screen.getByRole('button', { name })).toHaveAttribute('aria-pressed', 'true');

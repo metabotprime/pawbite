@@ -28,10 +28,10 @@ describe('homepage product rotation', () => {
   it('cycles all three headlines with their matching photo, price and destination, then loops', () => {
     render(<HeroSection />);
     for (const [headline, slug, price, photo] of [
-      ['CALMING', 'calm', '34.00', 'calm.webp'],
-      ['HIP & JOINT', 'hip-and-joint', '38.00', 'hip-and-joint.webp'],
-      ['GUT HEALTH', 'daily-probiotic', '32.00', 'daily-probiotic.webp'],
-      ['CALMING', 'calm', '34.00', 'calm.webp'],
+      ['CALMING', 'calm', '34.00', 'calming-r2.webp'],
+      ['JOINT +', 'hip-and-joint', '38.00', 'joint-mobility-r2.webp'],
+      ['PROBIOTIC', 'daily-probiotic', '32.00', 'probiotic-r2.webp'],
+      ['CALMING', 'calm', '34.00', 'calming-r2.webp'],
     ]) {
       expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(headline);
       expect(screen.getByRole('link', { name: /Explore/ })).toHaveAttribute(
@@ -51,14 +51,14 @@ describe('homepage product rotation', () => {
     expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('CALMING');
     fireEvent.click(screen.getByRole('button', { name: 'Resume product rotation' }));
     advance();
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('HIP & JOINT');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('JOINT +');
     const link = screen.getByRole('link', { name: /Explore/ });
     fireEvent.focus(link);
     advance();
     expect(link).toHaveAttribute('href', '/products/hip-and-joint');
     fireEvent.blur(link, { relatedTarget: null });
     advance();
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('GUT HEALTH');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('PROBIOTIC');
   });
 
   it('starts paused for reduced motion and still allows manual product selection', () => {
@@ -73,6 +73,6 @@ describe('homepage product rotation', () => {
     expect(screen.getByRole('button', { name: 'Resume product rotation' })).toBeVisible();
     fireEvent.click(screen.getByRole('button', { name: 'Gut health' }));
     advance();
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('GUT HEALTH');
+    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent('PROBIOTIC');
   });
 });

@@ -36,31 +36,34 @@ export const vsPages: VsPage[] = [
     competitorName: 'PetLab Co.',
     competitorTagline: "America's #1 dog digestive remedy on Amazon",
     productCategories: ['Probiotics', 'Dental sticks', 'Joint chews'],
-    tldr: "PetLab Co. is the most recognizable direct-to-consumer dog supplement brand in the US and their Probiotic Chews are a legitimate top-seller on Amazon — if you already trust the brand and your dog likes the formula, there's no urgent reason to switch. PawBite Daily Probiotic matches PetLab on CFU count (5 billion per chew), names every strain by its study designation instead of hiding behind a proprietary blend, and ships at a comparable monthly cost with a 90-day money-back guarantee instead of 30.",
+    tldr: "PetLab Co. is the most recognizable direct-to-consumer dog supplement brand in the US and their Probiotic Chews are a legitimate top-seller on Amazon. If you already trust the brand and your dog likes the formula, there's no urgent reason to switch. PawBite Probiotic Chews list 2.5 billion CFU per 2.5 g chew across five named microorganisms, plus 100 mg of inulin and 125 mg of pumpkin powder. PetLab's listed CFU count is 5 billion per chew. These different formulas should not be treated as equivalent.",
     byline: {
       author: 'PawBite editorial team',
-      reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-02-14',
-      updatedDate: '2026-09-08',
+      updatedDate: '2026-10-28',
     },
     comparisonRows: [
-      { feature: 'CFU per chew', pawbite: '5 billion', competitor: '5 billion (claimed)' },
+      { feature: 'CFU per chew', pawbite: '2.5 billion', competitor: '5 billion (claimed)' },
       {
         feature: 'Number of strains',
-        pawbite: '5 (all named with study designation)',
+        pawbite: '5 (named at species level)',
         competitor: '8 (proprietary blend)',
       },
       {
         feature: 'Strains identified by study ID',
-        pawbite: 'Yes (e.g. L. rhamnosus GG, B. animalis BB-12)',
+        pawbite: 'No; species names are listed',
         competitor: 'No',
       },
       {
         feature: 'Prebiotic',
-        pawbite: 'Chicory inulin, 200 mg disclosed',
+        pawbite: 'Inulin, 100 mg per chew',
         competitor: 'Included, amount not disclosed',
       },
-      { feature: 'Pumpkin / digestive aid', pawbite: '250 mg pumpkin powder', competitor: 'No' },
+      {
+        feature: 'Pumpkin / digestive aid',
+        pawbite: '125 mg pumpkin powder per chew',
+        competitor: 'No',
+      },
       { feature: 'Form', pawbite: 'Soft chew', competitor: 'Soft chew' },
       { feature: 'Flavor', pawbite: 'Chicken', competitor: 'Pork' },
       { feature: 'Price per month (subscription)', pawbite: '$26', competitor: '~$28–32' },
@@ -70,10 +73,14 @@ export const vsPages: VsPage[] = [
         competitor: 'Tiered up to 40% off (promo-driven)',
       },
       { feature: 'Money-back guarantee', pawbite: '90 days', competitor: '30 days' },
-      { feature: 'Third-party tested per batch', pawbite: 'Yes', competitor: 'Yes' },
+      {
+        feature: 'Third-party tested per batch',
+        pawbite: 'Not confirmed by current label',
+        competitor: 'Yes',
+      },
       {
         feature: 'cGMP-certified manufacturing',
-        pawbite: 'Yes (USA)',
+        pawbite: 'Made in China; GMP-certified facility stated on label',
         competitor: 'Yes',
       },
       {
@@ -85,7 +92,7 @@ export const vsPages: VsPage[] = [
     whenCompetitorMakesSense:
       "PetLab has earned its scale. If your dog has been on PetLab Probiotic Chews for months and stool is firm, gas is gone, and you're happy with the price after the Amazon Subscribe & Save discount, there's no urgent reason to switch. PetLab also wins on convenience — if you order most of your household goods on Amazon and want one-click reordering inside Prime, that ecosystem matters. Their 30-day guarantee is shorter than ours but adequate if your dog tends to respond quickly to probiotics.",
     whenPawbiteMakesSense:
-      "If you want to know exactly which strains your dog is getting and at what dose, PawBite tells you. We name each strain by its clinical designation (Lactobacillus rhamnosus GG, Bifidobacterium animalis BB-12) and link each one to the study that supports it. PetLab uses a proprietary 8-strain blend without naming the strains — which is fine, but means you can't cross-reference the research yourself. PawBite is also a better fit if you'd rather buy direct from a brand that doesn't compete with itself on Amazon listings, and if a 90-day guarantee feels more honest than 30.",
+      'PawBite Probiotic Chews may suit owners who prefer a chicken-flavored soft chew with the amount of each listed microorganism disclosed. The label lists five species at 500 million CFU each, plus 100 mg of inulin and 125 mg of pumpkin powder per chew. It does not identify clinical strain designations. PawBite also offers direct purchasing and a 90-day guarantee.',
     sections: [
       {
         heading: 'What PetLab does well',
@@ -93,15 +100,15 @@ export const vsPages: VsPage[] = [
       },
       {
         heading: 'Where PawBite is different',
-        body: "We made the opposite decision on transparency. Every strain in PawBite Daily Probiotic is named by its full study designation — Lactobacillus rhamnosus GG, Bifidobacterium animalis subsp. lactis BB-12, Lactobacillus acidophilus LA-5, Lactobacillus plantarum 299v, Bacillus coagulans GBI-30 6086. Each one has decades of human and canine research behind it. You can google any of those names and find the trial data yourself.\n\nWe also include 200 mg of chicory inulin as the prebiotic (named amount, not vague), 250 mg of pumpkin powder for digestive support, and we test every batch with a third-party lab for CFU at expiration (not just at manufacture). The chews are duck-and-chicken liver based, made in the USA in a cGMP-certified facility, and we ship them in a recyclable canister.\n\nThe practical differences for your dog are small. The intellectual difference — knowing exactly what's going into them — is the part most owners we talk to care about once they look closely.",
+        body: "PawBite Probiotic Chews list Bacillus coagulans, Bifidobacterium animalis, Lactobacillus acidophilus, Lactobacillus plantarum, and Lactobacillus rhamnosus at a minimum of 500 million CFU each per 2.5 g chew, for a total of 2.5 billion CFU. The label names these microorganisms at species level; it does not supply clinical strain IDs.\n\nEach chew also contains 100 mg of inulin and 125 mg of pumpkin powder. The chicken-flavored formula contains chicken and chickpea. Each tube contains approximately 80 soft chews, with a net weight of 200 g (7.05 oz). The label states Made in China and Made in a GMP-certified facility.\n\nThe product's label description is: For dogs' gut wellness. Ingredient names and amounts do not establish that a finished product has the same effects as another formulation.",
       },
       {
         heading: 'On price and subscription',
-        body: "PetLab and PawBite are in the same price band per month. PetLab lists at around $35–40 for a one-time order and runs aggressive promotional discounts on Amazon Subscribe & Save (claims of up to 40% off, though the actual landed price varies by promo cycle). PawBite is $32 retail, $26 on Subscribe & Save — a flat 20% off plus free shipping, no promo gymnastics required.\n\nThe Subscribe & Save discount also stacks if you add Hip + Joint via The Daily Duo bundle, dropping the combined per-month cost to $47.60 versus $70 retail — 32% off. PetLab sells joint chews too, but the bundle math depends on which retailer you buy from and which promo is live that week.\n\nNeither brand locks you in. You can skip, pause, or cancel a PawBite subscription from your account portal in one click — no calls, no fees. PetLab's cancellation flow is reasonable but goes through customer service rather than self-serve.",
+        body: "PetLab and PawBite are in the same price band per month. PetLab lists at around $35–40 for a one-time order and runs aggressive promotional discounts on Amazon Subscribe & Save (claims of up to 40% off, though the actual landed price varies by promo cycle). PawBite is $32 retail, $26 on Subscribe & Save — a flat 20% off plus free shipping, no promo gymnastics required.\n\nThe Subscribe & Save discount also stacks if you add Joint + Mobility Chews via The Daily Duo bundle, dropping the combined per-month cost to $47.60 versus $70 retail — 32% off. PetLab sells joint chews too, but the bundle math depends on which retailer you buy from and which promo is live that week.\n\nNeither brand locks you in. You can skip, pause, or cancel a PawBite subscription from your account portal in one click — no calls, no fees. PetLab's cancellation flow is reasonable but goes through customer service rather than self-serve.",
       },
       {
         heading: 'On testing and certification',
-        body: "Both brands manufacture in cGMP-certified facilities and both claim third-party batch testing. The difference is what gets tested and how visible it is.\n\nPawBite publishes a Certificate of Analysis for every lot — a PDF with the CFU count at manufacture, the CFU count at the printed expiration date, and a heavy-metals / microbial contamination panel. We test for CFU at expiration because probiotics die over time, and a label claim of 5 billion CFU is meaningless if the actual count at month 9 is 200 million. The COAs are available on request and we're working on making them publicly downloadable on the product page.\n\nPetLab tests every batch as well, but the testing data is not published publicly — you'd need to contact support to get a COA. That's not unusual for the supplement industry but it's a meaningful gap if you're the kind of owner who wants to verify what's on the label.",
+        body: "PawBite's current label lists a minimum of 2.5 billion CFU per chew. It does not specify whether that count is measured at manufacture or guaranteed through expiration. A through-expiration guarantee should not be assumed from the count alone.\n\nPetLab tests every batch, but the testing data is not published publicly — you'd need to contact support to get a COA. That's not unusual for the supplement industry but it's a meaningful gap if you're the kind of owner who wants to verify what's on the label.",
       },
     ],
     recommendsProduct: 'daily-probiotic',
@@ -112,29 +119,29 @@ export const vsPages: VsPage[] = [
           "Yes. PetLab Co. is a legitimate brand with real manufacturing standards, third-party testing, and a long track record of customer satisfaction on Amazon. The Probiotic Chews work for most dogs. The main critique is transparency — they use a proprietary blend and don't publish strain-level data publicly, which is a tradeoff some owners are happy to make and others aren't.",
       },
       {
-        question: "How is PawBite Daily Probiotic different from PetLab's Probiotic Chews?",
+        question: "How is PawBite Probiotic Chews different from PetLab's Probiotic Chews?",
         answer:
-          'Same CFU count (5 billion per chew), different transparency model. PawBite names every strain by its clinical study designation so you can look up the research. PetLab uses an 8-strain proprietary blend. PawBite includes 250 mg of pumpkin powder for digestive aid; PetLab does not. PawBite has a 90-day money-back guarantee; PetLab is 30 days. Price per month is comparable on subscription ($26 vs ~$28–32).',
+          'PawBite Probiotic Chews list 2.5 billion CFU per chew across five named microorganisms, each at 500 million CFU. PetLab uses an 8-strain proprietary blend with a listed total of 5 billion CFU. PawBite also includes 100 mg of inulin and 125 mg of pumpkin powder per chew. PawBite has a 90-day money-back guarantee; PetLab is 30 days.',
       },
       {
         question: 'Should I switch from PetLab to PawBite if my dog is doing well on PetLab?',
         answer:
-          "Probably not urgently. If stool is firm, gas is under control, and your dog likes the chews, the formula is working — switching for the sake of switching just disrupts a gut microbiome that's stabilized. Where it does make sense to switch: your dog has plateaued, you want strain-level transparency for vet conversations, or you'd rather buy direct from a brand instead of Amazon.",
+          'If your dog is doing well on PetLab, there is no reason to switch solely because PawBite has a different formula. PawBite lists species names and amounts, but not clinical strain IDs. Ask your veterinarian before changing a product used as part of a care plan.',
       },
       {
         question: 'Which has more CFUs — PetLab or PawBite?',
         answer:
-          "Both label 5 billion CFU per chew. The difference is what's inside that 5 billion. PetLab uses 8 strains in a proprietary blend (ratios undisclosed). PawBite splits 5 billion evenly across 5 named strains — 1 billion CFU each. The 5-strain approach lets us guarantee a meaningful dose of each strain rather than a trace amount of eight.",
+          'PetLab labels 5 billion CFU per chew; PawBite labels 2.5 billion CFU per chew. PawBite lists five named microorganisms at 500 million CFU each. PetLab uses eight strains in a proprietary blend with ratios undisclosed. CFU count alone does not establish which product is a better fit for a particular dog.',
       },
       {
         question: 'Is the PawBite chew chicken or pork flavored?',
         answer:
-          "PawBite Daily Probiotic is chicken-liver flavored. PetLab Probiotic Chews are pork-flavored. If your dog has a known chicken sensitivity, PetLab's pork base is the better fit. If your dog has a known pork sensitivity (less common), PawBite is the better fit.",
+          'PawBite Probiotic Chews are chicken-flavored and contain chicken and chickpea. PetLab Probiotic Chews are pork-flavored. For a dog with a known food sensitivity, compare the full ingredient and allergen lists with your veterinarian; flavor alone does not establish suitability.',
       },
       {
         question: "Are PetLab's probiotic strains the same as PawBite's?",
         answer:
-          "Some overlap, some differences — but it's hard to say with precision because PetLab doesn't publish the exact strain designations in their blend. They list genus and species (Lactobacillus, Bifidobacterium, Bacillus families) but not the specific clinical strains. PawBite publishes all five: Bacillus coagulans GBI-30 6086, Bifidobacterium animalis BB-12, Lactobacillus acidophilus LA-5, Lactobacillus plantarum 299v, Lactobacillus rhamnosus GG.",
+          'The labels do not establish an exact strain match. PawBite lists Bacillus coagulans, Bifidobacterium animalis, Lactobacillus acidophilus, Lactobacillus plantarum, and Lactobacillus rhamnosus without clinical strain IDs. PetLab also does not publish exact strain designations in its blend. Shared species names do not establish identical strains or effects.',
       },
       {
         question: "What's the PawBite money-back guarantee?",
@@ -173,12 +180,11 @@ export const vsPages: VsPage[] = [
     competitorName: 'Native Pet',
     competitorTagline: 'Whole-food, vet-formulated supplements for dogs',
     productCategories: ['Probiotics', 'Joint chews', 'Allergy support', 'Bone broth'],
-    tldr: 'Native Pet is one of the strongest premium-natural brands in the category — vet-nutritionist-formulated, whole-food forward (powders and bone broths in addition to chews), and stocked at Whole Foods and Target Premium Pet. If you prefer powders you sprinkle on food and you value the whole-food positioning, Native Pet is a defensible pick. PawBite Daily Duo bundles probiotic and joint support into two clinically-dosed soft chews at a lower combined monthly cost, with full strain-level and mg-level transparency on every active.',
+    tldr: 'Native Pet is one of the strongest premium-natural brands in the category — vet-nutritionist-formulated, whole-food forward (powders and bone broths in addition to chews), and stocked at Whole Foods and Target Premium Pet. If you prefer powders you sprinkle on food and you value the whole-food positioning, Native Pet is a defensible pick. PawBite offers Probiotic Chews and Joint + Mobility Chews together in the Daily Duo bundle, with ingredient amounts listed per 2.5 g chew.',
     byline: {
       author: 'PawBite editorial team',
-      reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-02-21',
-      updatedDate: '2026-05-10',
+      updatedDate: '2026-10-28',
     },
     comparisonRows: [
       {
@@ -188,27 +194,27 @@ export const vsPages: VsPage[] = [
       },
       {
         feature: 'Probiotic CFU per serving',
-        pawbite: '5 billion',
+        pawbite: '2.5 billion per 2.5 g chew',
         competitor: '2 billion (Probiotic powder)',
       },
       {
         feature: 'Probiotic strains named',
-        pawbite: '5 (all study-designated)',
+        pawbite: '5 (named at species level)',
         competitor: '4 (named at genus/species level)',
       },
       {
         feature: 'Glucosamine per joint serving',
-        pawbite: '500 mg',
+        pawbite: '250 mg per 2.5 g chew',
         competitor: '300 mg',
       },
       {
         feature: 'Chondroitin per joint serving',
-        pawbite: '400 mg',
+        pawbite: '125 mg per 2.5 g chew',
         competitor: 'Not used (whole-food alternative: green-lipped mussel)',
       },
       {
         feature: 'Vet formulator',
-        pawbite: 'In-house veterinary nutritionist (board-certified)',
+        pawbite: 'Veterinary review pending',
         competitor: 'Dr. Mondrian Contreras, DVM (founding vet)',
       },
       {
@@ -224,7 +230,7 @@ export const vsPages: VsPage[] = [
       },
       {
         feature: 'Third-party tested per batch',
-        pawbite: 'Yes (COA available on request)',
+        pawbite: 'Not confirmed by current label',
         competitor: 'Yes',
       },
       {
@@ -234,30 +240,30 @@ export const vsPages: VsPage[] = [
       },
       {
         feature: 'NASC member',
-        pawbite: 'Pending',
+        pawbite: 'Not currently claimed',
         competitor: 'Yes',
       },
     ],
     whenCompetitorMakesSense:
       "Native Pet is the right call if you prefer a powder you mix into food over a chew — some dogs simply won't eat chews, and Native Pet's probiotic powder is one of the cleanest options on shelf. The brand's whole-food angle (bone broths, freeze-dried toppers, mushroom blends) is also genuinely useful if you want a single brand for both supplements and food add-ons. The Whole Foods and Target Premium Pet distribution means you can buy in person without waiting for shipping. And if you trust the vet-nutritionist founding story, the brand's medical credibility is real.",
     whenPawbiteMakesSense:
-      "If your dog will eat a chew, two daily soft chews are easier to dose accurately and more enjoyable for the dog than a powder you have to measure and stir into food. PawBite hits higher active doses where it matters — 5 billion CFU per probiotic chew versus Native Pet's 2 billion, and 500 mg glucosamine per joint serving versus Native Pet's 300 mg. The Daily Duo bundle is also meaningfully cheaper per month than buying Native Pet's probiotic powder and joint chew separately. If you're optimizing for active-ingredient dose per dollar and you don't need the in-person retail experience, PawBite is the more efficient pick.",
+      "PawBite may suit owners who prefer soft chews and want to buy Probiotic Chews and Joint + Mobility Chews together in the Daily Duo bundle. Probiotic Chews list 2.5 billion CFU per chew; Joint + Mobility Chews list 250 mg of glucosamine HCl and 125 mg of chondroitin sulfate per chew. Follow each product's weight-based directions when comparing daily servings. These amounts do not establish superior effectiveness.",
     sections: [
       {
         heading: 'What Native Pet does well',
-        body: "Native Pet has built one of the most credible premium-natural brands in the pet supplement space. The founding story is real — co-founded with a practicing veterinarian (Dr. Mondrian Contreras, DVM) — and the formulations show a willingness to use whole-food ingredients (bone broth, mushroom powders, organ meats) instead of relying solely on synthesized actives. The brand is stocked at Whole Foods, Target Premium Pet, and Chewy, which is meaningful retail real estate that very few DTC competitors have earned.\n\nThe product line is also broader than ours. Native Pet sells freeze-dried bone broths, mushroom immune blends, and seasonal allergy support powders in addition to the core probiotic and joint chews. If you want a single brand to cover supplements, toppers, and functional foods, they're a strong choice.\n\nThe whole-food angle has practical limits — you can't deliver 500 mg of glucosamine through whole-food ingredients alone, and Native Pet's joint chew uses 300 mg, which is on the lower end of what trial data supports. But for owners who explicitly prefer minimally-processed ingredients over higher-dose isolated actives, that tradeoff is the point of the brand.",
+        body: "Native Pet has built one of the most credible premium-natural brands in the pet supplement space. The founding story is real — co-founded with a practicing veterinarian (Dr. Mondrian Contreras, DVM) — and the formulations show a willingness to use whole-food ingredients (bone broth, mushroom powders, organ meats) instead of relying solely on synthesized actives. The brand is stocked at Whole Foods, Target Premium Pet, and Chewy, which is meaningful retail real estate that very few DTC competitors have earned.\n\nThe product line is also broader than ours. Native Pet sells freeze-dried bone broths, mushroom immune blends, and seasonal allergy support powders in addition to the core probiotic and joint chews. If you want a single brand to cover supplements, toppers, and functional foods, they're a strong choice.\n\nNative Pet's joint chew uses 300 mg of glucosamine. Its whole-food positioning may appeal to owners who prefer that formulation approach. The amount of one ingredient alone does not establish how a product will perform.",
       },
       {
         heading: 'Where PawBite is different',
-        body: "PawBite is more like a clinical-trial-aligned supplement company than a whole-food brand. We dose to the levels that show up in the trial data — 5 billion CFU per probiotic chew, 500 mg glucosamine and 400 mg chondroitin per joint serving — and we name every active by its study designation. That isn't better or worse than Native Pet's approach; it's a different philosophy about what efficacy looks like.\n\nWhere the philosophies converge: both brands are vet-formulated, both manufacture in cGMP-certified facilities, both test every batch with a third-party lab, and both publish ingredient panels you can actually read. Neither brand uses corn, soy, wheat, dairy, or artificial colors.\n\nWhere they diverge: PawBite is chew-only (no powders, no broths), direct-to-consumer only (no retail), and bundle-priced for owners who want the probiotic and joint products together (the Daily Duo). Native Pet is multi-format, multi-channel, and priced category-by-category.",
+        body: "PawBite lists ingredient amounts per 2.5 g chew. Probiotic Chews contain a minimum of 2.5 billion CFU across five named microorganisms, plus 100 mg of inulin and 125 mg of pumpkin powder. Joint + Mobility Chews contain 250 mg of glucosamine HCl, 125 mg each of chondroitin sulfate, MSM, and green-lipped mussel, and 50 mg of turmeric extract.\n\nPawBite's veterinary review is pending. The current labels provide ingredient amounts, but do not establish clinical strain IDs or finished-product efficacy. Each tube contains approximately 80 soft chews, with a net weight of 200 g (7.05 oz).\n\nPawBite is chew-only (no powders, no broths), direct-to-consumer only (no retail), and bundle-priced for owners who want Probiotic Chews and Joint + Mobility Chews together. Native Pet is multi-format, multi-channel, and priced category-by-category.",
       },
       {
         heading: 'On price',
-        body: "Native Pet's probiotic powder retails around $30 for a 30-day supply at the recommended dose. Their joint chew is around $32–35 for a 30-day supply at the recommended dose. Buying both on subscription with the standard 20% discount lands you around $50–55 per month for the combined regimen.\n\nPawBite's Daily Duo bundle subscription is $47.60 per month — same kind of regimen (daily probiotic + daily joint), lower combined cost. The savings come from two places: PawBite's bundle stacks a 15% bundle discount on top of the 20% subscription discount (32% total), and our direct-only distribution means we're not pricing in retail margin to support Whole Foods and Target placement.\n\nIf you only need one category (just probiotic or just joint), the per-product pricing is closer to a wash — Native Pet's probiotic powder is ~$24 on subscription, PawBite Daily Probiotic is $26 on subscription. The bundle is where PawBite pulls ahead.",
+        body: "Native Pet's probiotic powder retails around $30 for a 30-day supply at the recommended dose. Their joint chew is around $32–35 for a 30-day supply at the recommended dose. Buying both on subscription with the standard 20% discount lands you around $50–55 per month for the combined regimen.\n\nPawBite's Daily Duo bundle subscription is $47.60 per month — same kind of regimen (daily probiotic + daily joint), lower combined cost. The savings come from two places: PawBite's bundle stacks a 15% bundle discount on top of the 20% subscription discount (32% total), and our direct-only distribution means we're not pricing in retail margin to support Whole Foods and Target placement.\n\nIf you only need one category (just probiotic or just joint), the per-product pricing is closer to a wash — Native Pet's probiotic powder is ~$24 on subscription, PawBite Probiotic Chews is $26 on subscription. The bundle is where PawBite pulls ahead.",
       },
       {
         heading: 'Who should pick Native Pet',
-        body: "Pick Native Pet if any of these matter to you: your dog doesn't eat chews and a powder mixed into food works better; you want to buy in person at Whole Foods or Target instead of waiting for shipping; you want a brand that also sells bone broths, mushroom blends, and seasonal toppers so you can consolidate your supplement and food-additive purchasing; you specifically prefer whole-food ingredients over higher-dose synthesized actives; or you trust the founding-vet story and that's the primary credibility signal you weight.\n\nNative Pet is one of the brands we recommend to friends when chews don't work for their dog. The category benefits from having multiple credible options, and Native Pet is genuinely one of them.",
+        body: "Pick Native Pet if any of these matter to you: your dog doesn't eat chews and a powder mixed into food works better; you want to buy in person at Whole Foods or Target instead of waiting for shipping; you want a brand that also sells bone broths, mushroom blends, and seasonal toppers so you can consolidate your supplement and food-additive purchasing; you specifically prefer whole-food ingredients; or you trust the founding-vet story and that's the primary credibility signal you weight.\n\nNative Pet is one of the brands we recommend to friends when chews don't work for their dog. The category benefits from having multiple credible options, and Native Pet is genuinely one of them.",
       },
     ],
     recommendsProduct: 'daily-duo',
@@ -265,17 +271,17 @@ export const vsPages: VsPage[] = [
       {
         question: 'Is Native Pet a good brand?',
         answer:
-          "Yes. Native Pet is one of the more credible premium-natural dog supplement brands in the US. It's vet-co-founded, stocked at Whole Foods and Target Premium Pet, and the formulations are honest about what they contain. The main tradeoff is dose — the whole-food angle means some actives (glucosamine, CFU count) come in lower than the clinical-trial-aligned doses we use at PawBite.",
+          "Yes. Native Pet is one of the more credible premium-natural dog supplement brands in the US. It's vet-co-founded, stocked at Whole Foods and Target Premium Pet, and the formulations are honest about what they contain. Its powders and chews offer different formats from PawBite's soft-chew range.",
       },
       {
         question: "How does PawBite's probiotic compare to Native Pet's probiotic powder?",
         answer:
-          "Format and dose. PawBite is a chew at 5 billion CFU; Native Pet is a powder at around 2 billion CFU per serving. Both name the strains. The chew is easier to dose accurately and most dogs treat it as a treat. The powder is the right choice if your dog won't eat chews. The 2.5x difference in CFU is meaningful — if you're treating a specific gut issue, the higher dose generally moves faster.",
+          'PawBite Probiotic Chews list 2.5 billion CFU per 2.5 g chew; Native Pet is a powder at around 2 billion CFU per serving. Both name microorganisms on the label. The formats and serving instructions differ, and the CFU totals alone do not establish faster results or superior effectiveness.',
       },
       {
-        question: "How does PawBite Hip + Joint compare to Native Pet's joint chew?",
+        question: "How does PawBite Joint + Mobility Chews compare to Native Pet's joint chew?",
         answer:
-          "PawBite has 500 mg of glucosamine HCl, 400 mg of chondroitin sulfate, 250 mg of MSM, 150 mg of green-lipped mussel, 100 mg of turmeric, plus hyaluronic acid and salmon oil. Native Pet's joint chew uses 300 mg of glucosamine and skips chondroitin in favor of green-lipped mussel as the joint nutrient source. PawBite's dosing is closer to what arthritis trial data supports; Native Pet's formulation is more whole-food-aligned.",
+          "PawBite Joint + Mobility Chews list 250 mg of glucosamine HCl, 125 mg of chondroitin sulfate, 125 mg of MSM, 125 mg of green-lipped mussel, and 50 mg of turmeric extract per 2.5 g chew. Native Pet's joint chew uses 300 mg of glucosamine and skips chondroitin in favor of green-lipped mussel as the joint nutrient source. These are different formulations; ingredient amounts alone do not establish equivalent effects.",
       },
       {
         question: "Is the Daily Duo cheaper than buying Native Pet's probiotic and joint together?",
@@ -290,12 +296,12 @@ export const vsPages: VsPage[] = [
       {
         question: 'Is Native Pet vet-formulated?',
         answer:
-          'Yes — Native Pet was co-founded with Dr. Mondrian Contreras, DVM, who is involved in formulation. PawBite is formulated in-house with a board-certified veterinary nutritionist on the team and every product is reviewed by Dr. M. Hayes, DVM before release.',
+          'Yes — Native Pet was co-founded with Dr. Mondrian Contreras, DVM, who is involved in formulation. PawBite veterinary review is pending.',
       },
       {
         question: "Does Native Pet do bone broth and PawBite doesn't?",
         answer:
-          'Correct. Native Pet sells freeze-dried bone broth as a food topper, and PawBite does not. We focused the brand on two clinically-dosed daily chews (probiotic and joint) rather than expanding into food toppers. If you want a single brand for both supplements and food additives, Native Pet covers more ground.',
+          'Correct. Native Pet sells freeze-dried bone broth as a food topper, and PawBite does not. PawBite offers Probiotic Chews, Joint + Mobility Chews, and Calming Chews. If you want a single brand for both supplements and food additives, Native Pet covers more ground.',
       },
     ],
   },
@@ -312,27 +318,26 @@ export const vsPages: VsPage[] = [
       'Dental chews',
       'Skin & coat',
     ],
-    tldr: "Zesty Paws is the broadest mass-market dog supplement brand on the market — they sell well over a hundred SKUs, they're B-Corp certified, they're stocked everywhere from Chewy to Petco to Costco, and the top-selling products have hundreds of thousands of positive reviews. If you want a one-stop wellness shop at Costco prices, Zesty Paws is a defensible pick. PawBite is the opposite product — two clinically-dosed daily chews instead of a hundred mid-dosed ones, with strain-level transparency on the probiotic and the higher per-active doses on the joint chew.",
+    tldr: "Zesty Paws is the broadest mass-market dog supplement brand on the market — they sell well over a hundred SKUs, they're B-Corp certified, they're stocked everywhere from Chewy to Petco to Costco, and the top-selling products have hundreds of thousands of positive reviews. If you want a one-stop wellness shop at Costco prices, Zesty Paws is a defensible pick. PawBite has three soft-chew products: Probiotic Chews, Joint + Mobility Chews, and Calming Chews, with amounts listed for each active ingredient.",
     byline: {
       author: 'PawBite editorial team',
-      reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-02-28',
-      updatedDate: '2026-05-10',
+      updatedDate: '2026-10-28',
     },
     comparisonRows: [
       {
         feature: 'Probiotic CFU per chew (top probiotic SKU)',
-        pawbite: '5 billion',
+        pawbite: '2.5 billion',
         competitor: '3 billion (Probiotic Bites)',
       },
       {
         feature: 'Probiotic strains named',
-        pawbite: '5 (all study-designated)',
+        pawbite: '5 (named at species level)',
         competitor: '6 (named at species level, not strain ID)',
       },
       {
         feature: 'Number of SKUs in the line',
-        pawbite: '3 (probiotic, joint, bundle)',
+        pawbite: '3 chews (probiotic, joint, calming), plus Daily Duo bundle',
         competitor: '100+',
       },
       {
@@ -342,17 +347,17 @@ export const vsPages: VsPage[] = [
       },
       {
         feature: 'NASC Quality Seal',
-        pawbite: 'Pending',
+        pawbite: 'Not currently claimed',
         competitor: 'Yes',
       },
       {
         feature: 'Joint chew glucosamine',
-        pawbite: '500 mg',
+        pawbite: '250 mg per chew',
         competitor: '250 mg (Mobility Bites)',
       },
       {
         feature: 'Joint chew chondroitin',
-        pawbite: '400 mg',
+        pawbite: '125 mg per chew',
         competitor: '200 mg (Mobility Bites)',
       },
       {
@@ -372,7 +377,7 @@ export const vsPages: VsPage[] = [
       },
       {
         feature: 'Third-party tested per batch',
-        pawbite: 'Yes',
+        pawbite: 'Not confirmed by current label',
         competitor: 'Yes',
       },
       {
@@ -384,23 +389,23 @@ export const vsPages: VsPage[] = [
     whenCompetitorMakesSense:
       "Zesty Paws makes sense if you want one brand to cover every wellness category your dog might need — probiotic, multivitamin, joint, allergy, calming, skin and coat, dental. The SKU breadth is genuinely useful for a multi-dog household where each dog has different needs. They're B-Corp certified and NASC-sealed, which are real third-party credentials that not every supplement brand earns. And on Amazon Subscribe & Save the per-month cost is hard to beat — you can land Zesty Paws probiotic bites for under $20 a month if you watch the promo cycle.",
     whenPawbiteMakesSense:
-      "PawBite makes sense if you'd rather pay for higher doses of fewer actives than spread your budget across a wide-format catalog. Zesty Paws Probiotic Bites are 3 billion CFU per chew; PawBite Daily Probiotic is 5 billion. Zesty Paws Mobility Bites use 250 mg of glucosamine; PawBite Hip + Joint uses 500 mg — the dose that actually shows up in arthritis trials. We also name every probiotic strain by its clinical study designation (Zesty Paws lists at species level, which is standard but less precise). If you want a focused, higher-dose, strain-transparent supplement instead of a category-spanning catalog, PawBite is the simpler answer.",
+      'PawBite may suit owners who prefer a focused range and direct purchasing. Probiotic Chews list 2.5 billion CFU per chew across five named microorganisms. Joint + Mobility Chews list 250 mg of glucosamine HCl and 125 mg of chondroitin sulfate per chew. Zesty Paws Probiotic Bites list 3 billion CFU per chew, and Mobility Bites list 250 mg of glucosamine and 200 mg of chondroitin. The formulas differ, and these quantities do not establish that one product works better.',
     sections: [
       {
         heading: 'What Zesty Paws does well',
-        body: "Zesty Paws is the closest thing the dog supplement industry has to a mass-market multi-category brand. They sell over 100 SKUs, they're carried at every major pet retailer in the US (Chewy, Amazon, Petco, PetSmart, Target, Costco), and the volume drives prices down meaningfully — a 90-count jar of Zesty Paws Probiotic Bites on Amazon Subscribe & Save during a promo cycle can land under $20.\n\nThe brand also has real third-party credentials. Zesty Paws is B-Corp certified — a meaningful signal about supply chain and labor practices that very few supplement brands have earned. They carry the National Animal Supplement Council (NASC) Quality Seal on most SKUs, which requires annual facility audits, adverse event reporting, and ingredient-specific risk reviews. Both of those are credible signals that PawBite has not yet earned (NASC membership is in process for us).\n\nWhere the breadth has costs: across 100+ SKUs, formulation focus gets thin. Zesty Paws Probiotic Bites are 3 billion CFU per chew, which is in the working range but lower than what we use. The Mobility Bites use 250 mg of glucosamine and 200 mg of chondroitin, both at roughly half the dose of PawBite Hip + Joint. The brand makes those tradeoffs to hit the retail price points that mass-market distribution requires.",
+        body: "Zesty Paws is the closest thing the dog supplement industry has to a mass-market multi-category brand. They sell over 100 SKUs, they're carried at every major pet retailer in the US (Chewy, Amazon, Petco, PetSmart, Target, Costco), and the volume drives prices down meaningfully — a 90-count jar of Zesty Paws Probiotic Bites on Amazon Subscribe & Save during a promo cycle can land under $20.\n\nThe brand also has real third-party credentials. Zesty Paws is B-Corp certified — a meaningful signal about supply chain and labor practices that very few supplement brands have earned. They carry the National Animal Supplement Council (NASC) Quality Seal on most SKUs, which requires annual facility audits, adverse event reporting, and ingredient-specific risk reviews. Both of those are credible signals that PawBite has not yet earned (PawBite does not currently claim these certifications).\n\nZesty Paws Probiotic Bites list 3 billion CFU per chew. Mobility Bites list 250 mg of glucosamine and 200 mg of chondroitin. PawBite Probiotic Chews list 2.5 billion CFU per chew; Joint + Mobility Chews list 250 mg of glucosamine HCl and 125 mg of chondroitin sulfate per chew. Compare the full formulas and directions rather than treating ingredient totals as a measure of effectiveness.",
       },
       {
         heading: 'Where PawBite is different',
-        body: "We made the opposite tradeoff. A short line, higher per-active doses, single distribution channel.\n\nDaily Probiotic at 5 billion CFU across 5 named strains — Bacillus coagulans GBI-30 6086, Bifidobacterium animalis BB-12, Lactobacillus acidophilus LA-5, Lactobacillus plantarum 299v, Lactobacillus rhamnosus GG. Each strain has a citation in the product detail. Hip + Joint at 500 mg glucosamine and 400 mg chondroitin per serving, plus MSM, green-lipped mussel, turmeric, hyaluronic acid, and salmon oil. Calm pairs L-theanine and ashwagandha with a gut-brain probiotic — calm without sedation. The Daily Duo bundle combines the two daily essentials at a 32% discount.\n\nWe don't sell multivitamins, dental chews, or skin-and-coat treats. If you need those, you'll need a second brand. The decision was deliberate: we'd rather do three chews well than ten products at the dose point retailers want.\n\nDistribution is direct only. We're not on Amazon, Chewy, Petco, or Costco. The savings from cutting out retailer margins fund the higher doses and the 90-day guarantee.",
+        body: "PawBite offers three soft-chew formulas through its direct site.\n\nProbiotic Chews list a minimum of 2.5 billion CFU per chew across Bacillus coagulans, Bifidobacterium animalis, Lactobacillus acidophilus, Lactobacillus plantarum, and Lactobacillus rhamnosus, each at 500 million CFU. Joint + Mobility Chews list 250 mg of glucosamine HCl, 125 mg each of chondroitin sulfate, MSM, and green-lipped mussel, and 50 mg of turmeric extract. Calming Chews contain 75 mg of ashwagandha root extract, 50 mg of L-theanine, and 50 mg of chamomile extract. Calming Chews do not contain Bacillus coagulans.\n\nThe label descriptions are For dogs' gut wellness for Probiotic Chews, Support your dog's active lifestyle for Joint + Mobility Chews, and For dogs during busy, noisy days for Calming Chews. The Daily Duo bundle combines Probiotic Chews and Joint + Mobility Chews at a 32% discount.\n\nWe don't sell multivitamins, dental chews, or skin-and-coat treats. Distribution is direct only, with a 90-day guarantee.",
       },
       {
         heading: 'On price and what you pay for',
-        body: "Zesty Paws is genuinely cheaper per month on the probiotic side — $16–22 on Amazon Subscribe & Save versus PawBite's $26. Per-CFU, the gap narrows: Zesty Paws is 3 billion CFU per chew, PawBite is 5 billion, so PawBite is roughly 25% more expensive per billion CFU at typical promo pricing.\n\nOn the joint side, the price comparison reverses. Zesty Paws Mobility Bites are around $22 a month, PawBite Hip + Joint is $30 on subscription. But on glucosamine-mg-per-dollar, PawBite is cheaper — 500 mg per serving at $30 is roughly $0.06 per 100 mg, versus Zesty Paws at 250 mg per serving for $22 (roughly $0.09 per 100 mg).\n\nIf you want lowest sticker price, Zesty Paws on Amazon wins. If you want lowest dose-adjusted price on the actives that matter for joint health, PawBite wins. The Daily Duo bundle at $47.60 per month is the configuration where PawBite is most defensible — it's a clinically-dosed probiotic plus a clinically-dosed joint chew at roughly Zesty-Paws-individual-SKU pricing.",
+        body: "Zesty Paws is cheaper per month on the probiotic side — $16–22 on Amazon Subscribe & Save versus PawBite's $26. The formulas have different CFU totals: Zesty Paws lists 3 billion per chew and PawBite lists 2.5 billion per chew.\n\nZesty Paws Mobility Bites are around $22 a month; PawBite Joint + Mobility Chews are $30 on subscription. Both list 250 mg of glucosamine per chew, while their chondroitin amounts differ.\n\nPawBite's Daily Duo bundle is $47.60 per month. Compare the number of chews and each product's daily directions when assessing cost; these listed ingredient amounts do not establish a PawBite dose-adjusted price or efficacy advantage.",
       },
       {
         heading: 'On certification and testing',
-        body: "Zesty Paws holds two third-party credentials PawBite does not yet hold: NASC Quality Seal and B-Corp certification. Both are meaningful.\n\nThe NASC Quality Seal requires participating brands to undergo a biennial third-party facility audit, maintain an adverse event reporting system, follow specific labeling and quality guidelines, and submit to ingredient-by-ingredient risk reviews. It's the most credible quality seal in the animal supplement industry. PawBite has an NASC membership application in progress; we expect to carry the seal by mid-2026.\n\nB-Corp certification covers governance, workers, community, environment, and customers. It's harder to earn than people assume — most brands that claim sustainability values don't pursue it because the audit is genuinely demanding. Zesty Paws is one of the few US dog supplement brands to hold it. PawBite is not currently pursuing B-Corp; if that's an explicit deal-breaker for you, Zesty Paws is the better fit on that axis alone.\n\nOn batch testing both brands publish or provide third-party COAs covering CFU verification (where applicable), heavy metals, and microbial contamination panels. Both manufacture in cGMP-certified US facilities.",
+        body: "Zesty Paws holds two third-party credentials PawBite does not yet hold: NASC Quality Seal and B-Corp certification. Both are meaningful.\n\nThe NASC Quality Seal requires participating brands to undergo a biennial third-party facility audit, maintain an adverse event reporting system, follow specific labeling and quality guidelines, and submit to ingredient-by-ingredient risk reviews. It's the most credible quality seal in the animal supplement industry. PawBite does not currently claim an NASC Quality Seal.\n\nB-Corp certification covers governance, workers, community, environment, and customers. It's harder to earn than people assume — most brands that claim sustainability values don't pursue it because the audit is genuinely demanding. Zesty Paws is one of the few US dog supplement brands to hold it. PawBite is not currently pursuing B-Corp; if that's an explicit deal-breaker for you, Zesty Paws is the better fit on that axis alone.\n\nZesty Paws publishes or provides third-party COAs covering CFU verification (where applicable), heavy metals, and microbial contamination panels, and manufactures in cGMP-certified US facilities. PawBite's label states Made in China and Made in a GMP-certified facility. PawBite's current label does not establish batch-test results or a CFU guarantee through expiration.",
       },
     ],
     recommendsProduct: 'daily-probiotic',
@@ -408,22 +413,22 @@ export const vsPages: VsPage[] = [
       {
         question: 'Is Zesty Paws a good brand?',
         answer:
-          "Yes. Zesty Paws is one of the most credible mass-market dog supplement brands in the US. They're B-Corp certified, NASC-sealed, third-party tested, and stocked at every major retailer. The main tradeoff is dose — at the price points needed to compete at Costco and Amazon scale, the per-chew active doses tend to be on the lower end of clinically useful.",
+          "Yes. Zesty Paws is one of the most credible mass-market dog supplement brands in the US. They're B-Corp certified, NASC-sealed, third-party tested, and stocked at every major retailer. Its broad range and retail availability offer different purchasing options from PawBite's direct soft-chew range.",
       },
       {
-        question: 'How does PawBite Daily Probiotic compare to Zesty Paws Probiotic Bites?',
+        question: 'How does PawBite Probiotic Chews compare to Zesty Paws Probiotic Bites?',
         answer:
-          'PawBite has 5 billion CFU per chew across 5 named strains (each with a study citation). Zesty Paws Probiotic Bites have 3 billion CFU per chew across 6 strains (listed at species level, not by clinical strain ID). Both include prebiotics. PawBite is $26/month on subscription; Zesty Paws is $16–22/month on Amazon Subscribe & Save depending on promo cycle.',
+          'PawBite Probiotic Chews list 2.5 billion CFU per chew across five named microorganisms at 500 million CFU each. Zesty Paws Probiotic Bites have 3 billion CFU per chew across six strains, listed at species level rather than by clinical strain ID. Both include prebiotics. PawBite is $26/month on subscription; Zesty Paws is $16–22/month on Amazon Subscribe & Save depending on promo cycle.',
       },
       {
-        question: 'How does PawBite Hip + Joint compare to Zesty Paws Mobility Bites?',
+        question: 'How does PawBite Joint + Mobility Chews compare to Zesty Paws Mobility Bites?',
         answer:
-          "PawBite is 500 mg glucosamine + 400 mg chondroitin + 250 mg MSM + 150 mg green-lipped mussel + 100 mg turmeric per serving. Zesty Paws Mobility Bites are 250 mg glucosamine + 200 mg chondroitin + lower amounts of MSM and supporting actives. PawBite's dose levels match what arthritis trial data uses; Zesty Paws is dosed for affordability at retail scale.",
+          'PawBite Joint + Mobility Chews list 250 mg of glucosamine HCl, 125 mg of chondroitin sulfate, 125 mg of MSM, 125 mg of green-lipped mussel, and 50 mg of turmeric extract per 2.5 g chew. Zesty Paws Mobility Bites list 250 mg of glucosamine and 200 mg of chondroitin. Compare the full label and daily directions; ingredient quantities alone do not establish superior effectiveness.',
       },
       {
         question: 'Is Zesty Paws cheaper than PawBite?',
         answer:
-          'On sticker price, yes — Zesty Paws on Amazon Subscribe & Save runs $5–10 less per month per SKU than PawBite direct. On dose-adjusted price (cost per billion CFU or cost per mg of glucosamine), the gap narrows or reverses. The PawBite Daily Duo bundle is roughly competitive with buying two Zesty Paws SKUs separately, with higher per-active doses.',
+          'On sticker price, yes — Zesty Paws on Amazon Subscribe & Save runs $5–10 less per month per SKU than PawBite direct. PawBite Daily Duo is $47.60 per month on subscription. Compare serving instructions and package size; the current formulas do not support a blanket claim that PawBite has higher per-active doses or a better dose-adjusted price.',
       },
       {
         question: 'Is Zesty Paws B-Corp certified?',
@@ -433,7 +438,7 @@ export const vsPages: VsPage[] = [
       {
         question: 'Does Zesty Paws have an NASC Quality Seal?',
         answer:
-          "Yes. The National Animal Supplement Council Quality Seal is the most credible third-party quality program in the animal supplement category. Zesty Paws carries it on most SKUs. PawBite's NASC membership application is in progress and we expect to carry the seal by mid-2026.",
+          'Yes. The National Animal Supplement Council Quality Seal is the most credible third-party quality program in the animal supplement category. Zesty Paws carries it on most SKUs. PawBite does not currently claim an NASC Quality Seal.',
       },
       {
         question: 'Where do I buy Zesty Paws vs PawBite?',
@@ -447,47 +452,46 @@ export const vsPages: VsPage[] = [
     competitorName: 'Cosequin',
     competitorTagline: 'The #1 veterinarian-recommended joint health supplement brand',
     productCategories: ['Joint supplements'],
-    tldr: "Cosequin is the longest-established canine joint supplement and has decades of veterinarian recommendations and clinical trial data behind it — it's the safe pick if your vet has already prescribed it and your dog is responding well. PawBite Hip + Joint matches the active-ingredient dosing (500 mg glucosamine HCl, 400 mg chondroitin sulfate) and adds MSM, green-lipped mussel, turmeric, hyaluronic acid, and salmon oil in a single soft chew, at a lower per-month subscription price with a 90-day money-back guarantee.",
+    tldr: 'Cosequin is the longest-established canine joint supplement and has decades of veterinarian recommendations and clinical trial data behind it. If your vet has already prescribed it and your dog is responding well, continuity matters. PawBite Joint + Mobility Chews have a different formula: 250 mg of glucosamine HCl, 125 mg of chondroitin sulfate, 125 mg of MSM, 125 mg of green-lipped mussel, and 50 mg of turmeric extract per 2.5 g chew. The products should not be treated as dose-equivalent.',
     byline: {
       author: 'PawBite editorial team',
-      reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-03-07',
-      updatedDate: '2026-09-08',
+      updatedDate: '2026-10-28',
     },
     comparisonRows: [
       {
         feature: 'Glucosamine HCl per serving',
-        pawbite: '500 mg',
+        pawbite: '250 mg per 2.5 g chew',
         competitor: '500 mg (Cosequin DS)',
       },
       {
         feature: 'Chondroitin sulfate per serving',
-        pawbite: '400 mg',
+        pawbite: '125 mg per 2.5 g chew',
         competitor: '400 mg (Cosequin DS)',
       },
       {
         feature: 'MSM included',
-        pawbite: 'Yes (250 mg)',
+        pawbite: 'Yes (125 mg per chew)',
         competitor: 'Only in Cosequin DS Plus MSM SKU',
       },
       {
         feature: 'Green-lipped mussel',
-        pawbite: 'Yes (150 mg)',
+        pawbite: 'Yes (125 mg per chew)',
         competitor: 'No',
       },
       {
         feature: 'Turmeric / curcumin',
-        pawbite: 'Yes (100 mg standardized)',
+        pawbite: 'Turmeric extract, 50 mg per chew',
         competitor: 'No',
       },
       {
         feature: 'Hyaluronic acid',
-        pawbite: 'Yes (10 mg)',
+        pawbite: 'Not included',
         competitor: 'No',
       },
       {
         feature: 'Omega-3 (EPA + DHA)',
-        pawbite: 'Yes (50 mg salmon oil)',
+        pawbite: 'No EPA + DHA amount stated on label',
         competitor: 'No',
       },
       {
@@ -517,14 +521,14 @@ export const vsPages: VsPage[] = [
       },
       {
         feature: 'Clinical trial history',
-        pawbite: 'Individual actives published; product-level trials in progress',
+        pawbite: 'No finished-product clinical trial evidence established',
         competitor: 'Decades of brand-specific clinical trial data',
       },
     ],
     whenCompetitorMakesSense:
       "Cosequin is the right pick when your vet has specifically prescribed it. The brand has more product-specific clinical trial data than any other canine joint supplement on the market — multiple peer-reviewed trials going back to the 1990s — and it's the formulation most veterinary teaching hospitals reach for first. If your dog has been on Cosequin for years and is responding well, there's no reason to switch. Cosequin is also the safer choice in cases where vet-prescribed continuity matters — post-orthopedic-surgery rehabilitation, dogs on complex medication regimens, or owners who want a supplement their vet has personally validated in their clinic.",
     whenPawbiteMakesSense:
-      "PawBite Hip + Joint matches Cosequin DS on the two actives that show up most in joint trial data — 500 mg glucosamine HCl and 400 mg chondroitin sulfate — and adds MSM, green-lipped mussel, turmeric, hyaluronic acid, and salmon-derived omega-3 in a single chew. Cosequin sells those additions as separate SKUs (Cosequin DS Plus MSM, Cosequin Optimum), which means matching PawBite's full anti-inflammatory profile requires stacking 2–3 Cosequin products and ends up costing $50–70 a month. PawBite delivers it in one chew at $30 a month on subscription. If you want the full active stack without the multi-SKU complexity, PawBite is the simpler pick.",
+      "PawBite Joint + Mobility Chews may suit owners looking for a duck-flavored soft chew with declared ingredient amounts. Each 2.5 g chew lists 250 mg of glucosamine HCl, 125 mg each of chondroitin sulfate, MSM, and green-lipped mussel, and 50 mg of turmeric extract. The formula does not contain hyaluronic acid or salmon oil. It differs from Cosequin DS and should not be presented as matching Cosequin's dosing or clinical evidence. Ask your veterinarian before replacing a product in an existing care plan.",
     sections: [
       {
         heading: 'What Cosequin does well',
@@ -532,15 +536,15 @@ export const vsPages: VsPage[] = [
       },
       {
         heading: 'Where PawBite is different',
-        body: "PawBite Hip + Joint matches Cosequin DS on the two foundational actives — same 500 mg glucosamine HCl, same 400 mg chondroitin sulfate — and then stacks the additional anti-inflammatory and joint-supportive ingredients that Cosequin sells separately or not at all.\n\nMSM (methylsulfonylmethane) at 250 mg per chew. Green-lipped mussel at 150 mg, which delivers naturally occurring glycosaminoglycans and omega-3 fatty acids. Turmeric extract standardized to curcumin at 100 mg. Hyaluronic acid at 10 mg for joint fluid viscosity. Salmon-derived omega-3 (EPA + DHA) at 50 mg. All in one chew.\n\nTo match that profile with Cosequin, you'd typically stack Cosequin DS Plus MSM ($35–45/month) with a separate green-lipped mussel SKU or fish oil supplement ($10–20/month). Cosequin's Dasuquin Advanced line adds some of these ingredients but at higher price points (~$55–75/month for large dogs).\n\nThe honest tradeoff: PawBite does not yet have product-level clinical trial data. We can cite the trial data for the individual actives at the doses we use — those are published — but Cosequin can cite trials on the exact branded formulation, which we cannot. If product-specific trial evidence is the deciding factor for you, Cosequin is the right call.",
+        body: "PawBite Joint + Mobility Chews list 250 mg of glucosamine HCl, 125 mg of chondroitin sulfate, 125 mg of MSM, 125 mg of green-lipped mussel, and 50 mg of turmeric extract per 2.5 g chew. These are not the same declared quantities as Cosequin DS.\n\nThe PawBite formula does not contain hyaluronic acid or salmon oil. It is duck-flavored and contains shellfish (green-lipped mussel), duck, chicken, and chickpea. Each tube contains approximately 80 soft chews, with a net weight of 200 g (7.05 oz). Its label description is Support your dog's active lifestyle.\n\nPawBite's current label does not establish finished-product clinical efficacy. Ingredient research does not establish that the finished chew matches the effects of Cosequin or another product. A veterinarian should compare both labels before changing an existing care plan.",
       },
       {
         heading: 'On price',
-        body: "Cosequin DS for medium-large dogs typically runs $35–45 per month at the standard daily dose, depending on whether you buy at Chewy Autoship, Amazon, PetSmart, or through your vet. Cosequin DS Plus MSM and Dasuquin Advanced (the SKUs closer to PawBite's active profile) run $40–55 and $55–75 per month respectively.\n\nPawBite Hip + Joint is $38 retail and $30 on Subscribe & Save for a typical medium-large dog dose. That's roughly $5–25 a month cheaper than the comparable Cosequin SKU, depending on which Cosequin product you're comparing to and where you buy it.\n\nThe Daily Duo bundle ($47.60/month on subscription, includes both Hip + Joint and Daily Probiotic) is also relevant here — if your dog needs digestive support and joint support (common in senior dogs), getting both from PawBite typically costs less than buying Cosequin alone at retail.\n\nNeither brand locks you in to a subscription you can't cancel. PawBite subscriptions cancel in one click from your account. Cosequin via Chewy Autoship is also self-serve cancel.",
+        body: "Cosequin DS for medium-large dogs typically runs $35–45 per month at the standard daily dose, depending on whether you buy at Chewy Autoship, Amazon, PetSmart, or through your vet. Cosequin DS Plus MSM and Dasuquin Advanced run $40–55 and $55–75 per month respectively.\n\nPawBite Joint + Mobility Chews are $38 retail and $30 on Subscribe & Save. The Daily Duo bundle is $47.60 on subscription and includes Joint + Mobility Chews and Probiotic Chews. The products' formulas and serving instructions differ, so these prices do not establish equivalent dosing or a cost advantage for equivalent treatment.\n\nNeither brand locks you in to a subscription you can't cancel. PawBite subscriptions cancel in one click from your account. Cosequin via Chewy Autoship is also self-serve cancel.",
       },
       {
         heading: 'Who should pick Cosequin',
-        body: "Pick Cosequin if your vet has specifically prescribed it, your dog is mid-treatment for a diagnosed joint condition and continuity matters, or you specifically value product-level clinical trial data over a broader active-ingredient stack. Cosequin is also the right call if your dog has had an orthopedic surgery and the rehab plan includes a specific joint supplement your vet has used in their practice — switching brands during rehabilitation isn't a great time to introduce variables.\n\nCosequin is one of the few supplements in this entire category that has genuinely earned its veterinarian-recommended status. The brand premium reflects real evidence. We won't tell you to switch off it if it's working — we'd just point out that PawBite Hip + Joint offers the same foundational dosing in a broader active stack at a lower monthly cost, and we offer a 90-day money-back guarantee so trying it costs nothing if it doesn't work out.",
+        body: "Pick Cosequin if your vet has specifically prescribed it, your dog is mid-treatment for a diagnosed joint condition and continuity matters, or you specifically value product-level clinical trial data over a broader active-ingredient stack. Cosequin is also the right call if your dog has had an orthopedic surgery and the rehab plan includes a specific joint supplement your vet has used in their practice — switching brands during rehabilitation isn't a great time to introduce variables.\n\nCosequin is one of the few supplements in this entire category that has genuinely earned its veterinarian-recommended status. The brand premium reflects real evidence. We won't tell you to switch off it if it's working. PawBite Joint + Mobility Chews have a different formula and do not establish equivalent dosing or results.",
       },
     ],
     recommendsProduct: 'hip-and-joint',
@@ -548,37 +552,38 @@ export const vsPages: VsPage[] = [
       {
         question: 'Is Cosequin the best joint supplement for dogs?',
         answer:
-          "It's the most clinically studied at the product level, which is a meaningful credential. Whether it's the best fit for your specific dog depends on what you're optimizing for. If you want product-specific trial evidence and your vet has recommended it, Cosequin is hard to beat. If you want a broader active-ingredient stack (glucosamine + chondroitin + MSM + green-lipped mussel + turmeric + hyaluronic acid + omega-3) in a single chew at a lower price point, PawBite Hip + Joint is worth considering.",
+          "It's the most clinically studied at the product level, which is a meaningful credential. Whether it's the best fit for your specific dog depends on what you're optimizing for. If you want product-specific trial evidence and your vet has recommended it, Cosequin is hard to beat. PawBite Joint + Mobility Chews offer a different formula and should not be assumed to provide equivalent effects.",
       },
       {
-        question: 'How does PawBite Hip + Joint compare to Cosequin DS?',
+        question: 'How does PawBite Joint + Mobility Chews compare to Cosequin DS?',
         answer:
-          'PawBite matches Cosequin DS on the two foundational actives — same 500 mg glucosamine HCl and 400 mg chondroitin sulfate per serving. PawBite then adds 250 mg MSM, 150 mg green-lipped mussel, 100 mg turmeric, 10 mg hyaluronic acid, and 50 mg salmon-derived omega-3. To match the full PawBite profile with Cosequin, you would typically need to stack Cosequin DS Plus MSM with a separate green-lipped mussel or fish oil SKU.',
+          'PawBite Joint + Mobility Chews list 250 mg of glucosamine HCl, 125 mg of chondroitin sulfate, 125 mg of MSM, 125 mg of green-lipped mussel, and 50 mg of turmeric extract per 2.5 g chew. Cosequin DS lists 500 mg of glucosamine HCl and 400 mg of chondroitin sulfate per serving. These quantities and formulas differ; PawBite does not match that declared dosing.',
       },
       {
         question: 'Is PawBite cheaper than Cosequin?',
         answer:
-          "Yes, on most comparisons. PawBite Hip + Joint on subscription is $30/month for a medium-large dog dose. Cosequin DS runs $35–45/month, Cosequin DS Plus MSM runs $40–55/month, and Dasuquin Advanced runs $55–75/month at comparable doses. The price gap widens as you compare PawBite to Cosequin's higher-tier SKUs that add MSM and other actives.",
+          'PawBite Joint + Mobility Chews are $30 on subscription. Cosequin DS runs $35–45/month, Cosequin DS Plus MSM runs $40–55/month, and Dasuquin Advanced runs $55–75/month. Package size, daily directions, and formulas differ, so these figures should not be treated as prices for equivalent doses or outcomes.',
       },
       {
         question: 'Should I switch from Cosequin to PawBite if my dog is doing well on Cosequin?',
         answer:
-          "If your dog is responding well to Cosequin, especially in a post-surgical rehab or vet-managed arthritis case, we wouldn't push you to switch. Continuity matters in chronic care. Where switching makes more sense: your dog has plateaued on Cosequin DS and you want a broader anti-inflammatory profile without the cost of moving up to Dasuquin Advanced, or your monthly Cosequin budget is creeping above $50 and you want comparable dosing for less.",
+          "If your dog is responding well to Cosequin, especially in a post-surgical rehab or vet-managed arthritis case, we wouldn't push you to switch. Continuity matters in chronic care. PawBite Joint + Mobility Chews have different ingredient amounts. Ask your veterinarian before changing a product used in a treatment plan.",
       },
       {
         question: 'Does PawBite have clinical trials like Cosequin does?',
         answer:
-          "Not at the product level — we can cite peer-reviewed trial data on the individual active ingredients at the doses we use (glucosamine, chondroitin, MSM, green-lipped mussel, turmeric, omega-3 have all been studied in canine joint health), but we have not yet run a Hip + Joint branded clinical trial. Cosequin has. If product-specific clinical evidence is the deciding factor, that's an honest reason to choose Cosequin.",
+          "PawBite's current label does not establish finished-product clinical efficacy. Research on individual ingredients does not establish equivalent effects for Joint + Mobility Chews. Cosequin has product-specific trial evidence. Discuss the relevance of that evidence and both formulas with your veterinarian.",
       },
       {
-        question: 'Is PawBite Hip + Joint safe to give with a vet-prescribed NSAID like Carprofen?',
+        question:
+          'Is PawBite Joint + Mobility Chews safe to give with a vet-prescribed NSAID like Carprofen?',
         answer:
-          'Ask your prescribing veterinarian before combining Hip + Joint with an NSAID or any other medicine. A supplement can still have adverse effects or interactions. Do not reduce or stop prescribed pain medication because you have added a supplement.',
+          'Ask your prescribing veterinarian before combining Joint + Mobility Chews with an NSAID or any other medicine. A supplement can still have adverse effects or interactions. Do not reduce or stop prescribed pain medication because you have added a supplement.',
       },
       {
-        question: 'What flavor is PawBite Hip + Joint? Cosequin comes in chicken.',
+        question: 'What flavor is PawBite Joint + Mobility Chews? Cosequin comes in chicken.',
         answer:
-          'PawBite Hip + Joint is duck-flavored. A lot of senior dogs (the primary use case for joint supplements) develop chicken sensitivities over time, so we made Hip + Joint duck-based to avoid that. Cosequin offers chicken, tuna, and unflavored capsule SKUs depending on which product line you pick.',
+          'PawBite Joint + Mobility Chews are duck-flavored, but the formula also contains chicken fat. The label declares shellfish (green-lipped mussel), duck, chicken, and chickpea. It should not be treated as chicken-free. Cosequin offers chicken, tuna, and unflavored capsule SKUs depending on which product line you pick.',
       },
       {
         question: 'Can I switch from Cosequin to PawBite without a gap?',

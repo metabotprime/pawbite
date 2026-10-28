@@ -26,9 +26,9 @@ export const metadata: Metadata = {
 
 const filters = [
   { label: 'All reviews', value: 'all', active: true },
-  { label: 'Daily Probiotic', value: 'daily-probiotic', active: false },
-  { label: 'Hip + Joint', value: 'hip-and-joint', active: false },
-  { label: 'Calming Chew', value: 'calm', active: false },
+  { label: 'Probiotic Chews', value: 'daily-probiotic', active: false },
+  { label: 'Joint + Mobility Chews', value: 'hip-and-joint', active: false },
+  { label: 'Calming Chews', value: 'calm', active: false },
   { label: 'Daily Duo', value: 'daily-duo', active: false },
 ];
 

@@ -17,20 +17,25 @@ const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect 
 const logo = (width = 290) =>
   h('img', { src: svgData(wordmark), width, height: (width * 283.34) / 873.85 });
 const photo = async (slug) =>
-  `data:image/png;base64,${(await sharp(`public/products/studio/${slug}.webp`).png().toBuffer()).toString('base64')}`;
+  `data:image/png;base64,${(await sharp(`public/products/studio/${slug}-r2.webp`).png().toBuffer()).toString('base64')}`;
 const items = [
-  { slug: 'calm', label: 'Calming', detail: '30 soft chews', image: await photo('calm') },
+  {
+    slug: 'calm',
+    label: 'Calming Chews',
+    detail: '80 soft chews • 200 g',
+    image: await photo('calming'),
+  },
   {
     slug: 'hip-and-joint',
-    label: 'Hip & Joint',
-    detail: '60 soft chews',
-    image: await photo('hip-and-joint'),
+    label: 'Joint + Mobility Chews',
+    detail: '80 soft chews • 200 g',
+    image: await photo('joint-mobility'),
   },
   {
     slug: 'daily-probiotic',
-    label: 'Gut Health',
-    detail: '30 soft chews',
-    image: await photo('daily-probiotic'),
+    label: 'Probiotic Chews',
+    detail: '80 soft chews • 200 g',
+    image: await photo('probiotic'),
   },
 ];
 async function png(element, width, height) {
@@ -60,23 +65,26 @@ function collection(selected) {
             style: { objectFit: 'cover', borderRadius: 20 },
           }),
           box(
-            { fontSize: 29, fontWeight: 700, marginTop: 17, justifyContent: 'center' },
+            { fontSize: 25, fontWeight: 700, marginTop: 17, justifyContent: 'center' },
             item.label,
           ),
         ),
       ),
     ),
-    box({ position: 'absolute', bottom: 29, left: 48, fontSize: 20 }, 'Dog supplement chews'),
+    box(
+      { position: 'absolute', bottom: 29, left: 48, fontSize: 20 },
+      'Dog supplement chews • Packaging preview',
+    ),
     box({ position: 'absolute', bottom: 29, right: 48, fontSize: 20 }, 'pawbite.com'),
   ]);
 }
 await mkdir('public/share', { recursive: true });
 await mkdir('public/brand', { recursive: true });
 const defaultCard = await png(collection(items), 1200, 630);
-await writeFile('public/share/pawbite-line-v2.png', defaultCard);
+await writeFile('public/share/pawbite-line-r2.png', defaultCard);
 await writeFile('public/og-default.png', defaultCard);
 await writeFile(
-  'public/share/daily-duo-v2.png',
+  'public/share/daily-duo-r2.png',
   await png(collection([items[1], items[2]]), 1200, 630),
 );
 for (const item of items) {
@@ -85,7 +93,7 @@ for (const item of items) {
     box(
       { position: 'absolute', left: 52, top: 242, width: 480, flexDirection: 'column' },
       box({ fontSize: 65, fontWeight: 700, lineHeight: 1.08 }, item.label),
-      box({ fontSize: 34, marginTop: 15 }, 'Chews for dogs.'),
+      box({ fontSize: 34, marginTop: 15 }, 'For dogs.'),
       box({ fontSize: 23, marginTop: 26 }, item.detail),
     ),
     h('img', {
@@ -96,7 +104,7 @@ for (const item of items) {
     }),
     box({ position: 'absolute', left: 52, bottom: 44, fontSize: 22 }, 'pawbite.com'),
   ]);
-  await writeFile(`public/share/${item.slug}-v2.png`, await png(element, 1200, 630));
+  await writeFile(`public/share/${item.slug}-r2.png`, await png(element, 1200, 630));
 }
 await writeFile('public/brand/pawbite-wordmark.svg', wordmark + '\n');
 await writeFile('public/brand/pawbite-wordmark.png', await png(logo(874), 874, 284));

@@ -90,7 +90,7 @@ export function CalmIngredients() {
         <div className="mb-10 grid gap-6 md:grid-cols-2">
           <div>
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em]">
-              Inside the calming chew
+              Inside Calming Chews
             </p>
             <h2 className="editorial-heading text-4xl leading-tight md:text-5xl">
               SMALL CHEW.
@@ -100,16 +100,15 @@ export function CalmIngredients() {
           </div>
           <div className="self-end">
             <p className="mb-4 leading-relaxed text-charcoal">
-              No CBD, melatonin, or sedatives in the formula. Ingredient research is a starting
-              point, not proof that the finished chew will treat anxiety. For persistent distress,
-              start with your veterinarian.
+              For dogs during busy, noisy days. Each 2.5 g chew lists the three ingredients below.
+              Read the product page for directions, allergens and cautions.
             </p>
             <Link href="/products/calm" className="font-bold underline underline-offset-4">
-              Explore Calm and its full formula
+              Explore Calming Chews and the full label
             </Link>
           </div>
         </div>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {calmDetail.ingredients.map((ingredient, i) => (
             <Link
               key={ingredient.name}

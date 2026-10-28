@@ -37,7 +37,7 @@ export const blogPosts: BlogPost[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-03-10',
-      updatedDate: '2026-05-12',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -133,7 +133,7 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'daily-probiotic',
     recommendsContext:
-      'PawBite Daily Probiotic was built around the strains with the strongest canine evidence (Bacillus coagulans, BB-12, L. plantarum 299v) at a 5 billion CFU dose that holds shelf life in a chew, not a fridge bottle.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
   },
   {
     slug: 'best-dog-probiotic-2026',
@@ -145,7 +145,7 @@ export const blogPosts: BlogPost[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-01-20',
-      updatedDate: '2026-05-14',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -162,7 +162,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: 'Our pick and why',
-        body: 'PawBite Daily Probiotic ranks first on our criteria. It is also our product, so take it with whatever salt that requires. We built it specifically to fix the gaps we saw across the category: spore-forming strains so it survives a shelf, a real prebiotic, named strains, and CFU guaranteed at expiration rather than at manufacture.\n\nIf you want to ignore us entirely and pick a competitor, we would point you at Purina FortiFlora (single strain, well-studied, vet-distributed) or VetriScience Probiotic Everyday (multi-strain, transparent label). Both are solid. Both have downsides we explain in the table.',
+        body: 'PawBite Probiotic Chews is our product. Its current label lists a total guaranteed 2.5 billion CFU per 2.5 g chew, with five named strains at 500 million CFU each, inulin 100 mg and pumpkin powder 125 mg. The label does not provide specific clinical strain identifiers or specify an at-manufacture or through-expiry CFU basis. The earlier ranking should not be read as evidence of these unconfirmed properties.',
       },
       {
         heading: 'What to avoid',
@@ -180,7 +180,14 @@ export const blogPosts: BlogPost[] = [
         'Price/month',
       ],
       rows: [
-        ['PawBite Daily Probiotic', '5, all named', '5B', 'Yes (inulin)', 'Soft chew', '$26'],
+        [
+          'PawBite Probiotic Chews',
+          '5, all named',
+          '2.5B per chew; expiry basis not stated',
+          'Yes (inulin)',
+          'Soft chew',
+          '$26',
+        ],
         ['Purina FortiFlora', '1 (E. faecium SF68)', '1B', 'No', 'Powder', '$32'],
         ['VetriScience Probiotic Everyday', '5, all named', '1B', 'Yes', 'Soft chew', '$22'],
         ['PetLab Co. Probiotic', '8, proprietary blend', 'Not disclosed', 'Yes', 'Powder', '$35'],
@@ -268,7 +275,7 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'daily-probiotic',
     recommendsContext:
-      'PawBite Daily Probiotic is built around named strains with canine evidence, with CFU guaranteed at expiration and a real prebiotic included. It also costs less per month than most of the products in the comparison table.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
   },
   {
     slug: 'probiotic-vs-prebiotic-vs-postbiotic-for-dogs',
@@ -280,7 +287,7 @@ export const blogPosts: BlogPost[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-02-18',
-      updatedDate: '2026-05-08',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -395,7 +402,7 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'daily-probiotic',
     recommendsContext:
-      'PawBite Daily Probiotic is a synbiotic. Five named probiotic strains plus inulin as a prebiotic. That combination has the strongest evidence base for most dogs.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
   },
   {
     slug: 'how-long-does-it-take-for-probiotics-to-work-in-dogs',
@@ -407,7 +414,7 @@ export const blogPosts: BlogPost[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-02-25',
-      updatedDate: '2026-05-09',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -500,7 +507,7 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'daily-probiotic',
     recommendsContext:
-      'PawBite Daily Probiotic uses strains with documented onset windows. Most dogs show stool changes by day 10 to 14 at the labeled dose, and the included prebiotic shortens that window further.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
   },
   {
     slug: 'is-my-dogs-poop-normal-color-chart',
@@ -512,7 +519,7 @@ export const blogPosts: BlogPost[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-01-12',
-      updatedDate: '2026-05-15',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -616,7 +623,7 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'daily-probiotic',
     recommendsContext:
-      'PawBite Daily Probiotic is the most direct lever for improving stool consistency at home. Most dogs see softer stool firm up within 14 days at the labeled dose.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
   },
   {
     slug: 'signs-of-joint-pain-in-dogs',
@@ -628,7 +635,7 @@ export const blogPosts: BlogPost[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-02-08',
-      updatedDate: '2026-05-13',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -725,7 +732,7 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'hip-and-joint',
     recommendsContext:
-      'PawBite Hip + Joint includes the five ingredients with the strongest canine joint evidence (glucosamine, chondroitin, MSM, green-lipped mussel, turmeric) at meaningful doses. Most dogs see mobility changes inside 6 weeks.',
+      "Joint + Mobility Chews: Support your dog's active lifestyle. Duck Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
   },
   {
     slug: 'glucosamine-for-dogs-complete-guide',
@@ -737,7 +744,7 @@ export const blogPosts: BlogPost[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-01-28',
-      updatedDate: '2026-05-12',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -838,19 +845,19 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'hip-and-joint',
     recommendsContext:
-      'PawBite Hip + Joint includes 600 mg glucosamine HCl per chew, matched with chondroitin and four other joint ingredients. Dosed by weight, it hits the trial-validated range for most dogs.',
+      "Joint + Mobility Chews: Support your dog's active lifestyle. Duck Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
   },
   {
     slug: 'best-hip-and-joint-supplement-for-dogs-2026',
     title: 'Best hip and joint supplement for dogs in 2026',
     category: "Buyer's guide",
     readMin: 9,
-    tldr: 'The best hip and joint supplement for dogs in 2026 combines glucosamine HCl, chondroitin sulfate, MSM, green-lipped mussel, and turmeric at clinically meaningful doses. We compared seven popular options against those criteria. PawBite Hip + Joint, Cosequin Maximum Strength, and Dasuquin Advanced topped the list.',
+    tldr: 'The best hip and joint supplement for dogs in 2026 combines glucosamine HCl, chondroitin sulfate, MSM, green-lipped mussel, and turmeric at clinically meaningful doses. We compared seven popular options against those criteria. The table includes current PawBite label amounts alongside the listed competitor figures; it does not establish equivalent clinical results.',
     byline: {
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-01-18',
-      updatedDate: '2026-05-14',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -859,11 +866,11 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: 'The shortlist',
-        body: 'Of 14 widely-sold joint supplements we reviewed, seven met our minimum criteria for transparency and dosing. The table below shows how they compare on the ingredient mix.\n\nThe top three (PawBite, Cosequin, Dasuquin Advanced) all include multiple actives at meaningful doses. The bottom four are still reasonable products but lighter on one or more ingredient axes.',
+        body: 'Of 14 widely-sold joint supplements we reviewed, seven met our minimum criteria for transparency and dosing. The table below shows how they compare on the ingredient mix.\n\nThe PawBite row has been updated to its current label amounts. Ingredient quantities and serving sizes vary, so the table is not evidence of equivalent effects.',
       },
       {
-        heading: 'Our pick: PawBite Hip + Joint',
-        body: 'We rank PawBite Hip + Joint first on our criteria. We are biased, since we built it. But the formula is honest about ingredient mix and dose:\n\n- 600 mg glucosamine HCl per chew\n- 300 mg chondroitin sulfate\n- 500 mg MSM\n- 300 mg green-lipped mussel\n- 100 mg turmeric extract\n\nThat is the multi-ingredient approach the canine evidence base supports. The chew is soft and chicken-flavored. Pricing at $30 per month on subscription is below the average for comparable formulas.',
+        heading: 'Our pick: PawBite Joint + Mobility Chews',
+        body: 'PawBite Joint + Mobility Chews is our product. The current label lists, per 2.5 g chew: glucosamine HCl 250 mg, chondroitin sulfate 125 mg, MSM 125 mg, green-lipped mussel 125 mg and turmeric extract 50 mg. It is duck flavored, with approximately 80 soft chews and a net weight of 200 g per can. Subscription pricing is $30. These label facts do not establish a clinical ranking or the effects of the finished formula.',
       },
       {
         heading: 'Strong alternatives',
@@ -886,7 +893,7 @@ export const blogPosts: BlogPost[] = [
         'Monthly cost',
       ],
       rows: [
-        ['PawBite Hip + Joint', '600 mg', '300 mg', '500 mg', '300 mg', '100 mg', '$30'],
+        ['PawBite Joint + Mobility Chews', '250 mg', '125 mg', '125 mg', '125 mg', '50 mg', '$30'],
         ['Cosequin Maximum Strength', '600 mg', '300 mg', 'Some versions', 'No', 'No', '$45'],
         ['Dasuquin Advanced', '900 mg', '350 mg', 'No', 'No', 'No (has ASU)', '$60'],
         ['Nutramax Cosequin DS', '500 mg', '400 mg', 'No', 'No', 'No', '$40'],
@@ -962,7 +969,7 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'hip-and-joint',
     recommendsContext:
-      'PawBite Hip + Joint includes the five most-evidence-backed canine joint ingredients at meaningful doses, in a soft chew format, at a lower monthly cost than Cosequin or Dasuquin Advanced.',
+      "Joint + Mobility Chews: Support your dog's active lifestyle. Duck Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
   },
   {
     slug: 'do-dogs-need-probiotics',
@@ -974,7 +981,7 @@ export const blogPosts: BlogPost[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-02-12',
-      updatedDate: '2026-05-09',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -1069,7 +1076,7 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'daily-probiotic',
     recommendsContext:
-      'PawBite Daily Probiotic is dosed for daily use across all life stages, with strains targeting the clinical situations (chronic loose stool, post-antibiotic recovery, stress-related GI flares) where the canine evidence is strongest.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
   },
   {
     slug: 'gut-health-in-dogs-signs-of-imbalance',
@@ -1081,7 +1088,7 @@ export const blogPosts: BlogPost[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-02-22',
-      updatedDate: '2026-05-09',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -1178,7 +1185,7 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'daily-probiotic',
     recommendsContext:
-      'PawBite Daily Probiotic is built around the strains most studied for canine dysbiosis (Bacillus coagulans, BB-12, L. plantarum 299v) with a prebiotic to support recovery in 4 to 8 weeks.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
   },
   {
     slug: 'probiotic-strains-for-dogs-explained',
@@ -1190,7 +1197,7 @@ export const blogPosts: BlogPost[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-03-01',
-      updatedDate: '2026-05-08',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -1312,7 +1319,7 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'daily-probiotic',
     recommendsContext:
-      'PawBite Daily Probiotic includes all five of the most-studied canine strains at meaningful per-strain CFU. Every strain is named with genus, species, and strain ID. No proprietary blends.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
   },
   {
     slug: 'how-to-tell-if-your-dog-has-arthritis',
@@ -1324,7 +1331,7 @@ export const blogPosts: BlogPost[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-03-12',
-      updatedDate: '2026-05-13',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -1433,7 +1440,7 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'hip-and-joint',
     recommendsContext:
-      'PawBite Hip + Joint includes the five ingredients with the strongest canine arthritis evidence at clinically meaningful doses. Most dogs see mobility improvements between weeks 4 and 8 of daily use.',
+      "Joint + Mobility Chews: Support your dog's active lifestyle. Duck Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
   },
   {
     slug: 'puppy-vs-senior-dog-supplements-what-to-know',
@@ -1445,7 +1452,7 @@ export const blogPosts: BlogPost[] = [
       author: 'PawBite editorial team',
       reviewedBy: 'Dr. M. Hayes, DVM',
       publishedDate: '2026-04-02',
-      updatedDate: '2026-05-13',
+      updatedDate: '2026-10-28',
     },
     sections: [
       {
@@ -1548,7 +1555,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'What is the Daily Duo bundle for?',
         answer:
-          'It pairs the Daily Probiotic and Hip + Joint supplements at a bundle discount. It is built for adult and senior dogs who benefit from both, which is most dogs past age 7.',
+          'It pairs the Probiotic Chews and Joint + Mobility Chews supplements at a bundle discount. Each can contains approximately 80 soft chews. Read the ingredients, allergens and directions for each product before choosing the bundle.',
       },
       {
         question: 'Are senior-formula supplements just adult formulas with extra ingredients?',
@@ -1568,7 +1575,7 @@ export const blogPosts: BlogPost[] = [
     ],
     recommendsProduct: 'daily-duo',
     recommendsContext:
-      'The Daily Duo bundles PawBite Daily Probiotic and Hip + Joint, which together cover the two supplement categories with the strongest evidence across life stages. Senior dogs benefit most, but the pairing is also reasonable for mature adults watching for early arthritis signs.',
+      'The Daily Duo pairs Probiotic Chews with Joint + Mobility Chews. Each can contains approximately 80 soft chews, 2.5 g each. Follow the directions for each product.',
   },
 ];
 

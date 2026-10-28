@@ -19,7 +19,7 @@ const byline: ContentByline = {
   author: defaultAuthor,
   reviewedBy: defaultVet.name,
   publishedDate: '2026-04-01',
-  updatedDate: '2026-05-15',
+  updatedDate: '2026-10-28',
 };
 
 const sections: ContentSection[] = [
@@ -29,15 +29,15 @@ const sections: ContentSection[] = [
   },
   {
     heading: 'Our probiotic strains.',
-    body: 'Our Daily Probiotic uses five strains chosen for documented benefit in dogs at the doses we ship. Each strain ID is on the label.\n\n**Bacillus coagulans GBI-30, 6086.** A spore-forming strain that survives stomach acid without enteric coating. The Kalman 2009 trial showed improved stool quality and reduced GI symptoms at 2 billion CFU/day in mammals; the primary mechanism is gut barrier integrity and competitive exclusion of pathogens.\n\n**Bifidobacterium animalis subsp. lactis BB-12.** One of the most-studied probiotic strains across species. Eskesen 2015 demonstrated normalization of stool consistency and reduced GI discomfort. Survives gastric transit and adheres to the intestinal mucosa.\n\n**Lactobacillus acidophilus LA-5.** Saggioro 2004 documented pathogen exclusion and competitive inhibition of harmful bacteria in the gut lumen. LA-5 is among the most clinically validated acidophilus strains for GI flora support across species.\n\n**Lactobacillus plantarum 299v.** Nobaek 2000 documented short-chain fatty acid production and reduced bloating — the fermentation of indigestible fibers produces butyrate, which feeds colonocytes and supports the intestinal barrier.\n\n**Lactobacillus rhamnosus GG.** Hatakka 2001 demonstrated immune modulation and reduced incidence of GI infections. One of the most extensively studied probiotic strains; canine data supports use in stress-related GI flares (travel, boarding, antibiotic recovery).\n\nWe ship 5 billion total CFU per chew, guaranteed through end-of-shelf-life — not just at the time of manufacture. That distinction matters: many competitor labels list CFU at manufacture, which can be 40-60% higher than what reaches your dog 18 months later.',
+    body: "Probiotic Chews: For dogs' gut wellness. The label lists Bacillus coagulans, Bifidobacterium animalis, Lactobacillus acidophilus, Lactobacillus plantarum and Lactobacillus rhamnosus at 500 million CFU each per 2.5 g chew. Total guaranteed: 2.5 billion CFU across 5 named strains. Inulin (prebiotic) is 100 mg and pumpkin powder is 125 mg per chew. Specific clinical strain identifiers and an at-manufacture or through-expiry guarantee are not stated on the current label. Ingredient studies do not establish the effects of this finished formula.",
   },
   {
     heading: 'Our joint actives.',
-    body: 'Hip + Joint pulls together five actives with the strongest canine data for mobility, cartilage support, and inflammation modulation.\n\n**Glucosamine HCl (500mg).** McNamara 2017 reviewed the evidence for glucosamine in canine osteoarthritis and found consistent improvement in mobility scores at therapeutic doses. HCl form, not sulfate — better bioavailability per milligram.\n\n**Chondroitin sulfate (400mg).** Comblain 2017 demonstrated reduced cartilage breakdown markers and improved gait analysis scores when combined with glucosamine. The two work together; we ship them together.\n\n**MSM (300mg).** McCarthy 2007 reported improved owner-assessed pain scores in dogs with mild-to-moderate osteoarthritis at 50-100mg/kg. Useful adjunct, not a standalone fix.\n\n**Green-lipped mussel (150mg).** Bui and Bierer 2003 published the foundational canine work showing reduced joint pain and improved range of motion at 450mg/day in arthritic dogs. We use freeze-dried whole-organism, which preserves the omega-3 profile that does the work.\n\n**Turmeric extract (50mg, standardized to 95% curcuminoids).** Hielm-Björkman 2009 documented improvement in chronic osteoarthritis pain scores at meaningful curcuminoid doses. Bioavailability is the limit; we pair it with black pepper extract to lift absorption.\n\nDoses are per chew. Two chews per day for a 50-pound dog. Adjust by weight per the label.',
+    body: "Joint + Mobility Chews: Support your dog's active lifestyle. Minimum amounts per 2.5 g chew: Glucosamine HCl 250 mg; Chondroitin Sulfate 125 mg; MSM (methylsulfonylmethane) 125 mg; Green-Lipped Mussel (Perna canaliculus) 125 mg; Turmeric Extract (Curcuma longa) 50 mg. The current formula does not list hyaluronic acid, fish oil or black pepper extract. See the product page for complete ingredients, allergens and directions.",
   },
   {
     heading: 'Our calming actives.',
-    body: "[Calm](/products/calm) is the newest formula and the one where we hold the line hardest on claims. Anxiety research in dogs is younger than the gut and joint literature, so we lead with the ingredients that actually have canine data and we tell you plainly which ones don't yet.\n\n**L-theanine / Suntheanine (100mg).** This is the anchor, and the reason Calm exists. Araujo 2010 ran a controlled trial of [L-theanine](/ingredients/l-theanine) in dogs and found reduced fear and anxiety-related behavior — without sedation. L-theanine promotes the alpha-wave activity associated with calm focus rather than drowsiness. It has the most direct canine evidence of any calming ingredient, which is why it's the largest dose in the chew.\n\n**[Bacillus coagulans GBI-30, 6086](/ingredients/bacillus-coagulans) (1 billion CFU).** The gut-brain piece — the same digestive strain we ship in the [Daily Probiotic](/products/daily-probiotic), included here on gut-brain rationale rather than its own anxiety data. To be precise: McGowan 2018 found that a *different* probiotic, Bifidobacterium longum BL999 (not B. coagulans), reduced anxious behaviors in dogs over a six-week trial. We include B. coagulans for its documented GI benefit and the gut-calm link; the L-theanine carries the behavioral evidence.\n\n**[Ashwagandha](/ingredients/ashwagandha) root (50mg).** An adaptogen with strong human stress-response data and a long traditional-use record; direct canine trial data is still emerging. We dose it conservatively and we'll say it straight: this one rides on mechanistic and cross-species evidence, not a canine RCT. The L-theanine is doing the heavy lifting regardless.\n\n**Organic [chamomile](/ingredients/chamomile) (100mg).** A traditional calming herb — gentle, with a long safety record. A supporting actor, not the lead.\n\nWhat's deliberately not in Calm: no melatonin, no sedatives, no CBD. We wanted calm without sedation — a dog that's still themselves, just less wound up.",
+    body: 'Calming Chews: For dogs during busy, noisy days. Minimum amounts per 2.5 g chew: Ashwagandha Root Extract 75 mg; L-Theanine 50 mg; Chamomile Extract 50 mg. The final Calming formula excludes Bacillus coagulans. The current label does not list hemp, CBD or cannabis extracts. Ingredient research is background information, not a promise of sedation, anxiety treatment or a particular effect from the finished chew.',
   },
   {
     heading: 'How our content is reviewed.',
@@ -142,14 +142,14 @@ const faqs: ContentFAQ[] = [
       'No. Every study cited on PawBite was independently funded and peer-reviewed before we existed. We did not pay for any of this research.',
   },
   {
-    question: 'Why list CFU at end of shelf life instead of at manufacture?',
+    question: 'What CFU count does the current Probiotic Chews label state?',
     answer:
-      'Because end-of-shelf-life is what your dog actually receives. Many competitor labels list CFU at manufacture, which can be 40-60% higher than what reaches the chew 18 months later. We dose to guarantee the labeled count through expiry.',
+      'The label states a total guaranteed 2.5 billion CFU per 2.5 g chew, with 500 million CFU each of five named strains. It does not specify an at-manufacture or through-expiry basis.',
   },
   {
     question: 'What happens if the science updates and your formula is out of date?',
     answer:
-      'We reformulate. If a strain we ship is shown to be inferior to a newer option at the same dose, we swap it. We update the page, re-review with Dr. Hayes, and timestamp the change so you can see what shifted.',
+      'We review new evidence and update product information when a formula or label changes. The current product pages show the label ingredients and amounts; veterinary review remains pending.',
   },
   {
     question: 'Do you have your own clinical trial data?',

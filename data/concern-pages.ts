@@ -103,7 +103,7 @@ export const concernPages: ConcernPage[] = [
       "If your dog's stool is bloody, black, or has been loose for more than 3 days, that's a vet visit. Same goes for signs of dehydration, lethargy, vomiting, refusing food, or a distended abdomen. Probiotics support chronic, mild GI issues — they are not a substitute for diagnosing acute illness.",
     recommendsProduct: 'daily-probiotic',
     reasonForRecommendation:
-      'Loose stool is a microbiome problem 80% of the time. Daily Probiotic delivers five strains plus prebiotic fiber, which is the combination most studied for firming stool in dogs. Owners typically report visible change within two weeks of daily use.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
     faqs: [
       {
         question: 'How long should it take for a probiotic to firm up my dog’s stool?',
@@ -195,7 +195,7 @@ export const concernPages: ConcernPage[] = [
       'There is a difference between gassy and bloated. True bloat (gastric dilatation-volvulus, or GDV) is a surgical emergency — usually in deep-chested breeds — and looks like a hard, distended belly, unproductive retching, restlessness, and rapid decline. If you see those signs, go to an emergency vet immediately. Chronic mild gas is a diet and microbiome issue, not an emergency.',
     recommendsProduct: 'daily-probiotic',
     reasonForRecommendation:
-      'Gas is largely a microbiome math problem. Daily Probiotic delivers five strains plus prebiotic fiber to shift the bacterial balance toward better food fermentation. Most owners report less smell and fewer episodes within 2-3 weeks.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
     faqs: [
       {
         question: 'Why does my dog’s gas smell so much worse some days?',
@@ -297,7 +297,7 @@ export const concernPages: ConcernPage[] = [
       'If your dog has severe itching, recurrent ear infections, chronic GI symptoms, or facial swelling, see your vet for a workup. They can rule out other causes (environmental allergies, parasites, infection) and supervise an elimination diet. Anaphylaxis is rare in dogs but possible — facial swelling with breathing changes is an emergency.',
     recommendsProduct: 'daily-probiotic',
     reasonForRecommendation:
-      'Food sensitivity symptoms are partly a gut barrier problem. Daily Probiotic supports the gut-skin axis, which research links to reduced food reactivity and calmer skin over time. It pairs well with an elimination diet — not in place of one.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
     faqs: [
       {
         question: 'Are food allergies actually common in dogs?',
@@ -400,7 +400,7 @@ export const concernPages: ConcernPage[] = [
       'See your vet if itching is severe, the skin is broken or bleeding, ear infections keep coming back, or your dog seems generally unwell. These can signal underlying conditions like atopic dermatitis, hypothyroidism, or mange that require diagnosis and prescription treatment. Constant itch is exhausting for dogs — do not wait it out.',
     recommendsProduct: 'daily-probiotic',
     reasonForRecommendation:
-      'Skin and gut are more connected than most owners realize. Daily Probiotic supports the gut-skin axis, which research links to reduced inflammatory response and calmer skin over time. We are working on a dedicated skin-and-coat chew but it is not out yet — for now, gut support is the meaningful lever we offer.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
     faqs: [
       {
         question: 'Can gut health really affect my dog’s skin?',
@@ -498,7 +498,7 @@ export const concernPages: ConcernPage[] = [
       'See your vet if your dog is suddenly limping, refusing to bear weight, crying out, or showing rapid decline. These could indicate acute injury, advanced arthritis, or other conditions that need diagnosis and prescription pain management. Joint supplements support long-term joint health — they are not pain relief for acute problems.',
     recommendsProduct: 'hip-and-joint',
     reasonForRecommendation:
-      'Hip-and-Joint is built around the four ingredients with the most evidence for canine joint health: glucosamine, chondroitin, MSM, and omega-3s. Most owners report noticeably easier movement within 4-6 weeks. Best results come from starting early, before symptoms become severe.',
+      "Joint + Mobility Chews: Support your dog's active lifestyle. Duck Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
     faqs: [
       {
         question: 'At what age should I start a joint supplement?',
@@ -596,7 +596,7 @@ export const concernPages: ConcernPage[] = [
       'See your vet at the first signs of stiffness or limping — earlier intervention slows progression. Get back in touch if pain worsens suddenly, your dog cannot bear weight on a limb, or quality of life declines despite current treatment. Arthritis often requires prescription pain relief alongside supplements, and your vet is the right person to manage that.',
     recommendsProduct: 'hip-and-joint',
     reasonForRecommendation:
-      'Hip-and-Joint delivers glucosamine, chondroitin, MSM, and omega-3s — the four ingredients with the strongest evidence base for canine osteoarthritis. It is designed for daily long-term use and pairs well with vet-prescribed care for moderate and advanced cases.',
+      "Joint + Mobility Chews: Support your dog's active lifestyle. Duck Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
     faqs: [
       {
         question: 'Can arthritis in dogs be cured?',
@@ -694,7 +694,7 @@ export const concernPages: ConcernPage[] = [
       'See your vet if mobility decline is sudden, your dog cannot bear weight, or progression seems rapid (weeks, not months). Sudden changes can signal acute injury, cruciate tear, disc disease, or other conditions that need imaging and possibly surgery. Slow gradual change still deserves a checkup — earlier diagnosis means better long-term outcomes.',
     recommendsProduct: 'hip-and-joint',
     reasonForRecommendation:
-      'Mobility decline is almost always a joint issue, and joint issues respond best to early intervention. Hip-and-Joint combines glucosamine, chondroitin, MSM, and omega-3s — the four ingredients with the most evidence for supporting cartilage health and reducing inflammation in dogs.',
+      "Joint + Mobility Chews: Support your dog's active lifestyle. Duck Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
     faqs: [
       {
         question: 'Is it normal for older dogs to be slow getting up?',
@@ -782,7 +782,7 @@ export const concernPages: ConcernPage[] = [
       'Contact your vet if loose stool persists more than 1-2 weeks after antibiotics end, if appetite does not return, if your dog seems unwell beyond mild GI symptoms, or if the original infection seems to be returning. Probiotics support recovery from mild antibiotic aftermath — they do not address underlying issues like C. difficile overgrowth or a second infection.',
     recommendsProduct: 'daily-probiotic',
     reasonForRecommendation:
-      'Reseeding the gut after antibiotics is exactly what a multi-strain probiotic is designed for. Daily Probiotic delivers five well-studied canine strains plus prebiotic fiber to feed them. Most dogs show visible digestive recovery within 2-4 weeks of daily use.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
     faqs: [
       {
         question: 'Can I give my dog probiotics during the antibiotic course?',
@@ -880,7 +880,7 @@ export const concernPages: ConcernPage[] = [
       'See your vet if your dog has refused food for more than 24 hours (12 for puppies or small breeds), is losing weight, seems lethargic, has bad breath or visible dental issues, or if pickiness developed suddenly in a previously eager eater. Sudden appetite loss in dogs is rarely just behavioral and warrants a workup.',
     recommendsProduct: 'daily-probiotic',
     reasonForRecommendation:
-      'When pickiness has a digestive root, supporting the gut microbiome often restores normal appetite. Daily Probiotic addresses the low-grade nausea and GI discomfort that can suppress food interest. It is not a fix for behavioral pickiness — that takes a routine reset.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
     faqs: [
       {
         question: 'Will my dog starve themselves if I do not give in?',
@@ -982,7 +982,7 @@ export const concernPages: ConcernPage[] = [
       'See your vet if symptoms are severe, getting worse, include blood in stool or vomit, weight loss, lethargy, or if your dog seems generally unwell. Chronic sensitive stomach is a manageable pattern; suspected inflammatory bowel disease, pancreatitis, or other underlying conditions need diagnosis and possibly prescription treatment.',
     recommendsProduct: 'daily-probiotic',
     reasonForRecommendation:
-      'Chronic sensitive stomachs are usually microbiome problems. Daily Probiotic delivers five strains plus prebiotic fiber to rebuild gut diversity and resilience over time. Most dogs show fewer flares and firmer baseline stool within 4-6 weeks of daily use.',
+      "Probiotic Chews: For dogs' gut wellness. Chicken Flavor. Approximately 80 soft chews, 2.5 g each, net weight 200 g. See the product page for current ingredients and directions.",
     faqs: [
       {
         question: 'How is a sensitive stomach different from a food allergy?',

@@ -73,7 +73,7 @@ const perks = [
 const howSteps = [
   {
     title: 'Pick your formula.',
-    body: 'Daily Probiotic, Hip + Joint, or the Daily Duo if your dog needs both. Most subscribers go with the Duo.',
+    body: 'Probiotic Chews, Joint + Mobility Chews, or the Daily Duo if your dog needs both. Most subscribers go with the Duo.',
   },
   {
     title: 'Choose a cadence.',
@@ -199,8 +199,8 @@ export default function PerksPage() {
               <div className="space-y-4 text-base leading-relaxed text-charcoal">
                 <p>
                   If your dog needs both — and roughly 70% of subscribers go this way — the Daily
-                  Duo bundle gives you Daily Probiotic plus Hip + Joint as a single subscription at
-                  a {duoSavingsPct}% discount off the combined retail price.
+                  Duo bundle gives you Probiotic Chews plus Joint + Mobility Chews as a single
+                  subscription at a {duoSavingsPct}% discount off the combined retail price.
                 </p>
                 <p>
                   Both formulas ship together, on the same day, in one box. One subscription to

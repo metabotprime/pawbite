@@ -63,7 +63,8 @@ export function ProductShowcase() {
           <div>
             <h3 className="mb-1 text-2xl font-bold text-cream">Better together: The Daily Duo.</h3>
             <p className="text-sm text-cream/80">
-              Daily Probiotic + Hip + Joint. {dailyDuo.badge} when you bundle and subscribe.
+              Probiotic Chews + Joint + Mobility Chews. {dailyDuo.badge} when you bundle and
+              subscribe.
             </p>
           </div>
           <span className="flex items-center gap-5 font-bold">

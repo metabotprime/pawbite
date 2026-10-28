@@ -8,7 +8,7 @@ import { SITE_URL } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Shop the line',
   description:
-    'Three daily essentials: the Daily Probiotic, Hip + Joint, and Calming chews — plus the Daily Duo subscription bundle.',
+    'Three daily essentials: the Probiotic Chews, Joint + Mobility Chews, and Calming chews — plus the Daily Duo subscription bundle.',
   alternates: { canonical: `${SITE_URL}/products` },
 };
 

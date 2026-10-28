@@ -20,7 +20,7 @@ export const quizQuestions: QuizQuestion[] = [
   {
     id: 'weight',
     question: 'How much does your dog weigh?',
-    helper: 'A rough estimate is fine — we use this to dial dosing.',
+    helper: 'A rough estimate is fine. Check the label directions for the product you choose.',
     options: [
       { value: 'under-25', label: 'Under 25 lbs', sublabel: 'Small breed' },
       { value: '25-50', label: '25–50 lbs', sublabel: 'Medium breed' },
@@ -41,7 +41,7 @@ export const quizQuestions: QuizQuestion[] = [
   {
     id: 'primary',
     question: 'What’s the main thing you want to improve?',
-    helper: 'Pick one — we’ll recommend a SKU that targets it.',
+    helper: 'Pick one. We will show a product label to review.',
     options: [
       { value: 'gut', label: 'Gut + stool', sublabel: 'Loose stool, gas, sensitive stomach' },
       { value: 'joint', label: 'Hip + joint', sublabel: 'Stiffness, slow mornings, mobility' },
@@ -51,7 +51,7 @@ export const quizQuestions: QuizQuestion[] = [
         label: 'Anxiety + stress',
         sublabel: 'Fireworks, vet visits, separation',
       },
-      { value: 'wellness', label: 'Daily wellness', sublabel: 'General support, prevention' },
+      { value: 'wellness', label: 'Daily wellness', sublabel: 'An everyday routine' },
     ],
   },
   {
@@ -100,45 +100,45 @@ export function recommendFromAnswers(answers: QuizAnswers): QuizResult {
   const wantsBoth = wantsGut && wantsJoint;
   const seniorPlusJoint = isSenior && (primary === 'joint' || primary === 'wellness');
 
-  // Senior dogs benefit from both — recommend the Duo
+  // Preserve the existing combined-interest and senior/joint bundle routing.
   if (wantsBoth || seniorPlusJoint) {
     return {
       primarySku: 'daily-duo',
       reasoning:
-        'Both gut health and joint mobility tend to need attention together — especially in adult and senior dogs. The Daily Duo covers both daily, and you save 32% by bundling and subscribing.',
+        "The Daily Duo combines Probiotic Chews and Joint + Mobility Chews. Probiotic Chews are for dogs' gut wellness, and Joint + Mobility Chews support your dog's active lifestyle. You save 32% by bundling and subscribing.",
       bundleRecommended: true,
     };
   }
 
-  // Primary joint → Hip + Joint
+  // Primary joint -> Joint + Mobility Chews
   if (primary === 'joint') {
     return {
       primarySku: 'hip-and-joint',
       reasoning:
-        'Hip + Joint is clinically dosed glucosamine (500 mg), chondroitin (400 mg), MSM, green-lipped mussel, and turmeric — built to ease stiffness and protect cartilage. Most dogs notice easier mornings within 14–21 days.',
+        "Joint + Mobility Chews: Support your dog's active lifestyle. Each 2.5 g chew contains 250 mg of glucosamine HCl, 125 mg each of chondroitin sulfate, MSM, and green-lipped mussel, and 50 mg of turmeric extract.",
       bundleRecommended: false,
     };
   }
 
-  // Primary anxiety → Calm
+  // Primary anxiety -> Calming Chews
   if (primary === 'anxiety') {
     return {
       primarySku: 'calm',
       reasoning:
-        'Calm pairs L-theanine, ashwagandha, and chamomile for relaxed focus without sedation — plus a gut-brain probiotic, since anxious dogs are very often gut-unsettled dogs. Give a chew 30 minutes before a known stressor, or one daily for everyday nerves.',
+        'Calming Chews: For dogs during busy, noisy days. Each 2.5 g chew contains 75 mg of ashwagandha root extract, 50 mg of L-theanine, and 50 mg of chamomile extract.',
       bundleRecommended: false,
     };
   }
 
-  // Gut / skin / wellness → Daily Probiotic (the gut-first thesis)
+  // Preserve the existing gut / skin / wellness route to Probiotic Chews.
   return {
     primarySku: 'daily-probiotic',
     reasoning:
       primary === 'gut'
-        ? 'Daily Probiotic is 5 strains, 5 billion CFUs — including the strains most-studied for firming stool, reducing gas, and supporting digestion. Most dogs see improvement within 7–14 days.'
+        ? "Probiotic Chews: For dogs' gut wellness. Each 2.5 g chew lists a minimum of 2.5 billion CFU across five named microorganisms at 500 million CFU each, plus 100 mg of inulin and 125 mg of pumpkin powder."
         : primary === 'skin'
-          ? 'Skin and coat issues often trace back to the gut — it’s called the gut-skin axis, and it’s real. Most owners see coat improvements once digestion stabilizes. Daily Probiotic is our recommendation while we develop a skin-specific chew.'
-          : 'Daily Probiotic is our most-recommended daily essential. Five strains, five billion CFUs, third-party tested. The simplest way to support overall wellness from the gut up.',
+          ? "Probiotic Chews are for dogs' gut wellness. They are not a skin-specific product. Ask your veterinarian about persistent skin or coat concerns."
+          : "Probiotic Chews: For dogs' gut wellness. Each 2.5 g chew lists a minimum of 2.5 billion CFU across five named microorganisms, plus 100 mg of inulin and 125 mg of pumpkin powder.",
     bundleRecommended: false,
   };
 }

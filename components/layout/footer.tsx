@@ -8,9 +8,9 @@ const linkColumns = [
   {
     title: 'Shop',
     links: [
-      { href: '/products/daily-probiotic', label: 'Daily Probiotic' },
-      { href: '/products/hip-and-joint', label: 'Hip + Joint' },
-      { href: '/products/calm', label: 'Calming Chew' },
+      { href: '/products/daily-probiotic', label: 'Probiotic Chews' },
+      { href: '/products/hip-and-joint', label: 'Joint + Mobility Chews' },
+      { href: '/products/calm', label: 'Calming Chews' },
       { href: '/products/daily-duo', label: 'The Daily Duo' },
       { href: '/quiz', label: 'Take the quiz' },
     ],

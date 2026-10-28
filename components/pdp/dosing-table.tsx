@@ -9,7 +9,7 @@ export function DosingTable({ dosing, note }: { dosing: DosingRow[]; note: strin
         <p className="text-charcoal">Based on your dog&apos;s weight.</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3">
         {dosing.map((row) => (
           <div
             key={row.weightRange}
