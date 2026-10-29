@@ -29,7 +29,7 @@ describe('homepage product rotation', () => {
     render(<HeroSection />);
     for (const [headline, slug, price, photo] of [
       ['CALMING', 'calm', '34.00', 'calming-paper-v1.webp'],
-      ['JOINT +', 'hip-and-joint', '38.00', 'joint-mobility-paper-v1.webp'],
+      ['JOINT +', 'hip-and-joint', '38.00', 'joint-mobility-paper-v2.webp'],
       ['PROBIOTIC', 'daily-probiotic', '32.00', 'probiotic-paper-v1.webp'],
       ['CALMING', 'calm', '34.00', 'calming-paper-v1.webp'],
     ]) {

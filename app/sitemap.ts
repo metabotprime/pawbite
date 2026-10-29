@@ -8,8 +8,8 @@ import { ingredientPages } from '@/data/ingredient-pages';
 import { vsPages } from '@/data/vs-pages';
 
 // Update only after a significant edit to these pages, never on each build.
-const PRODUCT_PHOTOGRAPHY_UPDATED = '2026-10-28';
-const HOME_METADATA_UPDATED = '2026-10-28';
+const PRODUCT_PHOTOGRAPHY_UPDATED = '2026-10-29';
+const HOME_METADATA_UPDATED = '2026-10-29';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [

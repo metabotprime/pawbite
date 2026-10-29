@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from './seo';
 
-export const SHARE_IMAGE = '/share/pawbite-line-paper-v1.png';
+export const SHARE_IMAGE = '/share/pawbite-line-paper-v2.png';
 
 /** Next replaces nested metadata objects; keep every override's image intact. */
 export function socialMetadata({

@@ -16,8 +16,8 @@ const pawShapes = pawSource.match(/<(?:ellipse|path)\s+[^>]+\/>/g).join('');
 const icon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="15" fill="${blue}"/><svg x="10" y="9" width="44" height="44" viewBox="0 0 24 24" fill="${cream}">${pawShapes}</svg></svg>`;
 const logo = (width = 290) =>
   h('img', { src: svgData(wordmark), width, height: (width * 283.34) / 873.85 });
-const photo = async (slug) =>
-  `data:image/png;base64,${(await sharp(`public/products/studio/${slug}-paper-v1.webp`).png().toBuffer()).toString('base64')}`;
+const photo = async (slug, version = 'paper-v1') =>
+  `data:image/png;base64,${(await sharp(`public/products/studio/${slug}-${version}.webp`).png().toBuffer()).toString('base64')}`;
 const items = [
   {
     slug: 'calm',
@@ -29,7 +29,8 @@ const items = [
     slug: 'hip-and-joint',
     label: 'Joint + Mobility Chews',
     detail: '80 soft chews • 200 g',
-    image: await photo('joint-mobility'),
+    image: await photo('joint-mobility', 'paper-v2'),
+    version: 'paper-v2',
   },
   {
     slug: 'daily-probiotic',
@@ -81,10 +82,10 @@ function collection(selected) {
 await mkdir('public/share', { recursive: true });
 await mkdir('public/brand', { recursive: true });
 const defaultCard = await png(collection(items), 1200, 630);
-await writeFile('public/share/pawbite-line-paper-v1.png', defaultCard);
+await writeFile('public/share/pawbite-line-paper-v2.png', defaultCard);
 await writeFile('public/og-default.png', defaultCard);
 await writeFile(
-  'public/share/daily-duo-paper-v1.png',
+  'public/share/daily-duo-paper-v2.png',
   await png(collection([items[1], items[2]]), 1200, 630),
 );
 for (const item of items) {
@@ -104,7 +105,10 @@ for (const item of items) {
     }),
     box({ position: 'absolute', left: 52, bottom: 44, fontSize: 22 }, 'pawbite.com'),
   ]);
-  await writeFile(`public/share/${item.slug}-paper-v1.png`, await png(element, 1200, 630));
+  await writeFile(
+    `public/share/${item.slug}-${item.version ?? 'paper-v1'}.png`,
+    await png(element, 1200, 630),
+  );
 }
 await writeFile('public/brand/pawbite-wordmark.svg', wordmark + '\n');
 await writeFile('public/brand/pawbite-wordmark.png', await png(logo(874), 874, 284));

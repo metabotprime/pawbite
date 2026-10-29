@@ -59,7 +59,7 @@ export const products: Product[] = [
     oneLineDescription: productLabels['hip-and-joint'].tagline,
     retailPrice: 38,
     subPrice: 30,
-    imageSrc: '/products/studio/joint-mobility-paper-v1.webp',
+    imageSrc: '/products/studio/joint-mobility-paper-v2.webp',
     imageWidth: 1254,
     imageHeight: 1254,
   },

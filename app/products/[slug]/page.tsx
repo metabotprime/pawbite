@@ -35,7 +35,10 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       title: `${product.seoTitle} · PawBite`,
       description: product.seoDescription,
       url: `${SITE_URL}/products/${product.slug}`,
-      image: `/share/${product.slug}-paper-v1.png`,
+      image:
+        product.slug === 'hip-and-joint'
+          ? '/share/hip-and-joint-paper-v2.png'
+          : `/share/${product.slug}-paper-v1.png`,
     }),
   };
 }
